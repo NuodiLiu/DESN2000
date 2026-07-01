@@ -1,0 +1,27 @@
+Attendances: 
+
+Liam z5403196, Dylan z5569891, Pranav z5589687 
+
+ 
+
+Tasks(before week3 ends):
+
+ 
+
+Liam: finish persona and user journey confluence docs by adding the stakeholder information
+
+Pranav: fix the user stories in Jira
+
+Nicky: finish persona and user journey confluence docs by adding the stakeholder information, diagrams
+
+Dylan: fix the user stories in Jira, make the UI design
+
+ 
+
+Started on working the design journal and assemble the thing into the group report
+
+
+
+Meeting:
+
+Saturday 1 pm

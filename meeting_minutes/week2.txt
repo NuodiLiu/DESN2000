@@ -1,0 +1,32 @@
+Attendances: 
+
+Liam z5403196, Dylan z5569891, Nicky z5505220, Pranav z5589687 
+
+ 
+
+Tasks(before week2 ends):
+
+ 
+
+Liam: record interview
+
+Pranav: finish the user stories and persona, finish the Jira doc
+
+Nicky: finish the mood board, finish the user stories and persona
+
+Dylan: make a list of interview question (based on the survey), finish the user stories and persona
+
+ 
+
+Persona:
+
+Create a visual template (AI, Figma).  For everyone
+
+ 
+
+Meeting:
+
+Saturday 1 pm
+
+basic check everyones progress.
+

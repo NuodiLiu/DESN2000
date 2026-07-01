@@ -10,7 +10,7 @@
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 
-\graphicspath{{./}{figures/}{../}{../week1to4_design_journal/}{../week1to4_design_journal/persona/}}
+\graphicspath{{./}{figures/}{../}}
 
 \definecolor{accent}{HTML}{0E6B67}
 \definecolor{softgray}{HTML}{F4F6F6}
@@ -68,7 +68,6 @@
     \end{tabular}
 
     \vfill
-    \textcolor{midgray}{Empathise and Define stage submission}
 \end{titlepage}
 
 \pagenumbering{roman}
@@ -151,7 +150,7 @@ After data collection, the team used affinity mapping to group repeated observat
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{mindmap_overview.png}
+    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{mindmap.png}
     \caption{Affinity map and mind map showing research themes from survey, interview and team synthesis.}
     \label{figaffinity}
 \end{figure}
@@ -211,41 +210,65 @@ Domestic student findings showed that informal household systems can fail after 
 
 \section{Personas, Scenarios and Journey Maps}
 
-The personas were built from repeated survey and interview themes rather than assumptions. Each persona includes a scenario and a journey map so the team can see what the user is trying to do, what pressure they feel and where support is missing. The journey maps showed that the main breakdown occurs while users shortlist options, make contact and check compatibility, because they must make consequential decisions with limited trust and lifestyle information.
+The four personas were developed from survey findings, interview insights and team synthesis artefacts. They were used to turn repeated research themes into concrete user situations, rather than treating users as abstract groups. Together, the personas show how different stakeholders experience the accommodation decision process from different positions. International students face uncertainty when judging unfamiliar listings before arrival. Existing housemates need confidence that a new person will fit into the household. Domestic students already living in shared accommodation reveal how unclear agreements around chores, bills and house rules can become conflict after move in. Property managers show the operational constraints around listing trust, enquiry handling and applicant screening.
+
+Across the four personas, the strongest pattern is that users need clearer information before they make or accept a commitment. Trust, compatibility, communication and shared responsibility expectations appear in different ways for each persona, but they all affect the same decision point. Users are often asked to choose a room, contact a landlord, accept a housemate or continue living with an informal household system before they have enough reliable information. For this reason, the personas were used with scenarios and journey maps to identify where the current experience breaks down and where a design intervention could reduce uncertainty.
 
 \begin{table}[H]
     \centering
     \small
-    \caption{Research informed personas, validation scenarios and journey map pain points.}
+    \caption{Research-based personas, validation scenarios and journey map pain points.}
     \begin{tabularx}{\textwidth}{@{}L{3.0cm} Y Y Y@{}}
         \toprule
         Persona & Research basis & Scenario for validation & Journey map pain point\\
         \midrule
-        International student & The evidence showed scam concern, unfamiliar rental norms and a need for clearer listing details. & The student chooses accommodation before arriving in Australia. & The student cannot judge listing trust or housemate fit with confidence.\\
-        Existing housemate & The evidence showed concern about cleanliness, bills, shared rules and privacy. & The student chooses a new housemate for an existing shared house. & Expectations are difficult to discuss before move in.\\
-        Domestic shared living student & The evidence showed conflict around household work and bills after move in. & The student wants to reduce household tension and improve coordination. & Informal agreements often fail once routines begin.\\
-        Property manager & The evidence showed that reliable listings and clear applicant communication affect trust before commitment. & The property manager screens student applicants and answers repeated listing questions. & High enquiry volume and incomplete applications make trust and communication harder to manage.\\
+        International student & Scam concern, unfamiliar Australian rental norms, language barriers and need for clear listing details. & The student shortlists accommodation before arriving in Australia and decides whether a listing is safe enough to contact. & The student cannot easily verify whether the listing, landlord or housemates are trustworthy.\\
+        Existing housemate & Cleanliness, privacy, bills, shared rules and respect for household routines. & The housemate chooses a new person for an existing share house and wants to avoid future conflict. & It is difficult to discuss expectations clearly before the person moves in.\\
+        Domestic shared living student & Chore conflict, late bill payment, informal agreements and weak accountability after move in. & The student tries to keep the household organised after move in while chores and bills rely on verbal agreement. & Informal systems fail because responsibilities are not visible, recorded or consistently followed.\\
+        Property manager & Listing accuracy, enquiry handling, applicant reliability and administrative workload. & The property manager publishes a listing, answers repeated questions, screens applicants and coordinates inspection or move in information. & High enquiry volume and incomplete applications make trust and communication harder to manage.\\
         \bottomrule
     \end{tabularx}
     \label{tabpersonas}
 \end{table}
 
+The international student persona represents users who are unfamiliar with Australian rental processes and must make early decisions from limited information. This persona highlights trust and safety as the first barrier. The journey map shows that uncertainty grows during shortlisting and contacting, because listing authenticity, landlord reliability and housemate compatibility are hard to verify before the student has arrived.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{HousemateEmilyChenPersona.png}
+    \includegraphics[width=\textwidth,height=0.48\textheight,keepaspectratio]{international_student_persona.png}
+    \caption{International student persona, scenario and journey map.}
+    \label{figintpersona}
+\end{figure}
+
+The existing housemate persona represents users who already live in a shared house and need to decide whether a potential new housemate is suitable. This persona is important because a poor match affects the whole household after move in. The journey map shows that the most difficult moment is not finding someone interested in the room, but judging whether that person will respect shared spaces, pay bills on time, communicate clearly and follow household expectations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=0.48\textheight,keepaspectratio]{housemate_emily_chen_persona.png}
     \caption{Existing housemate persona, scenario and journey map.}
     \label{fighthousematepersona}
 \end{figure}
 
+The domestic shared living student persona represents users who have already experienced the consequences of weak household systems. This persona provides supporting evidence for why expectations should be clarified before move in. The journey map shows that verbal agreements can work at the beginning, but conflict appears when chores are missed, bills are paid late or reminders become awkward. This supports the design need for clearer shared responsibility information during compatibility checking.
+
 \begin{figure}[H]
     \centering
-    \evidencecard{International student persona, validation scenario and journey map}{
-    \textbf{Persona structure.} A newly arrived international student needs affordable accommodation, listing information they can trust and housemates whose routines are compatible with their own. \textbf{Scenario.} The student shortlists accommodation before arriving, contacts a landlord or housemate and decides whether the listing is safe enough to pursue. \textbf{Journey map pain points.} The student first faces fragmented platforms, then struggles to verify authenticity during shortlisting. Replies may be unclear or hard to interpret. Lifestyle expectations are often hidden during compatibility checking. At the decision point, the student worries about choosing the wrong room or people.}
-    \caption{International student persona, validation scenario and journey map summary.}
-    \label{figintpersona}
+    \evidencecard{Domestic shared living student persona, scenario and journey map}{
+    \textbf{Persona structure.} A domestic student living in shared accommodation needs less household tension, clearer responsibility management and stronger social connection with housemates. \textbf{Scenario.} The student tries to keep the household running after move in, but chores, bill payments and communication rely on informal verbal agreements. \textbf{Journey map pain points.} Informal systems break down when responsibilities are missed, reminders feel awkward, accountability is unclear and household rules need to be renegotiated after conflict.}
+    \caption{Domestic shared living student persona, scenario and journey map summary.}
+    \label{figdomesticpersona}
 \end{figure}
 
-The domestic student persona and full journey map summary are included in Appendix~\ref{appdomesticpersona} as supporting evidence for responsibility conflicts after move in. The property manager persona is included in Appendix~\ref{apppropertymanager} as secondary stakeholder evidence for listing trust, applicant screening and communication constraints.
+The property manager persona represents a secondary stakeholder who shapes the trust environment around student accommodation. This persona is not the primary design target, but it shows why verified listing details, structured applicant information and guided communication matter. The journey map shows that property managers face repeated enquiries, incomplete applications and pressure to assess tenant suitability efficiently.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=0.48\textheight,keepaspectratio]{property_manager_persona.png}
+    \caption{Property manager persona, scenario and journey map.}
+    \label{figpropertymanagerpersonamain}
+\end{figure}
+
+These four personas show that the project should not only help students find accommodation. It should help them make a safer and more informed commitment. The design should therefore support verified listing information, structured housemate profiles, compatibility comparison, guided communication and early clarification of shared responsibilities.
 
 \section{Common Goals and Pain Points}
 
@@ -293,16 +316,14 @@ This report demonstrates the Empathise and Define stages of the project. The res
 \section{References}
 
 \begin{itemize}
-    \item Liam and Cara. (2026). Primary research interview for the accommodation app project. Video held in the team workspace.
-    \item Team international student survey. (2026). \textit{International Student Accommodation Search Experience Survey in Australia. Default Report}. Internal team survey report, 16 responses.
-    \item Team domestic student shared living survey. (2026). Internal survey screenshots and results, 6 responses.
-    \item UNSW DESN2000 SENG. (2026). \textit{Smart Share House \& Student Living Assistant project brief}.
+    \item Liam and Cara. (2026). Primary research interview for the accommodation app project. YouTube video: \url{https://www.youtube.com/watch?v=hysLiuMwqtg}.
+    \item Clark, V., Tuffin, K., Frewin, K. \& Bowker, N. (2018). Housemate desirability and understanding the social dynamics of shared living. \textit{Qualitative Psychology}, 5(1), 26--40.
 \end{itemize}
 
 \appendix
 \section{Interview Evidence}
 
-The interview asked why accommodation search feels frustrating and why very cheap social media listings can appear risky. It also explored what the participant wanted to know about a place and the people living there, including cleanliness, privacy, photos, reviews and roommate ratings. The evidence came from the team interview video and transcript stored in the project workspace.
+The interview asked why accommodation search feels frustrating and why very cheap social media listings can appear risky. It also explored what the participant wanted to know about a place and the people living there, including cleanliness, privacy, photos, reviews and roommate ratings. The evidence source is the team interview video on YouTube: \url{https://www.youtube.com/watch?v=hysLiuMwqtg}.
 
 \begin{table}[H]
     \centering
@@ -356,56 +377,5 @@ The domestic student shared living survey included 6 valid responses. The eviden
         \bottomrule
     \end{tabularx}
 \end{table}
-
-\section{Domestic Persona and Journey Map Evidence}
-\label{appdomesticpersona}
-
-\begin{table}[H]
-    \centering
-    \small
-    \caption{Domestic shared living persona and journey map summary.}
-    \begin{tabularx}{\textwidth}{@{}L{3.2cm} Y@{}}
-        \toprule
-        Element & Summary\\
-        \midrule
-        Persona & A domestic student already living in shared accommodation wants less household tension and clearer responsibility management.\\
-        Scenario & The student tries to keep the household running after move in, but household work, bill payments and communication rely on informal verbal agreements.\\
-        Journey stages & The journey moves from the move in agreement to routine living, then to a missed task or late payment, a conflict discussion and a later renegotiation of house rules.\\
-        Pain points & The student has no formal system, finds reminders awkward, does not know who is accountable, faces repeated conflict and feels weak social connection.\\
-        Design implication & Responsibility expectations should appear during compatibility checking and be reinforced through shared rules after move in.\\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\section{Property Manager Persona and Journey Map Evidence}
-\label{apppropertymanager}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{property_manager_persona.png}
-    \caption{Property manager persona, scenario and journey map.}
-    \label{figpropertymanagerpersona}
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \small
-    \caption{Property manager persona and journey map summary.}
-    \begin{tabularx}{\textwidth}{@{}L{3.2cm} Y@{}}
-        \toprule
-        Element & Summary\\
-        \midrule
-        Persona & A property manager who manages listings, receives student enquiries and screens applicants for shared accommodation.\\
-        Scenario & The manager publishes a listing, answers repeated questions, checks applicant reliability and coordinates inspection or move in information.\\
-        Journey stages & Listing preparation, enquiry handling, applicant screening, inspection coordination and tenant handover.\\
-        Pain points & Repeated messages, incomplete applications, difficulty communicating trust signals and pressure to fill vacancies quickly.\\
-        Design implication & The student-facing evaluation flow should use verified listing details, structured questions and clearer applicant information without making property managers the primary user.\\
-        \bottomrule
-    \end{tabularx}
-\end{table}
-
-\section{Persona and Team Synthesis Artefacts}
-
-The supporting artefacts show how the team used stakeholder work, personas, mapping and meeting minutes from Weeks 1 to 4 to move from a broad problem space to the final statement about trust and compatibility before commitment.
 
 \end{document}
