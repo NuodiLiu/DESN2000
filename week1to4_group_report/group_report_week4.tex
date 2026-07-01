@@ -10,7 +10,7 @@
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 
-\graphicspath{{./}{figures/}{../}}
+\graphicspath{{./}{figures/}{../}{../week1to4_design_journal/}{../week1to4_design_journal/persona/}}
 
 \definecolor{accent}{HTML}{0E6B67}
 \definecolor{softgray}{HTML}{F4F6F6}
@@ -55,18 +55,16 @@
     \includegraphics[width=4.2cm]{unsw_logo.png}
 
     \vspace{1.1cm}
-    {\Large DESN2000-SENG\par}
+    {\Large DESN2000 SENG\par}
     \vspace{0.3cm}
     {\Huge\bfseries Interim Report\par}
     \vspace{0.25cm}
-    {\LARGE\bfseries Student Shared Accommodation and Housemate Evaluation Experience\par}
+
 
     \vspace{1.2cm}
     \begin{tabular}{@{}ll@{}}
-        Project space & Smart Share-House \& Student Living Assistant\\
+        Project space & Smart Share House \& Student Living Assistant\\
         Team members & Liam (z5403196), Dylan (z5569891), Nicky (z5505220), Pranav (z5589687)\\
-        Date & 1 July 2026\\
-        Word count & 888 words, excluding tables, figures, references and appendices\\
     \end{tabular}
 
     \vfill
@@ -80,13 +78,13 @@
 
 \section{Introduction and Project Context}
 
-This interim report explores shared accommodation challenges faced by university students, with a focus on international students and new share-house residents. The broader project brief identifies chores, expenses, communication, maintenance, privacy, wellbeing and conflict as key shared-living issues. Our early research showed that many later shared-living conflicts begin before move-in, when students judge listings, contact potential housemates and decide whether the arrangement is trustworthy and compatible. Therefore, this report focuses on the pre-commitment accommodation and housemate evaluation experience.
+This interim report examines shared accommodation problems experienced by university students, with attention to international students and people entering a shared house for the first time. The project brief frames shared living as a practical and social challenge that affects everyday routines, trust and wellbeing. Early research suggested that many later problems begin before move in, when students judge a listing, contact potential housemates and decide whether the arrangement feels trustworthy and compatible. For this reason, the report focuses on how students evaluate accommodation and housemates before they commit.
 
-\boxfigure{Project focus within the Smart Share-House problem space}{Broad shared-living problem space: chores, expenses, communication, maintenance, privacy and wellbeing. This report's focus: pre-commitment listing trust, housemate compatibility and early shared-living expectations.}{fig:focus}
+\boxfigure{Project focus within the Smart Share House problem space}{The wider project considers everyday shared living. This report narrows the focus to the decision period before commitment, when students need to judge listing trust, housemate fit and early expectations.}{figfocus}
 
 \section{Stakeholders}
 
-Stakeholder mapping was used as a divergent technique to identify all groups affected by the shared-living system, then converge on the users with the highest uncertainty and consequence during accommodation decisions.
+Stakeholder mapping helped the team identify the groups affected by shared living and then focus on users who face the greatest uncertainty when accommodation decisions are made.
 
 \begin{table}[H]
     \centering
@@ -96,23 +94,23 @@ Stakeholder mapping was used as a divergent technique to identify all groups aff
         \toprule
         Stakeholder & Needs & Impact if unmet & Priority & Evidence source\\
         \midrule
-        International students & Trustworthy listings, clear rental information and compatible housemates & Scam risk, poor housing decisions and stress before arrival & Primary & Survey, interview\\
-        Existing housemates & Responsible, clean and respectful new housemates & Household conflict, unpaid bills and chore disputes & Primary & Survey, interview, persona\\
-        Domestic students & Better coordination for chores, bills and communication & Shared-living conflict and weak social connection & Secondary & Domestic survey\\
-        Property managers & Efficient enquiries and reliable applicants & Repetitive messaging and incomplete applications & Secondary & Persona analysis\\
-        Students with accessibility or stress needs & Low-friction, clear and accessible processes & Higher cognitive load and exclusion & Affected & Stakeholder mapping\\
+        International students & They need listings they can trust, rental information they can understand and housemates who fit their routines. & They may face scams, choose unsuitable housing or feel stressed before arrival. & Primary & Survey and interview\\
+        Existing housemates & They need applicants who are reliable, tidy and respectful. & The household may experience conflict, unpaid bills and uneven responsibility sharing. & Primary & Survey, interview and persona\\
+        Domestic students & They need simple ways to discuss household work, bills and communication. & Shared living can become tense, and social connection may weaken. & Secondary & Domestic survey\\
+        Property managers & They need enquiries that are easier to handle and applicants who provide enough information. & They may deal with repeated messages and incomplete applications. & Secondary & Persona analysis\\
+        Students with accessibility or stress needs & They need search and communication flows that reduce cognitive load. & They may be excluded by unclear or demanding processes. & Affected & Stakeholder mapping\\
         \bottomrule
     \end{tabularx}
-    \label{tab:stakeholders}
+    \label{tabstakeholders}
 \end{table}
 
-International students and existing housemates were prioritised because they experience the highest risk at the commitment point: international students must judge unfamiliar listings and rental norms, while existing housemates live with the long-term consequences of poor matching. Primary users were selected for full persona and journey mapping, while secondary and affected stakeholders were used to define constraints and risks.
+International students and existing housemates were prioritised because both groups carry substantial risk at the point of commitment. International students must judge unfamiliar listings and rental norms, while existing housemates must live with the consequences of poor matching. The team used primary users for persona and journey mapping, while secondary and affected stakeholders informed the constraints and risks.
 
 \section{Research Methods and Synthesis}
 
-The team used a mixed research approach to collect both broad patterns and deeper explanations. Surveys captured common concerns, while interview and persona work helped explain why those concerns matter in everyday shared living.
+The team used mixed methods to identify common patterns and understand why those patterns matter in everyday shared living. Surveys showed the scale of recurring concerns, while the interview and persona work gave context to the decisions students make when choosing accommodation or housemates.
 
-The research questions focused on four decision-critical areas: how students judge listing trustworthiness, what information they need before contacting landlords or housemates, what qualities make a housemate compatible, and what shared-living responsibilities commonly create conflict after move-in.
+The research questions examined how students judge whether a listing can be trusted, what they need to know before contacting a landlord or housemate, which qualities shape housemate fit and how shared responsibilities can create conflict after move in.
 
 \begin{table}[H]
     \centering
@@ -123,12 +121,12 @@ The research questions focused on four decision-critical areas: how students jud
         Focus area & Example research question\\
         \midrule
         Trust & How concerned are students about rental scams, fake listings or misleading housing information?\\
-        Compatibility & How important is roommate compatibility when choosing accommodation?\\
-        Communication & What information do students need before deciding whether to contact or commit?\\
-        Shared responsibilities & How are chores, bills and house rules currently managed after move-in?\\
+        Compatibility & How important is roommate compatibility when students choose accommodation?\\
+        Communication & What information do students need before they decide whether to make contact or commit?\\
+        Shared responsibilities & How are household work, bills and house rules handled after move in?\\
         \bottomrule
     \end{tabularx}
-    \label{tab:researchquestions}
+    \label{tabresearchquestions}
 \end{table}
 
 \begin{table}[H]
@@ -137,120 +135,121 @@ The research questions focused on four decision-critical areas: how students jud
     \caption{Research methods used during the Empathise stage.}
     \begin{tabularx}{\textwidth}{@{}L{3.0cm} L{3.3cm} Y Y@{}}
         \toprule
-        Method & Participants / source & Purpose & Output used in report\\
+        Method & Participants or source & Purpose & Output used in report\\
         \midrule
-        International student survey & 16 valid responses & Identify accommodation search concerns, especially scams, communication and compatibility & Quantitative charts and theme counts\\
-        Domestic student survey & 6 students in shared accommodation & Understand post-move-in issues such as chores, bills and conflict & Shared-living pain points\\
-        Semi-structured interview & 1 student participant & Explore trust, cleanliness, privacy and housemate expectations in depth & Qualitative validation\\
-        Persona and stakeholder analysis & Team persona files & Translate evidence into user archetypes & Personas, scenarios and journey maps\\
-        Mindmap & Team synthesis artefact & Cluster findings and compare themes by frequency, severity and design relevance & Final themes and problem definition\\
+        International student survey & 16 valid responses & Understand accommodation search concerns, with attention to scams, communication and compatibility. & Charts and theme counts\\
+        Domestic student survey & 6 students in shared accommodation & Understand problems that appear after move in, such as household work, bills and conflict. & Shared living pain points\\
+        Student interview & 1 participant & Explore trust, cleanliness, privacy and housemate expectations in more depth. & Qualitative validation\\
+        Persona and stakeholder analysis & Team persona files & Turn research evidence into user archetypes. & Personas, scenarios and journey maps\\
+        Affinity mapping and mind map & Team synthesis artefact & Group findings and compare them by frequency, severity and design relevance. & Final themes and problem definition\\
         \bottomrule
     \end{tabularx}
-    \label{tab:methods}
+    \label{tabmethods}
 \end{table}
 
-After data collection, the team used a mindmap as a convergent technique. Repeated observations were grouped into five themes: trust and safety, housemate compatibility, communication barriers, household responsibility management and social connection. Comparing these themes showed that trust and compatibility occur before commitment and strongly influence later shared-living conflict.
+After data collection, the team used affinity mapping to group repeated observations. Five themes emerged across the evidence. The strongest pattern was that worries about trust and uncertainty about compatibility appear before commitment, yet they often shape conflict after students move in.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{mindmap.png}
-    \caption{Mindmap showing research themes from survey, interview and team synthesis.}
-    \label{fig:mindmap}
+    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{mindmap_overview.png}
+    \caption{Affinity map and mind map showing research themes from survey, interview and team synthesis.}
+    \label{figaffinity}
 \end{figure}
 
 \section{Key Research Findings}
 
 \subsection{Trust and Safety Shape Accommodation Decisions}
 
-All 16 international student survey respondents reported concern about rental scams, with half being very concerned and half slightly concerned. This indicates that students do not only need more listings; they need signals that help them judge whether listings, landlords and housemates are genuine. This creates a design requirement for verified listings, realistic photos, reviews and safer in-platform communication.
+All 16 international student survey respondents reported concern about rental scams, with half being very concerned and half being slightly concerned. This suggests that students do not only need access to more listings. They need help checking the person who posted a listing, matching the photos with the room and keeping early messages inside a safer platform. Student feedback should also be easy to find.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.94\textwidth]{survey_scams_concern.png}
-    \caption{International student survey result: concern about rental scams, n=16.}
-    \label{fig:scams}
+    \caption{International student survey result. Concern about rental scams, n=16.}
+    \label{figscams}
 \end{figure}
 
-\subsection{Housemate Compatibility Is a High-Priority Decision Factor}
+\subsection{Housemate Compatibility Is a High Priority Decision Factor}
 
-The international student survey showed an average roommate compatibility importance score of 4.44 out of 5. Interview findings also highlighted cleanliness, respect, privacy and daily routines as important compatibility factors. This creates a design requirement for visible compatibility information before users commit to a room.
+The international student survey showed an average roommate compatibility importance score of 4.44 out of 5. The interview also showed that compatibility is practical rather than abstract. Students wanted to know whether housemates keep spaces clean, respect privacy and follow routines that would not clash with their own. The design should make this information visible before users commit to a room.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.94\textwidth]{survey_roommate_compatibility.png}
-    \caption{International student survey result: roommate compatibility importance, n=16.}
-    \label{fig:compatibility}
+    \caption{International student survey result. Roommate compatibility importance, n=16.}
+    \label{figcompatibility}
 \end{figure}
 
 \subsection{Communication and Information Gaps Increase Uncertainty}
 
-International students may be unfamiliar with Australian rental processes, inspection expectations and how to judge listing reliability. The interview participant also expected clear location details, realistic photos, reviews and surrounding facility information before deciding. This creates a design requirement for structured listing information and guided communication rather than unstructured social media-style messaging.
+International students may not know Australian rental processes, inspection expectations or the cues used to judge whether a listing is reliable. The interview participant wanted to see where the room was, what it looked like in realistic photos, whether reviews were available and what facilities were nearby. This points to a need for listing pages and messages that guide the user through a decision rather than leaving them to interpret scattered information on their own.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.94\textwidth]{survey_search_challenges.png}
-    \caption{International student survey result: accommodation search challenges before arrival, n=16.}
-    \label{fig:barriers}
+    \caption{International student survey result. Accommodation search challenges before arrival, n=16.}
+    \label{figbarriers}
 \end{figure}
 
-\subsection{Shared-Living Conflicts Often Come From Unclear Expectations}
+\subsection{Shared Living Conflicts Often Come From Unclear Expectations}
 
-Domestic student findings showed that informal household systems can break down after move-in. All domestic respondents used verbal agreements for chores, and all reported conflict over household responsibilities. Bill splitting was also weakly structured, with 66.67\% reporting no formal arrangement and all reporting issues with late payment. This creates a design requirement for clarifying expectations around chores, bills and shared rules before move-in, not only personality matching.
+Domestic student findings showed that informal household systems can fail after move in. All domestic respondents relied on verbal agreements for household work, and all had experienced conflict over household responsibilities. Bill splitting was also weakly structured, as 66.67\% reported no formal arrangement and all reported late payment issues. The design should help students discuss responsibility expectations before move in, rather than relying only on personality matching.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.82\textwidth]{domestic_chore_methods.png}
-    \caption{Domestic student survey result: chore management methods, n=6.}
-    \label{fig:chores}
+    \caption{Domestic student survey result. Household work management methods, n=6.}
+    \label{figchores}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.94\textwidth]{domestic_bill_splitting.png}
-    \caption{Domestic student survey result: bill-splitting arrangements, n=6.}
-    \label{fig:bills}
+    \caption{Domestic student survey result. Bill splitting arrangements, n=6.}
+    \label{figbills}
 \end{figure}
 
 \section{Personas, Scenarios and Journey Maps}
 
-The personas were developed from repeated survey and interview themes rather than invented assumptions. Each persona includes a scenario and journey map to show the user's goal, decision context, emotional state, pain points and unmet needs. The journey maps show that the most critical breakdown occurs during shortlisting, contacting and compatibility checking, where users must make high-risk decisions with incomplete trust and lifestyle information.
+The personas were built from repeated survey and interview themes rather than assumptions. Each persona includes a scenario and a journey map so the team can see what the user is trying to do, what pressure they feel and where support is missing. The journey maps showed that the main breakdown occurs while users shortlist options, make contact and check compatibility, because they must make consequential decisions with limited trust and lifestyle information.
 
 \begin{table}[H]
     \centering
     \small
-    \caption{Research-based personas, validation scenarios and journey-map pain points.}
+    \caption{Research informed personas, validation scenarios and journey map pain points.}
     \begin{tabularx}{\textwidth}{@{}L{3.0cm} Y Y Y@{}}
         \toprule
-        Persona & Research basis & Scenario for validation & Journey-map pain point\\
+        Persona & Research basis & Scenario for validation & Journey map pain point\\
         \midrule
-        International student & Scam concern, unfamiliar rental norms and need for clear listing details & Chooses accommodation before arriving in Australia & Cannot verify listing trustworthiness or housemate compatibility\\
-        Existing housemate & Cleanliness, bills, shared rules and privacy concerns & Chooses a new housemate for an existing share house & Hard to discuss expectations before move-in\\
-        Domestic shared-living student & Chore and bill conflict after move-in & Wants to reduce household tension and improve coordination & Informal agreements fail after move-in\\
+        International student & The evidence showed scam concern, unfamiliar rental norms and a need for clearer listing details. & The student chooses accommodation before arriving in Australia. & The student cannot judge listing trust or housemate fit with confidence.\\
+        Existing housemate & The evidence showed concern about cleanliness, bills, shared rules and privacy. & The student chooses a new housemate for an existing shared house. & Expectations are difficult to discuss before move in.\\
+        Domestic shared living student & The evidence showed conflict around household work and bills after move in. & The student wants to reduce household tension and improve coordination. & Informal agreements often fail once routines begin.\\
+        Property manager & The evidence showed that reliable listings and clear applicant communication affect trust before commitment. & The property manager screens student applicants and answers repeated listing questions. & High enquiry volume and incomplete applications make trust and communication harder to manage.\\
         \bottomrule
     \end{tabularx}
-    \label{tab:personas}
+    \label{tabpersonas}
 \end{table}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{housemate_emily_chen_persona.png}
+    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{HousemateEmilyChenPersona.png}
     \caption{Existing housemate persona, scenario and journey map.}
-    \label{fig:housemate-persona}
+    \label{fighthousematepersona}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \evidencecard{International student persona, validation scenario and journey map}{
-    \textbf{Persona structure.} A newly arrived international student needs affordable accommodation, trustworthy listing information and compatible housemates while unfamiliar with Australian rental norms. \textbf{Scenario.} The student must shortlist accommodation before arrival, contact a landlord or housemate, and decide whether the listing is safe enough to pursue. \textbf{Journey-map pain points.} Awareness: fragmented platforms. Shortlisting: hard to verify authenticity. Contacting: unclear replies and language barriers. Compatibility check: lifestyle expectations are not visible. Decision: fear of committing to the wrong room or people.}
-    \caption{International student persona, validation scenario and journey-map summary.}
-    \label{fig:int-persona}
+    \textbf{Persona structure.} A newly arrived international student needs affordable accommodation, listing information they can trust and housemates whose routines are compatible with their own. \textbf{Scenario.} The student shortlists accommodation before arriving, contacts a landlord or housemate and decides whether the listing is safe enough to pursue. \textbf{Journey map pain points.} The student first faces fragmented platforms, then struggles to verify authenticity during shortlisting. Replies may be unclear or hard to interpret. Lifestyle expectations are often hidden during compatibility checking. At the decision point, the student worries about choosing the wrong room or people.}
+    \caption{International student persona, validation scenario and journey map summary.}
+    \label{figintpersona}
 \end{figure}
 
-The domestic student persona and full journey-map summary are included in Appendix~\ref{app:domesticpersona} as supporting evidence for post-move-in responsibility conflicts.
+The domestic student persona and full journey map summary are included in Appendix~\ref{appdomesticpersona} as supporting evidence for responsibility conflicts after move in. The property manager persona is included in Appendix~\ref{apppropertymanager} as secondary stakeholder evidence for listing trust, applicant screening and communication constraints.
 
 \section{Common Goals and Pain Points}
 
-The following synthesis table connects user goals, pain points, evidence sources and design implications. It shows the link between raw research and the final problem definition.
+The synthesis table links user goals with the problems found in the research and the design direction that follows from them.
 
 \begin{table}[H]
     \centering
@@ -260,52 +259,50 @@ The following synthesis table connects user goals, pain points, evidence sources
         \toprule
         Common goal & Pain point & Evidence source & Design implication\\
         \midrule
-        Find safe accommodation & Hard to verify listings & International survey, interview & Trust indicators and verified listing information\\
-        Choose suitable housemates & Lifestyle habits are unclear & Survey, interview & Compatibility questions and profile matching\\
-        Communicate clearly & Replies are slow or incomplete & Interview, accommodation search journey map & Structured in-platform messaging\\
-        Avoid future conflict & Chores, bills and rules are not agreed early & Domestic survey & Shared expectations before move-in\\
-        Decide with confidence & Users feel pressured and uncertain & Journey maps & Comparison, reviews and expectation summaries\\
+        Find safe accommodation & Users struggle to judge whether a listing is genuine. & International survey and interview & The product should help users check listing identity and evidence.\\
+        Choose suitable housemates & Lifestyle habits are hard to see before commitment. & Survey and interview & Profiles should ask about routines and expectations in plain terms.\\
+        Communicate clearly & Replies may arrive late or miss information users need. & Interview and accommodation search journey map & Messaging should guide the questions users need to ask.\\
+        Avoid future conflict & Household work, bills and rules are often not discussed early enough. & Domestic survey & The experience should surface shared expectations before move in.\\
+        Decide with confidence & Users feel pressure when evidence is incomplete. & Journey maps & The product should help users compare options and review expectations before deciding.\\
         \bottomrule
     \end{tabularx}
-    \label{tab:goals}
+    \label{tabgoals}
 \end{table}
 
 \section{Problem Definition}
 
 \subsection{Convergence From Research}
 
-The team initially explored several shared-living problem areas: rental trust, communication, chores, bills, privacy, maintenance and household conflict. Survey and interview findings showed that many of these issues are connected by one earlier decision point: students often commit to accommodation or housemates before they have enough reliable information about listing legitimacy, lifestyle compatibility and shared responsibilities. Therefore, the team converged on the pre-commitment accommodation and housemate evaluation stage as the most important problem situation to address.
+The team first explored trust in rentals, how housemates communicate, how household responsibilities are shared and how conflict develops. Survey and interview findings showed that many of these concerns connect to an earlier decision point. Students often commit to accommodation or housemates before they have enough reliable information about listing legitimacy, lifestyle fit and responsibility expectations. The team therefore focused on the stage where students evaluate accommodation and housemates before commitment.
 
-\boxfigure{Convergence diagram linking research themes to final problem definition}{Trust and safety + housemate compatibility + communication barriers + shared-responsibility expectations converge on one high-risk moment: evaluating accommodation and housemates before commitment.}{fig:convergence}
+\boxfigure{Convergence diagram linking research themes to final problem definition}{Trust concerns, housemate fit, communication barriers and responsibility expectations meet at the same decision point. Students need better support while evaluating accommodation and housemates before commitment.}{figconvergence}
 
 \subsection{Final Problem Statement}
 
-\begin{quote}
-International students and new share-house residents need a trustworthy and structured way to evaluate accommodation and potential housemates before committing, because current search and communication processes make it difficult to verify listing legitimacy, compare lifestyle compatibility, and clarify shared responsibilities such as cleaning, bills, privacy and household expectations.
-\end{quote}
+International students and new shared house residents need a trustworthy and structured way to evaluate accommodation and potential housemates before committing. Existing search and communication processes make it difficult to check whether a listing is legitimate, compare lifestyle fit and discuss who cleans, how bills are paid, how privacy is handled and what the household expects.
 
 \subsection{Justification}
 
-This problem matters because it occurs before users make a high-risk housing decision and directly affects later shared-living outcomes. Research findings showed that trust concerns, unclear compatibility and informal household expectations can lead to anxiety, poor decisions and conflict after move-in. A focused problem definition also gives the next design phase clear requirements: the solution should support trust verification, compatibility comparison, structured communication and expectation-setting.
+This problem matters because it appears before users make a risky housing decision and then shapes their living experience. The research showed that trust concerns, unclear compatibility and informal expectations can lead to anxiety, poor decisions and conflict after move in. A focused problem definition gives the next design phase a clear direction. The solution should let users check whether a listing can be trusted, understand how a potential housemate lives, communicate through a guided flow and agree on expectations before moving in.
 
 \section{Conclusion}
 
-This report demonstrates the Empathise and Define stages of the project. The research evidence converged on a specific problem: students need stronger support before committing to a room or housemate. The next design phase should test concepts that help users verify trust, compare compatibility and agree on shared-living expectations before move-in.
+This report demonstrates the Empathise and Define stages of the project. The research evidence led the team to a specific problem. Students need stronger support before they commit to a room or housemate. The next design phase should test concepts that help users check trust, understand compatibility and agree on shared living expectations before move in.
 
 \newpage
 \section{References}
 
 \begin{itemize}
-    \item Liam and Cara. (2026). Primary research interview for the accommodation app project [Video]. \url{https://www.youtube.com/watch?v=hysLiuMwqtg}.
-    \item Team international student survey. (2026). \textit{International Student Accommodation Search Experience Survey in Australia - Default Report}. Internal team survey report, 16 responses.
-    \item Team domestic student shared-living survey. (2026). Internal survey screenshots and results, 6 responses.
-    \item UNSW DESN2000-SENG. (2026). \textit{Smart Share-House \& Student Living Assistant project brief}.
+    \item Liam and Cara. (2026). Primary research interview for the accommodation app project. Video held in the team workspace.
+    \item Team international student survey. (2026). \textit{International Student Accommodation Search Experience Survey in Australia. Default Report}. Internal team survey report, 16 responses.
+    \item Team domestic student shared living survey. (2026). Internal survey screenshots and results, 6 responses.
+    \item UNSW DESN2000 SENG. (2026). \textit{Smart Share House \& Student Living Assistant project brief}.
 \end{itemize}
 
 \appendix
 \section{Interview Evidence}
 
-Source: semi-structured accommodation app user interview. The interview explored accommodation search frustration, trust in cheap social media listings, good housemate qualities, cleanliness, privacy, realistic photos, location information, reviews and interest in roommate ratings. Evidence sources: \href{https://www.youtube.com/watch?v=hysLiuMwqtg}{interview video} and \href{https://unsw-team-desn-seng2026.atlassian.net/wiki/spaces/XULKS/pages/24576020/User+Interview+Video+Link+and+Transcript}{interview transcript}.
+The interview asked why accommodation search feels frustrating and why very cheap social media listings can appear risky. It also explored what the participant wanted to know about a place and the people living there, including cleanliness, privacy, photos, reviews and roommate ratings. The evidence came from the team interview video and transcript stored in the project workspace.
 
 \begin{table}[H]
     \centering
@@ -315,16 +312,16 @@ Source: semi-structured accommodation app user interview. The interview explored
         \toprule
         Topic & Interview insight & Use in report\\
         \midrule
-        Trust & Very cheap social media listings can feel suspicious when information is incomplete. & Supports trust and safety finding.\\
-        Compatibility & Cleanliness, privacy and schedule were treated as practical shared-living needs. & Supports housemate compatibility persona.\\
-        Listing information & Location, realistic photos, reviews and surrounding facilities were expected before deciding. & Supports communication and information-gap finding.\\
+        Trust & Very cheap social media listings can feel suspicious when the information is incomplete. & Supports the trust and safety finding.\\
+        Compatibility & Cleanliness, privacy and schedule fit were treated as practical shared living needs. & Supports the housemate compatibility persona.\\
+        Listing information & The participant expected location details, realistic photos, reviews and information about nearby facilities before deciding. & Supports the communication and information gap finding.\\
         \bottomrule
     \end{tabularx}
 \end{table}
 
 \section{International Student Survey Evidence}
 
-Source: team international student survey, 16 valid responses. Evidence includes rental scam concern, roommate compatibility importance, accommodation search challenges, misleading listing experiences and platform feature expectations. Full survey artefacts are stored in the \href{https://unsw-team-desn-seng2026.atlassian.net/wiki/spaces/XULKS/pages/11698310/International+students+-+Persona}{international student persona evidence page}.
+The international student survey included 16 valid responses. The evidence showed how students perceived scams, how much compatibility mattered and what problems they faced before arrival. It also covered experiences with misleading listings and expectations for platform features. Full survey artefacts are stored in the international student persona evidence page.
 
 \begin{table}[H]
     \centering
@@ -334,16 +331,16 @@ Source: team international student survey, 16 valid responses. Evidence includes
         \toprule
         Evidence & Result & Report implication\\
         \midrule
-        Rental scam concern & 16/16 respondents reported concern; 50\% were very concerned. & Trust verification is a core need.\\
-        Compatibility importance & Average score was 4.44/5. & Matching must include lifestyle expectations.\\
-        Pre-arrival search challenge & Language barriers were the most selected difficulty. & Guided communication should reduce uncertainty.\\
+        Rental scam concern & 16 out of 16 respondents reported concern, and 50\% were very concerned. & Trust checking is a core need.\\
+        Compatibility importance & The average score was 4.44 out of 5. & Matching should include lifestyle expectations.\\
+        Search challenge before arrival & Language barriers were the most selected difficulty. & Guided communication should reduce uncertainty.\\
         \bottomrule
     \end{tabularx}
 \end{table}
 
-\section{Domestic Student Shared-Living Survey Evidence}
+\section{Domestic Student Shared Living Survey Evidence}
 
-Source: team domestic student shared-living survey, 6 valid responses. Evidence includes chore management methods, conflict over household responsibilities, bill-splitting arrangements, late payment issues and housemate social connection. Full survey artefacts are stored in the \href{https://unsw-team-desn-seng2026.atlassian.net/wiki/spaces/XULKS/pages/17465347/Domestic+students+-+Persona}{domestic student persona evidence page}.
+The domestic student shared living survey included 6 valid responses. The evidence covered how students manage household work, how conflict appears around responsibilities, how bills are split, how late payments occur and how housemate connection develops. Full survey artefacts are stored in the domestic student persona evidence page.
 
 \begin{table}[H]
     \centering
@@ -353,35 +350,62 @@ Source: team domestic student shared-living survey, 6 valid responses. Evidence 
         \toprule
         Evidence & Result & Report implication\\
         \midrule
-        Chore management & 100\% used verbal informal agreements. & Informal systems are fragile.\\
-        Household responsibility conflict & 100\% had experienced conflict. & Expectations should be clarified before move-in.\\
-        Bill splitting & 66.67\% had no formal bill-splitting arrangement. & Compatibility should include shared responsibility norms.\\
+        Household work management & 100\% used verbal informal agreements. & Informal systems are fragile.\\
+        Household responsibility conflict & 100\% had experienced conflict. & Expectations should be clarified before move in.\\
+        Bill splitting & 66.67\% had no formal bill splitting arrangement. & Compatibility should include expectations around shared responsibilities.\\
         \bottomrule
     \end{tabularx}
 \end{table}
 
-\section{Domestic Persona and Journey-Map Evidence}
-\label{app:domesticpersona}
+\section{Domestic Persona and Journey Map Evidence}
+\label{appdomesticpersona}
 
 \begin{table}[H]
     \centering
     \small
-    \caption{Domestic shared-living persona and journey-map summary.}
+    \caption{Domestic shared living persona and journey map summary.}
     \begin{tabularx}{\textwidth}{@{}L{3.2cm} Y@{}}
         \toprule
         Element & Summary\\
         \midrule
-        Persona & A domestic student already living in shared accommodation who wants less household tension and clearer responsibility management.\\
-        Scenario & The student tries to keep the household running after move-in, but chores, bill payments and communication rely on informal verbal agreements.\\
-        Journey stages & Move-in agreement, routine living, missed chore or late payment, conflict discussion, renegotiation of house rules.\\
-        Pain points & No formal system, awkward reminders, unclear accountability, repeated conflict and weak social connection.\\
-        Design implication & Responsibility expectations should be visible during compatibility checking and reinforced through shared rules after move-in.\\
+        Persona & A domestic student already living in shared accommodation wants less household tension and clearer responsibility management.\\
+        Scenario & The student tries to keep the household running after move in, but household work, bill payments and communication rely on informal verbal agreements.\\
+        Journey stages & The journey moves from the move in agreement to routine living, then to a missed task or late payment, a conflict discussion and a later renegotiation of house rules.\\
+        Pain points & The student has no formal system, finds reminders awkward, does not know who is accountable, faces repeated conflict and feels weak social connection.\\
+        Design implication & Responsibility expectations should appear during compatibility checking and be reinforced through shared rules after move in.\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\section{Property Manager Persona and Journey Map Evidence}
+\label{apppropertymanager}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=0.5\textheight,keepaspectratio]{property_manager_persona.png}
+    \caption{Property manager persona, scenario and journey map.}
+    \label{figpropertymanagerpersona}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Property manager persona and journey map summary.}
+    \begin{tabularx}{\textwidth}{@{}L{3.2cm} Y@{}}
+        \toprule
+        Element & Summary\\
+        \midrule
+        Persona & A property manager who manages listings, receives student enquiries and screens applicants for shared accommodation.\\
+        Scenario & The manager publishes a listing, answers repeated questions, checks applicant reliability and coordinates inspection or move in information.\\
+        Journey stages & Listing preparation, enquiry handling, applicant screening, inspection coordination and tenant handover.\\
+        Pain points & Repeated messages, incomplete applications, difficulty communicating trust signals and pressure to fill vacancies quickly.\\
+        Design implication & The student-facing evaluation flow should use verified listing details, structured questions and clearer applicant information without making property managers the primary user.\\
         \bottomrule
     \end{tabularx}
 \end{table}
 
 \section{Persona and Team Synthesis Artefacts}
 
-Supporting artefacts include stakeholder/persona files, the Emily Chen housemate persona, the mindmap, and Week 1--4 meeting minutes. These materials document how the team moved from broad stakeholder exploration to the final pre-commitment trust and compatibility problem statement.
+The supporting artefacts show how the team used stakeholder work, personas, mapping and meeting minutes from Weeks 1 to 4 to move from a broad problem space to the final statement about trust and compatibility before commitment.
 
 \end{document}
