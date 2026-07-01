@@ -1,0 +1,27 @@
+.DS_Store
+tmp/
+
+# Large/raw local media
+*.mp4
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Design journal material excluded from this GitHub submission
+week1to4_design_journal/
+design_journal_week4_housemate_draft.*
+design_jounal_1_z5403196.*
+DESN2000 T2 2026 Assessment Guide - Design Journal Week 4.pdf
+
+# Local course/reference files not needed for the report repository
+DESN2000 T2 2026 SENG Assessment Guideline - Interim Report.pdf
+DESN2000_SENG_Brief_2026T2.docx
+
+# Superseded generated/duplicate report images
+week1to4_group_report/figures/
+week1to4_group_report/International student survey result showing*.png
+week1to4_group_report/Domestic student survey result showing*.png
