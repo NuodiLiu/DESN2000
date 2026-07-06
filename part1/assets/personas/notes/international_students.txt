@@ -1,0 +1,24 @@
+Stakeholder Identification: International Students
+
+International students were identified as the primary stakeholder group for this project based on survey responses collected from 16 students currently studying in Australia. The findings suggest that international students face several challenges when searching for accommodation, particularly due to unfamiliarity with the Australian rental market, communication barriers, and concerns regarding trust and safety.
+
+The survey revealed that online housing platforms and student social media groups are the most used methods for finding accommodation. However, trust remains a significant concern. All respondents reported some level of concern regarding rental scams, while 43.75% had previously encountered misleading information in housing advertisements. These findings indicate a strong need for verified listings and identity verification features.
+
+
+
+Roommate compatibility was also identified as an important factor influencing accommodation decisions. Approximately 87.5% of respondents considered compatibility to be important or extremely important when choosing accommodation, and 68.75% reported experiencing conflicts with previous housemates. Participants commonly prioritized qualities such as cleanliness, respectfulness, similar daily schedules, and willingness to share household responsibilities.
+
+
+
+Language barriers were another recurring issue, with 44% of respondents identifying communication difficulties as one of the most challenging aspects of finding accommodation before arriving in Australia. Furthermore, over 80% of participants indicated that they would be willing to use a platform that supports preference-based roommate matching.
+
+
+
+Overall, the findings suggest that international students require accommodation services that prioritise trust, transparency, effective communication, and compatibility-based matching, making them the primary stakeholder group for the proposed platform.
+
+ 
+
+Persona, Scenarios and User Journeys: International Students:
+
+
+

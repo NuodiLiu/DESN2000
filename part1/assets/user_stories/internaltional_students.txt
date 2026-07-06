@@ -1,0 +1,7 @@
+
+
+User stories: International Students
+
+As an international student searching for accommodation in Sydney, I want to find verified and compatible housemates through a secure and trustworthy platform, so that I can avoid scams, communicate safely, and live in a comfortable shared environment with minimal conflicts.
+
+Notes: This user story is supported by the survey findings. All participants expressed concerns regarding rental scams, while 87.5% considered roommate compatibility important or extremely important. Additionally, 68.75% reported experiencing previous conflicts with housemates, and over 80% indicated that they would use a platform that supports preference-based roommate matching. These findings suggest that international students value trust, safety, and compatibility when searching for shared accommodation.

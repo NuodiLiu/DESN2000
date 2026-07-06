@@ -1,0 +1,79 @@
+
+
+User Story
+As a property manager, I want to advertise available rental properties to students efficiently, so that I can reduce vacancy periods and find suitable tenants faster.
+
+As a property manager, I want to receive complete and accurate tenant information before arranging inspections, so that I can save time during the screening process.
+
+As a property manager, I want to communicate with prospective tenants through a centralised platform, so that I can manage enquiries more efficiently.
+
+As a property manager, I want to verify tenant profiles and rental histories, so that I can minimise risks and select reliable tenants.
+
+As a property manager, I want to match properties with suitable tenants based on their preferences and requirements, so that tenancy issues can be reduced.
+
+Acceptance Criteria
+
+● Property listings can be uploaded within 5 minutes.
+● Photos and rental details can be attached.
+● Students can contact the property manager directly through the platform.
+● The property manager can view all enquiries in one dashboard.
+Persona
+Basic Information
+Name: Sarah Chen
+Age: 38
+Occupation: Property Manager
+Location: Sydney
+Experience: 8 years
+Properties Managed: 120+ rental properties
+
+Background
+Sarah works for a property management company that manages student accommodation and private rental properties around Sydney universities. She handles tenant enquiries, property inspections, lease agreements, and maintenance requests.
+
+Due to the increasing demand for student accommodation, Sarah receives a large number of applications from both domestic and international students every semester. Student housing demand remains high while accommodation supply is limited.
+
+Goals
+
+● Fill vacancies quickly
+● Reduce administrative workload
+● Find reliable tenants
+● Minimise tenancy disputes
+● Improve communication with prospective tenants
+
+Frustrations
+
+● Receiving incomplete tenant applications
+● Repeatedly answering the same questions
+● Tenants withdrawing at the last minute
+● Difficulty verifying tenant suitability
+● Managing large volumes of enquiries during peak university intake periods
+
+Motivations
+● Efficient property management
+● Positive tenant experiences
+● Reduced vacancy periods
+● Better tenant-property matching
+
+Quote
+
+"I need a quicker way to identify suitable tenants and manage enquiries without spending hours on repetitive communication."
+
+Technology Usage
+http://Realestate.com.au : Daily
+Domain: Daily
+Email: Daily
+Microsoft Teams: Frequently
+Property Management Software: Daily
+
+Needs
+● A platform that provides complete tenant profiles.
+● Easier communication with prospective tenants.
+● Better visibility of tenant preferences and requirements.
+● Reduced manual administration.
+● Faster screening and matching processes.
+
+Pain Points
+High enquiry volume: Increased workload
+Incomplete information: Slower screening
+Poor tenant matching: More disputes
+Housing shortages: Increased competition for properties
+Communication delays: Reduced efficiency

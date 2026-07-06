@@ -1,0 +1,17 @@
+User Stories
+
+As a student renting a house in Sydney, I want to find a suitable, trustworthy, and verified long-term housemate, so that I can live in a safe, comfortable, and well-managed shared home. [2]
+
+As a student communicating with potential long-term housemates, I want to use a safe online communication environment, so that I do not need to share my personal contact details too early and can reduce the risk of harassment or scams. [2]
+
+As a student assessing potential long-term housemates, I want their identity, rental intention, and shared-living expectations to be verified, so that I can trust that I am communicating with a real person who is genuinely looking for stable shared accommodation.
+
+As a student choosing a long-term housemate, I want to compare compatibility in lifestyle, study or work schedule, cleanliness level, communication style, noise tolerance, guest expectations, and privacy needs, so that we can reduce conflict in daily shared living. [1]
+
+As a student living with a long-term housemate, I want clear co-living rules for splitting rent and utility bills, sharing house chores, keeping common areas clean, managing guests, and respecting private and shared spaces, so that we can avoid conflict and maintain a respectful living environment. [2]
+
+References
+
+[1] Clark, V. & Tuffin, K. (2015). Choosing housemates and justifying age, gender, and ethnic discrimination. Australian Journal of Psychology, 67(1), 20–28.
+
+[2] Clark, V., Tuffin, K., Frewin, K. & Bowker, N. (2018). Housemate Desirability and Understanding the Social Dynamics of Shared Living. Qualitative Psychology, 5(1), 26–40.

@@ -1,0 +1,21 @@
+Persona
+Sarah Chen is a 38-year-old property manager based in Sydney with over eight years of experience managing student and residential rental properties. She is responsible for advertising available properties, responding to enquiries, arranging inspections, screening applicants, and maintaining communication with tenants.
+
+Sarah's primary goal is to fill vacant properties quickly while finding reliable and suitable tenants. She values efficient communication, accurate tenant information, and streamlined administrative processes. However, she often faces challenges such as receiving incomplete applications, managing large volumes of enquiries, repetitive communication, and difficulties assessing tenant suitability.
+
+Quote: "I need an easier way to identify suitable tenants without spending hours managing enquiries."
+
+Scenario 1: Searching for Accommodation Online
+Sarah uses the platform to find suitable students for a newly listed property.
+
+User Journey: Search Property → Receive Enquiries → Review Applications → Shortlist Candidates → Select Tenant
+
+Scenario 2: Attending a House Inspection
+Sarah meets potential tenants during an inspection to assess their suitability for the property.
+
+User Journey: Schedule Inspection → Meet Tenants → Evaluate Suitability → Answer Questions → Follow Up
+
+Scenario 3: Moving Into a Shared House
+Sarah finalises the lease and ensures a smooth move-in process for the selected tenants.
+
+User Journey: Prepare Lease → Confirm Tenancy → Provide Information → Move-in Day → Post Move-in

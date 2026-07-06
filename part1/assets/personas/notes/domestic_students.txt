@@ -1,0 +1,44 @@
+Stakeholder Identification: Domestic Students
+
+Domestic students were identified as a key stakeholder group for this project based on survey responses collected from a small group of 6 students currently living in shared accommodation in Australia. While the sample size is small and findings are indicative rather than conclusive, the data reveals consistent patterns around household management, expense tracking, and social connection challenges faced by domestic students in shared living environments.
+
+
+
+Household Chores:
+
+The survey revealed that 100% of respondents rely solely on verbal informal agreements to manage household chores, with no formal system in place. 
+
+Despite this, 100% reported having experienced conflict with housemates over household responsibilities at some point, suggesting that informal arrangements, while seemingly fair, are fragile and prone to breakdown. 
+
+Furthermore, 66.67% expressed a desire for better chore tracking functionality, indicating a clear need for a structured and transparent system.
+
+
+
+Expense management:
+
+Expense management was also identified as a significant pain point. 66.67% of respondents have no formal bill splitting arrangement, 
+
+and 100% reported having experienced issues with housemates not paying their share of expenses on time. 
+
+Additionally, 33.33% of respondents who currently use an expense splitting app expressed a desire for more specific tracking functionality, noting that broader category systems make it difficult to clearly identify who is purchasing what and when.
+
+
+
+Social connection:
+
+Social connection emerged as another recurring concern, with 66.67% of respondents expressing a desire to feel more connected with their housemates. Many reported that despite living together, housemates rarely interact beyond necessities, highlighting a gap between physical proximity and genuine social engagement.
+
+
+
+Survey findings summary:
+
+Overall, the findings suggest that domestic students require a shared living solution that prioritises transparent household management, structured expense tracking, and tools that foster social connection, making them a core stakeholder group for the proposed platform.
+
+
+
+Persona, Scenarios and User Journeys - Domestic students:
+
+Here is the Figma board:
+
+
+

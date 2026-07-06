@@ -1,0 +1,28 @@
+Skateholder Identification
+
+Long-term housemates were identified as a key stakeholder group because they share the same living space over time and must coordinate everyday responsibilities. This group may include students, young professionals, workers, and other regular renters. In this project, a housemate is defined by stable shared living rather than student status, so short-term travellers, tourists, temporary guests, and short-stay renters are excluded. Housemates affect the shared-living experience through how they communicate, manage household duties, respect privacy, and respond to conflict. Their needs suggest that the system should help residents build trust, check compatibility, agree on house rules, manage shared responsibilities, and communicate safely.
+
+
+
+Persona: Housemate
+
+Name: Emily Chen
+Age: 22
+Location: Sydney, Australia
+User Type: Long-term housemate living in shared accommodation
+
+Background
+
+Emily is a long-term housemate living in a shared rental home in Sydney. As a student, she shares the house with other residents to reduce rent and utility costs. Her housemates may be domestic students, international students, workers, or young professionals. Because they live together over a long period, Emily needs a stable, respectful, and well-managed shared-living environment.
+
+Goals
+
+Emily wants to find compatible long-term housemates with similar expectations around cleanliness, noise, privacy, guests, and shared responsibilities. She wants to communicate safely, set clear house rules, split rent and utility bills fairly, and organise chores in a way that everyone understands and follows.
+
+Pain Points
+
+Emily is concerned that some housemates may not pay bills on time, may ignore cleaning duties, or may have very different living habits. She also worries about unclear boundaries between private and shared spaces, poor communication, and conflict when responsibilities are not clearly agreed on.
+
+Persona Summary
+
+Emily needs an app that helps long-term housemates build trust, communicate safely, manage shared responsibilities, and maintain a fair and comfortable living environment.

@@ -1,0 +1,57 @@
+Problem statement:
+
+Create a mobile platform which allows university students and shared accommodation residents to seamlessly manage household responsibilities, expenses and housemate communication, while also enabling property managers to streamline tenancy administration and tenant communication, to reduce conflict between tenants, streamline property management, and improve the overall shared living experience.
+
+Requirements to check against:
+
+User-focused (from research):
+
+Transparent chore tracking and rotation system
+
+Structured expense splitting with specific categories
+
+Verified housemate profiles to build trust
+
+Safe in-app communication before sharing personal details
+
+Compatibility-based housemate matching
+
+Simple onboarding that all housemates can adopt easily
+
+Multilingual support for international students unfamiliar with shared living norms
+
+Anonymous issue raising for conflict resolution
+
+Property listing search and filtering by location and affordability
+
+Rent reminder and payment tracking for property managers
+
+Broadcast announcements from property managers to tenants
+
+Technical:
+
+Mobile-first design
+
+Push notifications for chore and payment reminders
+
+Secure user authentication and identity verification
+
+Single unified platform (not fragmented across multiple tools)
+
+Role-based access (resident vs property manager views)
+
+Self-determined (time/resource restrictions):
+
+High-fidelity prototype only, no back-end required
+
+Completed within 10-week timeline
+
+Focused on 2-3 core features to avoid overcommitting
+
+Legal/Ethical:
+
+User data privacy compliance
+
+Accessibility requirements considered in design
+
+Secure handling of identity verification documents
