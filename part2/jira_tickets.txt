@@ -1,0 +1,887 @@
+JIRA EXPORT — Project ST4
+Site: https://unsw-team-desn-seng2026.atlassian.net
+Exported: 2026-07-16 23:31:02
+Total issues: 63
+==============================================================================
+
+[ST4-1] Identify stakeholders
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-1
+  Description / Acceptance Criteria:
+    Every group member must think of a stakeholder and do research on that stakeholder, in the form of surveys, interviews, preexisting app user data, etc.
+  customfield_10019: 0|i0006f:
+  customfield_10015: 2026-06-01
+------------------------------------------------------------------------------
+
+[ST4-2] Research on stakeholders/background
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-2
+  Description / Acceptance Criteria:
+    Pranav - Domestic students survey research
+    Dylan - International students survey research
+    Liam - International students interview + Housemates research
+    Nicky - Property manager research
+  customfield_10019: 0|i0006n:
+------------------------------------------------------------------------------
+
+[ST4-3] Domestic students
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  Parent/Epic: ST4-2 Research on stakeholders/background
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-3
+  customfield_10019: 0|i0006v:
+------------------------------------------------------------------------------
+
+[ST4-4] International students
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Qian Cao
+  Parent/Epic: ST4-2 Research on stakeholders/background
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-4
+  customfield_10019: 0|i00073:
+------------------------------------------------------------------------------
+
+[ST4-5] Housemates
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  Parent/Epic: ST4-2 Research on stakeholders/background
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-5
+  customfield_10019: 0|i0007b:
+------------------------------------------------------------------------------
+
+[ST4-6] Property manager
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: NUODI LIU
+  Parent/Epic: ST4-2 Research on stakeholders/background
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-6
+  customfield_10019: 0|i0007j:
+------------------------------------------------------------------------------
+
+[ST4-7] Persona, User journals
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-7
+  Description / Acceptance Criteria:
+    Write 1 persona per stakeholder (all team members), and for each stakeholder, come up with 3 scenarios, and a user journal for each scenario.
+  customfield_10019: 0|i0007r:
+------------------------------------------------------------------------------
+
+[ST4-8] Problem statement
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-8
+  Description / Acceptance Criteria:
+    Create a problem statement using the powerpoint slides as a reference.
+  customfield_10019: 0|i0007z:
+------------------------------------------------------------------------------
+
+[ST4-9] Epics
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-9
+  customfield_10019: 0|i00087:
+------------------------------------------------------------------------------
+
+[ST4-10] User stories
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-10
+  customfield_10019: 0|i0008f:
+------------------------------------------------------------------------------
+
+[ST4-11] Mind maps
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: NUODI LIU
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-11
+  customfield_10019: 0|i0008n:
+------------------------------------------------------------------------------
+
+[ST4-12] UI design & sketch
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Qian Cao
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-12
+  customfield_10019: 0|i0008v:
+------------------------------------------------------------------------------
+
+[ST4-13] User flow chart
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  Parent/Epic: ST4-12 UI design & sketch
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-13
+  customfield_10019: 0|i00093:
+------------------------------------------------------------------------------
+
+[ST4-14] System architecture chart 
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  Parent/Epic: ST4-12 UI design & sketch
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-14
+  customfield_10019: 0|i0009b:
+------------------------------------------------------------------------------
+
+[ST4-15] Domestic student persona/user journal
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  Parent/Epic: ST4-7 Persona, User journals
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-15
+  customfield_10019: 0|i000rz:
+------------------------------------------------------------------------------
+
+[ST4-16] International student persona/user journal
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Qian Cao
+  Parent/Epic: ST4-7 Persona, User journals
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-16
+  customfield_10019: 0|i000s7:
+------------------------------------------------------------------------------
+
+[ST4-17] Housemates persona/user journal
+  Type: Subtask   Status: In Progress   Priority: Medium
+  Assignee: NUODI LIU
+  Parent/Epic: ST4-7 Persona, User journals
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-17
+  customfield_10019: 0|i000sf:
+------------------------------------------------------------------------------
+
+[ST4-18] Property manager persona/user journal
+  Type: Subtask   Status: Done   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  Parent/Epic: ST4-7 Persona, User journals
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-18
+  customfield_10019: 0|i000sn:
+------------------------------------------------------------------------------
+
+[ST4-19] Epic 1: Household Task Management
+  Type: Epic   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-19
+  Description / Acceptance Criteria:
+    Managing and tracking shared household responsibilities fairly and transparently.
+    Relevant stakeholders: Domestic students, General shared accommodation residents, International students
+    User Story Map (Confluence):  
+    Link to prototype:
+  customfield_10017: green
+  customfield_10019: 0|i001en:
+------------------------------------------------------------------------------
+
+[ST4-20] Epic 2: Expense Splitting and Bill Tracking
+  Type: Epic   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-20
+  Description / Acceptance Criteria:
+    Tracking, splitting, and settling shared costs without friction or ambiguity.
+    Relevant stakeholders: Domestic students, General shared accommodation residents, International students, Property managers
+    User Story Map (Confluence):  
+    Link to prototype:
+  customfield_10017: blue
+  customfield_10019: 0|i001k7:
+------------------------------------------------------------------------------
+
+[ST4-21] Epic 3: Housemate Communication and Conflict Resolution
+  Type: Epic   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-21
+  Description / Acceptance Criteria:
+    Providing a structured, low-pressure channel for household communication and issue raising.
+    Relevant stakeholders: Domestic students, General shared accommodation residents, International students
+    User Story Map (Confluence):  
+    Link to prototype:
+  customfield_10017: teal
+  customfield_10019: 0|i001kf:
+------------------------------------------------------------------------------
+
+[ST4-22] Epic 4: Housemate Matching and Verification
+  Type: Epic   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-22
+  Description / Acceptance Criteria:
+    Helping users find compatible, verified housemates safely before committing to living together.
+    Relevant stakeholders: International students, General shared accommodation residents, Property managers
+    User Story Map (Confluence):  
+    Link to prototype:
+  customfield_10017: dark_grey
+  customfield_10019: 0|i001kn:
+------------------------------------------------------------------------------
+
+[ST4-23] US1.1 — Domestic Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-19 Epic 1: Household Task Management
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-23
+  Description / Acceptance Criteria:
+    As a domestic student managing shared living for the first time, I want to set up a rotating chore roster and track completion history, so that household responsibilities are distributed fairly and I can refer back to who has and hasn't been contributing.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user has created a household and added housemates, when they set up a chore roster with task assignments and a rotation schedule, then the system distributes chores evenly and notifies each housemate of their assigned tasks
+    - Given a housemate has been assigned a chore, when they mark it as complete, then the system logs the completion with a timestamp and updates the participation summary
+    - Given a user wants to review contributions, when they access the chore history, then they can see a full log of who completed what and when
+    Error path:
+    - Given a user attempts to create a roster without assigning all housemates, when they submit, then the system prompts them to assign at least one task to each housemate before activating
+    - Given a chore deadline has passed without being marked complete, when the system checks for overdue tasks, then it flags the chore as overdue and notifies the assigned housemate
+    Edge case:
+    - Given a housemate leaves the household, when their assigned chores become unassigned, then the system alerts the house admin to reassign those tasks
+    Functional Requirements:
+    - The system must allow users to create, assign and schedule chores for each housemate
+    - The system must automatically rotate chore assignments on a defined schedule
+    - The system must log chore completions with timestamps and display a participation summary
+    - The system must flag overdue chores visually and notify the assigned housemate
+    Non-Functional Requirements:
+    - The chore roster must load within 2 seconds on a standard mobile connection
+    - The system must support households of up to 10 members
+    - Chore history must be retained for the duration of the tenancy
+  customfield_10019: 0|i001kj:
+------------------------------------------------------------------------------
+
+[ST4-24] US1.2 — International Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-19 Epic 1: Household Task Management
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-24
+  Description / Acceptance Criteria:
+    As an international student living in a shared apartment for the first time, I want to see clear written rules in the app about things like cleaning the kitchen, taking out rubbish, and keeping noise down, so that I know exactly what I’m expected to do without needing to ask my housemates.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a housemate has added household rules and expectations, when an international student opens the household rules section, then they can view all rules in a single clearly organised list
+    - Given a user has set their language preference to a non-English language, when they view household rules, then the rules are displayed in their preferred language or simplified English
+    - Given a user wants clarification on a specific rule, when they tap on it, then they can view an expanded description or explanation provided by the housemate who created it
+    Error path:
+    - Given a user attempts to save a rule without a title or description, when they submit, then the system prompts them to complete all required fields before saving
+    - Given no household rules have been added yet, when a user opens the rules section, then the system displays a prompt encouraging housemates to add expectations
+    Edge case:
+    - Given a rule is written in English but the user's preferred language is different, when the translation service is unavailable, then the system displays the rule in simplified English as a fallback
+    Functional Requirements:
+    - The system must allow housemates to add, edit and categorise household rules and expectations
+    - The system must support multilingual display of household rules
+    - The system must display all household rules in a single accessible location
+    Non-Functional Requirements:
+    - Language translation must support at minimum the 5 most common languages among international students in Australia (Mandarin, Hindi, Arabic, Vietnamese, Korean)
+    - The rules section must be accessible within 2 taps from the home screen
+  customfield_10019: 0|i001kh:
+------------------------------------------------------------------------------
+
+[ST4-25] US1.3 — General Resident
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-19 Epic 1: Household Task Management
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-25
+  Description / Acceptance Criteria:
+    As a young professional living in shared accommodation, I want to automatically receive in-app reminders when I have an overdue chore, so that I can stay on top of my responsibilities without housemates needing to confront me directly.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a chore deadline has passed and the chore has not been marked complete, when the system checks for overdue tasks, then it automatically sends an in-app notification to the assigned housemate
+    - Given the house admin wants to manually remind a housemate, when they send a nudge, then the assigned housemate receives an in-app notification without any personal contact details being exchanged
+    - Given a housemate marks an overdue chore as complete after receiving a reminder, when they submit the completion, then the system updates the chore log and removes the overdue flag
+    Error path:
+    - Given a housemate has disabled notifications, when a chore becomes overdue, then the system still flags the chore as overdue within the app and displays it prominently on their dashboard
+    Edge case:
+    - Given a housemate is temporarily removed from the roster (e.g. on leave), when their chore deadline passes, then the system does not send them an overdue reminder and reassigns the task to the next available housemate
+    Functional Requirements:
+    - The system must automatically detect overdue chores and send in-app notifications to the assigned housemate
+    - The system must allow the house admin to manually send a nudge notification to a specific housemate
+    - All reminders must be delivered through the app and must not require personal contact details
+    Non-Functional Requirements:
+    - Automated reminders must be delivered within 5 minutes of a chore deadline passing
+    - Notification delivery must not require the app to be open
+  customfield_10019: 0|i001kb:
+------------------------------------------------------------------------------
+
+[ST4-26] US1.4 — Domestic Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-19 Epic 1: Household Task Management
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-26
+  Description / Acceptance Criteria:
+    As a domestic student living in shared accommodation for the first time, I want to propose a structured chore system through the app (including task assignments and schedules), so that I can establish clear and fair expectations with my housemates without needing a confrontational discussion.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user wants to establish a chore system, when they submit a proposed chore system including task assignments and schedules, then all housemates receive a notification to review the proposal
+    - Given all housemates have reviewed the proposal, when they all approve it, then the chore system becomes active and assignments are distributed accordingly
+    - Given a housemate wants to suggest changes, when they submit feedback on the proposal, then the proposer receives a notification and can revise and resubmit
+    Error path:
+    - Given a housemate does not respond to the proposal within 7 days, when the deadline passes, then the system sends a reminder and flags the proposal as awaiting response
+    - Given a user submits a proposal without assigning tasks to all housemates, when they attempt to submit, then the system prompts them to assign at least one task per housemate
+    Edge case:
+    - Given one housemate rejects the proposal, when the rejection is submitted, then the system notifies the proposer and pauses activation until a revised proposal is approved by all
+    Functional Requirements:
+    - The system must allow users to create and submit a structured chore proposal to all housemates
+    - The system must require acknowledgement from all housemates before activating the chore system
+    - The system must allow housemates to suggest changes and the proposer to revise and resubmit
+    Non-Functional Requirements:
+    - Proposal notifications must be delivered to all housemates within 1 minute of submission
+    - The proposal interface must be completable within 5 minutes for a first-time user
+  customfield_10019: 0|i001kd:
+------------------------------------------------------------------------------
+
+[ST4-27] Delete this one
+  Type: Story   Status: CANCELLED   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-19 Epic 1: Household Task Management
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-27
+  Description / Acceptance Criteria:
+    As a domestic student living in shared accommodation for the first time, I want to suggest a chore system to my housemates through the app, so that I can establish fair expectations without it feeling like a confrontational conversation.
+    Acceptance Criteria:
+    - User can propose a chore system and invite housemates to agree or suggest changes
+    - Housemates can vote or approve the proposed system
+    - System is only activated once all housemates have acknowledged it
+  customfield_10019: 0|i001kg:
+------------------------------------------------------------------------------
+
+[ST4-28] US2.1 — General Resident
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-20 Epic 2: Expense Splitting and Bill Tracking
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-28
+  Description / Acceptance Criteria:
+    As a remote worker living in shared accommodation, I want to log shared expenses like groceries, electricity bills, and cleaning supplies with details of who paid, so that I can keep track of household spending and split costs fairly between housemates.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user has paid for a shared expense, when they log it with a description, amount, category and payer, then the system automatically calculates each selected housemate's share and notifies them
+    - Given an expense has been logged, when a housemate views their dashboard, then they can see all expenses they are involved in and their individual amount owed
+    - Given a housemate has paid their share, when the payer marks it as settled, then the balance between those two housemates updates automatically
+    Error path:
+    - Given a user submits an expense without entering an amount, when they attempt to save, then the system prompts them to complete all required fields
+    - Given a user attempts to split an expense among housemates not in their household, when they submit, then the system only allows splitting among confirmed household members
+    Edge case:
+    - Given a housemate leaves the household with an outstanding balance, when their account is removed, then the system retains their balance record and flags it as unresolved for the remaining housemates
+    Functional Requirements:
+    - The system must allow users to log expenses with a description, amount, specific category and payer
+    - The system must automatically calculate and assign each housemate's share of a logged expense
+    - The system must notify all involved housemates when a new expense is logged
+    Non-Functional Requirements:
+    - Expense calculations must be accurate to two decimal places
+    - The expense dashboard must load within 2 seconds
+    - All financial data must be encrypted in transit and at rest
+  customfield_10019: 0|i001ke:
+------------------------------------------------------------------------------
+
+[ST4-29] US2.2 — International Student 
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-20 Epic 2: Expense Splitting and Bill Tracking
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-29
+  Description / Acceptance Criteria:
+    As an international student living in shared accommodation, I want to track outstanding balances with my housemates, so that I know exactly who owes me money and how much without having to ask.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given expenses have been logged between housemates, when a user opens their balance dashboard, then they can see a clear summary of who owes them money and how much
+    - Given a housemate has paid their share, when the user marks the balance as settled, then the dashboard updates automatically to reflect the new balance
+    - Given balances exist across multiple housemates, when the user views the dashboard, then all balances are displayed individually per housemate
+    Error path:
+    - Given a user attempts to mark a balance as settled that has already been settled, when they submit, then the system notifies them that the balance is already cleared
+    - Given no expenses have been logged yet, when a user opens the balance dashboard, then the system displays a prompt to add the first shared expense
+    Edge case:
+    - Given a balance is disputed by a housemate, when they flag it, then the system marks the balance as disputed and notifies both parties to resolve it before it can be settled
+    Functional Requirements:
+    - The system must display a real-time balance summary showing amounts owed between each pair of housemates
+    - The system must allow users to mark individual balances as settled
+    - The system must update balances automatically when new expenses are added or existing ones are settled
+    Non-Functional Requirements:
+    - Balance calculations must update in real time without requiring a manual page refresh
+    - The balance dashboard must be accessible within 2 taps from the home screen
+  customfield_10019: 0|i001kf:i
+------------------------------------------------------------------------------
+
+[ST4-30] US2.3 — Property Manager 
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-20 Epic 2: Expense Splitting and Bill Tracking
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-30
+  Description / Acceptance Criteria:
+    As a property manager, I want to send automated rent reminders and monitor whether each tenant has paid their rent on time, so that I can reduce late payments without needing to manually chase tenants.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a property manager has set a rent amount and due date for a tenant, when the due date approaches, then the system automatically sends a rent reminder to that tenant
+    - Given a tenant's payment has been recorded, when the property manager views the dashboard, then the tenant's status updates to "paid"
+    - Given the due date has passed without payment being recorded, when the system checks payment status, then the tenant's status updates to "overdue" and the property manager is notified
+    Error path:
+    - Given a property manager attempts to set a rent due date without entering a rent amount, when they submit, then the system prompts them to complete all required fields
+    - Given a tenant's contact details are incomplete, when the system attempts to send a reminder, then the system flags the tenant's profile as incomplete and alerts the property manager
+    Edge case:
+    - Given a tenant disputes a rent amount, when they flag it through the app, then the system marks the payment status as disputed and notifies the property manager to review
+    Functional Requirements:
+    - The system must allow property managers to set rent amounts and due dates per tenant
+    - The system must automatically send rent reminders before and on the due date
+    - The system must display a payment status dashboard showing paid, pending and overdue tenants
+    Non-Functional Requirements:
+    - Automated rent reminders must be delivered at least 3 days before the due date
+    - The property manager dashboard must support management of at least 50 tenants simultaneously
+    - All tenant financial data must comply with the Australian Privacy Act 1988
+  customfield_10019: 0|i001ke:i
+------------------------------------------------------------------------------
+
+[ST4-31] Disregard this
+  Type: Epic   Status: CANCELLED   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-31
+  customfield_10019: 0|i001kf:9
+------------------------------------------------------------------------------
+
+[ST4-32] US2.4 — International Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-20 Epic 2: Expense Splitting and Bill Tracking
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-32
+  Description / Acceptance Criteria:
+    As an international student sharing a house in Australia, I want to split utility bills such as electricity, water, and internet with my housemates, so that I can ensure I only pay my fair share and avoid confusion with local billing systems.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a utility bill has been received, when a user enters the bill type, total amount and billing period, then the system calculates and assigns each housemate's share based on the selected split method
+    - Given a bill has been logged, when all housemates view the shared bill history, then they can see all submitted bills and their individual amounts owed
+    - Given a housemate believes a bill is incorrect, when they flag it as disputed, then all housemates are notified and the bill is marked as under review
+    Error path:
+    - Given a user submits a bill without entering a total amount, when they attempt to save, then the system prompts them to complete all required fields
+    - Given a user attempts to split a bill among zero housemates, when they submit, then the system requires at least two participants before allowing submission
+    Edge case:
+    - Given a utility bill covers a period during which a housemate was absent, when the bill is split, then the system allows the user to manually exclude or adjust that housemate's share for that billing period
+    Functional Requirements:
+    - The system must allow users to add utility bills with bill type, amount and billing period
+    - The system must support equal splitting and usage-based proportional splitting
+    - The system must store all bills in a shared history accessible to all housemates
+    - The system must allow users to flag a bill as disputed
+    Non-Functional Requirements:
+    - Bill splitting calculations must be accurate to two decimal places
+    - Bill history must be retained for at least 12 months
+    - The bill entry process must be completable within 3 minutes for a first-time user
+  customfield_10019: 0|i001kf:4
+------------------------------------------------------------------------------
+
+[ST4-33] US3.1 — General Resident
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-21 Epic 3: Housemate Communication and Conflict Resolution
+  Labels: Medium
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-33
+  Description / Acceptance Criteria:
+    As an avid traveller currently living in shared accommodation, I want a household noticeboard to post updates and suggestions, so that I can communicate with housemates without it getting lost in a busy group chat, while I’m on the move.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user wants to post a notice, when they create a notice with a title, description and optional image, then it is immediately visible to all housemates on the noticeboard
+    - Given a notice has been posted, when a housemate wants to respond, then they can leave a limited reaction or reply directly on the notice
+    - Given a notice has an expiry date set, when the date passes, then the notice is automatically archived and removed from the active noticeboard
+    Error path:
+    - Given a user attempts to post a notice without a title, when they submit, then the system prompts them to add a title before posting
+    - Given a user sets an expiry date in the past, when they submit, then the system rejects the date and prompts them to select a future date
+    Edge case:
+    - Given a notice receives no interaction for 30 days and has no expiry date set, when the system checks for inactive notices, then it prompts the creator to either renew or archive the notice
+    Functional Requirements:
+    - The system must allow users to create notices with a title, description and optional image
+    - The system must display notices in a dedicated noticeboard section separate from general messaging
+    - The system must support notice expiry dates and automatic archiving
+    - The system must allow limited reactions and replies on each notice
+    Non-Functional Requirements:
+    - The noticeboard must load within 2 seconds on a standard mobile connection
+    - Notices must remain accessible in the archive for at least 6 months after expiry
+  customfield_10019: 0|i001kf:d
+------------------------------------------------------------------------------
+
+[ST4-34] US3.2 — Domestic Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-21 Epic 3: Housemate Communication and Conflict Resolution
+  Labels: Medium
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-34
+  Description / Acceptance Criteria:
+    As a domestic student living away from home for the first time, I want a way to raise household issues anonymously through the app, so that I can address uncomfortable problems like bathroom usage or noise without damaging relationships with the people I live with.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user wants to raise an issue, when they submit it with the anonymous option selected, then the issue is posted to the shared household space without revealing the submitter's name or profile
+    - Given an issue has been posted, when housemates view it, then they can vote on whether they agree it is a concern
+    - Given all parties have agreed the issue is resolved, when the submitter or a majority vote marks it as resolved, then the issue is closed and archived
+    Error path:
+    - Given a user attempts to submit an issue without a description, when they submit, then the system prompts them to add a description before posting
+    - Given a user attempts to identify an anonymous submitter through the system, when they try to access submitter information, then the system does not reveal any identifying information under any circumstance
+    Edge case:
+    - Given an anonymous issue receives no votes or responses within 14 days, when the system checks for inactive issues, then it sends a reminder to all housemates to review and respond
+    Functional Requirements:
+    - The system must allow users to submit household issues with an optional anonymous toggle
+    - The system must never reveal the identity of an anonymous submitter to any other user
+    - The system must allow housemates to vote on issues and mark them as resolved
+    Non-Functional Requirements:
+    - Anonymous submissions must be stored without any linkable identifier to the submitter in the database
+    - The issue submission process must be completable within 2 minutes
+  customfield_10019: 0|i001kf:b
+------------------------------------------------------------------------------
+
+[ST4-35] US3.3 — International Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-21 Epic 3: Housemate Communication and Conflict Resolution
+  Labels: Large
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-35
+  Description / Acceptance Criteria:
+    As an international student new to Australia and unfamiliar with who to trust, I want to communicate with potential housemates securely through the app before sharing my personal contact details, so that I can evaluate compatibility and build trust without exposing myself to scams or harassment during early interactions.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given two users are connected on the platform, when they open a conversation, then they can send and receive messages through a secure in-app system without either party's personal contact details being visible
+    - Given both users mutually agree to share contact details, when they both opt in, then the system exchanges their contact details between them
+    - Given a user feels unsafe, when they block or report another user from the messaging interface, then the reported user is flagged for review and the conversation is ended
+    Error path:
+    - Given a user attempts to include personal contact details in a message, when the system detects this, then it warns the user and recommends using the opt-in contact sharing feature instead
+    - Given a user attempts to contact someone who has blocked them, when they try to send a message, then the system prevents the message from being sent without revealing that they have been blocked
+    Edge case:
+    - Given a user's account is flagged as unverified, when they attempt to initiate a conversation, then the system displays a warning to the recipient that the sender is unverified before they choose to respond
+    Functional Requirements:
+    - The system must provide secure in-app messaging that does not expose personal contact details
+    - The system must support mutual opt-in contact detail sharing
+    - The system must allow users to block and report other users from within the messaging interface
+    - Unverified users must be flagged visibly within the messaging interface
+    Non-Functional Requirements:
+    - All messages must be end-to-end encrypted
+    - Message history must be retained securely for the duration of the user's account
+    - The system must comply with the Australian Privacy Act 1988 in handling personal contact data
+  customfield_10019: 0|i001kf:6
+------------------------------------------------------------------------------
+
+[ST4-36] US3.4 — General Resident
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-21 Epic 3: Housemate Communication and Conflict Resolution
+  Labels: Small
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36
+  Description / Acceptance Criteria:
+    As a musical artist living in shared accommodation who regularly plays music at high volumes, I want to set and view agreed house rules within the app, so that boundaries around noise and shared spaces are clearly established upfront and I can refer back to them to resolve disputes without confrontation.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user wants to propose a house rule, when they submit it with a title, description and category, then all housemates receive a notification to review and acknowledge it
+    - Given all housemates have acknowledged a proposed rule, when the last acknowledgement is submitted, then the rule is officially added to the household rules list with a timestamp
+    - Given a user wants to reference a rule during a dispute, when they link it to a household issue, then the rule is displayed alongside the issue for all housemates to see
+    Error path:
+    - Given a user attempts to submit a rule without a title or category, when they submit, then the system prompts them to complete all required fields
+    - Given a housemate attempts to edit or remove a rule without majority approval, when they submit the change, then the system rejects it and notifies all housemates that a change has been requested pending approval
+    Edge case:
+    - Given a rule has not been acknowledged by one housemate after 7 days, when the system checks for pending acknowledgements, then it sends a reminder to that housemate to review and acknowledge the rule
+    Functional Requirements:
+    - The system must allow users to propose house rules with a title, description and category
+    - The system must require acknowledgement from all housemates before a rule becomes active
+    - The system must require majority approval for any edits or removals of existing rules
+    - The system must allow users to reference a specific rule when raising a household issue
+    Non-Functional Requirements:
+    - Rule acknowledgement notifications must be delivered within 1 minute of a rule being proposed
+    - The rules list must be accessible within 2 taps from the home screen
+  customfield_10019: 0|i001kf:a
+------------------------------------------------------------------------------
+
+[ST4-37] US3.5 — Property Manager
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-21 Epic 3: Housemate Communication and Conflict Resolution
+  Labels: Large
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-37
+  Description / Acceptance Criteria:
+    As a property manager overseeing multiple student rental properties, I want to send announcements and maintenance updates directly to all tenants in a property through the app, so that I can efficiently communicate important information to the right people without the delays and inefficiencies of individual emails or phone calls.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a property manager wants to send an announcement, when they compose it with a title, description, category and optional attachment, then it is delivered to all tenants in the selected property
+    - Given an announcement has been sent, when a tenant opens the app, then they receive a push notification and can view the announcement in their notification centre
+    - Given a property manager wants to schedule a recurring announcement, when they set a recurrence schedule, then the system automatically sends the announcement at the defined intervals
+    Error path:
+    - Given a property manager attempts to send an announcement without selecting a property, when they submit, then the system prompts them to select at least one property before sending
+    - Given a scheduled announcement fails to send, when the system detects the failure, then it retries delivery and notifies the property manager if the issue persists
+    Edge case:
+    - Given a tenant has not viewed a high priority announcement within 24 hours, when the system checks read receipts, then it sends a follow-up push notification to that tenant
+    Functional Requirements:
+    - The system must allow property managers to compose and send broadcast announcements to all tenants in a selected property
+    - The system must support announcement categories (maintenance, rent reminder, general notice, emergency)
+    - The system must allow scheduling of recurring announcements
+    - The system must provide read receipt tracking per tenant per announcement
+    Non-Functional Requirements:
+    - Announcements must be delivered to all tenants within 2 minutes of being sent
+    - The property manager dashboard must support management of announcements across at least 10 properties simultaneously
+    - All announcements must be stored in a searchable archive accessible to both property managers and tenants
+  customfield_10019: 0|i001kf:7
+------------------------------------------------------------------------------
+
+[ST4-38] US4.1 — International Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-22 Epic 4: Housemate Matching and Verification
+  Labels: Large
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-38
+  Description / Acceptance Criteria:
+    As an international student new to Australia with limited local knowledge, I want to view verified housemate profiles with clear identity confirmation, so that I can feel confident I am connecting with a real and trustworthy person before agreeing to share a living space with them.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user has submitted a valid form of identification, when the verification is approved, then their profile displays a verified identity badge visible to all other users
+    - Given a user is searching for housemates, when they apply the verified only filter, then only profiles with a verified identity badge appear in search results
+    - Given a user views an unverified profile, when they open it, then a visible warning indicator is displayed clearly at the top of the profile
+    Error path:
+    - Given a user submits an expired or unreadable identification document, when the system processes it, then the verification is rejected and the user is notified with instructions to resubmit a valid document
+    - Given a user attempts to access the platform's core matching features without completing verification, when they try to proceed, then the system prompts them to complete verification first
+    Edge case:
+    - Given a verified user's identification document expires, when the system detects the expiry, then it notifies the user to resubmit updated documentation to maintain their verified status
+    Functional Requirements:
+    - The system must allow users to submit identification documents for verification
+    - The system must display a verified badge on approved profiles and a warning on unverified profiles
+    - The system must allow users to filter search results to show only verified profiles
+    Non-Functional Requirements:
+    - Submitted identification documents must be stored with restricted access in compliance with the Australian Privacy Act 1988
+    - Verification processing must be completed within 48 hours of submission
+    - Identity documents must be encrypted at rest and in transit
+  customfield_10019: 0|i001kf:9i
+------------------------------------------------------------------------------
+
+[ST4-39] US4.2 — General Resident 
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-22 Epic 4: Housemate Matching and Verification
+  Labels: Medium
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-39
+  Description / Acceptance Criteria:
+    As a social worker with a demanding and irregular work schedule seeking shared accommodation, I want to filter potential housemates by lifestyle preferences such as cleanliness standards, sleep schedule, and daily routine, so that I can find someone whose habits are compatible with mine before committing to living together.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a user has completed their lifestyle preference profile, when they search for housemates, then results are automatically ranked by a compatibility score calculated from matching preferences
+    - Given a user wants to evaluate a potential housemate, when they open their profile, then a detailed compatibility summary is displayed showing areas of strong match and potential differences
+    - Given a potential housemate views the user's profile, when they open it, then they receive a notification that someone has viewed their profile
+    Error path:
+    - Given a user has not completed their lifestyle preference profile, when they attempt to search for compatible housemates, then the system prompts them to complete their profile before search results can be personalised
+    - Given a user sets contradictory preferences (e.g. early riser and late sleeper simultaneously), when they attempt to save, then the system flags the conflict and prompts them to review their selections
+    Edge case:
+    - Given no housemates match a user's strict preference filters, when the search returns zero results, then the system suggests broadening one or more filters and displays the closest available matches
+    Functional Requirements:
+    - The system must allow users to set detailed lifestyle preference filters during profile setup
+    - The system must calculate and display a compatibility score for each potential housemate
+    - The system must display a compatibility summary before the user initiates contact
+    - The system must notify users when their profile has been viewed
+    Non-Functional Requirements:
+    - Compatibility scores must be recalculated in real time when a user updates their preferences
+    - Search results must load within 3 seconds on a standard mobile connection
+  customfield_10019: 0|i001kl:
+------------------------------------------------------------------------------
+
+[ST4-40] US4.3 — Property Manager 
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-22 Epic 4: Housemate Matching and Verification
+  Labels: Large
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-40
+  Description / Acceptance Criteria:
+    As a property manager overseeing multiple student rental properties in Sydney, I want to publish detailed and accurate rental listings on the platform, so that students searching for accommodation can easily find, evaluate, and enquire about my properties directly without the need for third party listing websites.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a property manager has completed a listing with photos, description, rent price, available date and house rules, when they publish it, then it immediately appears in student search results based on location and filters
+    - Given a student finds a listing they are interested in, when they send an enquiry, then the property manager receives a notification and the message is stored in their centralised inbox
+    - Given a listing's available date has passed, when the system checks active listings, then the listing is automatically removed from search results and the property manager is notified
+    Error path:
+    - Given a property manager attempts to publish a listing without photos or a rent price, when they submit, then the system prompts them to complete all required fields before publishing
+    - Given a student attempts to enquire about a listing that has already been filled, when they submit the enquiry, then the system notifies them that the listing is no longer available
+    Edge case:
+    - Given a listing has been live for 60 days without being filled, when the system checks listing age, then it prompts the property manager to review and update the listing details
+    Functional Requirements:
+    - The system must allow property managers to create and publish listings with photos, descriptions, rent price, available date, lease duration and house rules
+    - The system must display listings in student search results based on location and applied filters
+    - The system must allow students to bookmark listings and send direct enquiries
+    - The system must automatically expire listings when marked as filled or when the available date passes
+    Non-Functional Requirements:
+    - Listings must appear in search results within 1 minute of being published
+    - The listing creation process must be completable within 10 minutes for a first-time user
+    - All listing photos must be stored securely and load within 3 seconds on a standard mobile connection
+  customfield_10019: 0|i001kf:99
+------------------------------------------------------------------------------
+
+[ST4-41] US4.4 — General Resident 
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-22 Epic 4: Housemate Matching and Verification
+  Labels: Medium
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-41
+  Description / Acceptance Criteria:
+    As a tradesperson frequently relocating for work and seeking reliable shared accommodation, I want to read honest reviews left by previous housemates, so that I can make a well-informed decision about who I choose to live with and avoid potential conflicts before committing to a shared living arrangement.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a confirmed tenancy period has ended, when a user submits a written review and star rating for their previous housemate, then the review is displayed on that housemate's profile in chronological order
+    - Given a user views a housemate's profile, when they scroll to the reviews section, then they can see all reviews with the overall star rating displayed prominently at the top
+    - Given a housemate receives a review, when it is posted, then they receive a notification and can submit a single written response
+    Error path:
+    - Given a user attempts to submit a review before a confirmed tenancy period has ended, when they try to submit, then the system prevents submission and notifies them that reviews can only be left after a confirmed tenancy
+    - Given a user attempts to submit a second review for the same housemate from the same tenancy, when they submit, then the system rejects the duplicate and notifies the user
+    Edge case:
+    - Given a review is flagged as inappropriate by multiple users, when the system detects multiple reports, then the review is temporarily hidden pending platform review and the reviewer is notified
+    Functional Requirements:
+    - The system must allow users to submit written reviews and star ratings only after a confirmed tenancy has ended
+    - The system must display reviews chronologically on the housemate's profile with an overall average star rating
+    - The system must prevent duplicate reviews for the same tenancy period
+    - The system must allow reviewed users to submit a single written response
+    Non-Functional Requirements:
+    - Reviews must be permanently associated with the reviewer's verified account to prevent anonymous abuse
+    - The review system must load all reviews within 2 seconds on a standard mobile connection
+  customfield_10019: 0|i001kf:9d
+------------------------------------------------------------------------------
+
+[ST4-42] Disregard this
+  Type: Epic   Status: CANCELLED   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-42
+  customfield_10019: 0|i001kf:9f
+------------------------------------------------------------------------------
+
+[ST4-43] US4.5 — Domestic Student
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  Parent/Epic: ST4-22 Epic 4: Housemate Matching and Verification
+  Labels: Medium
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-43
+  Description / Acceptance Criteria:
+    As a domestic student moving out of home for the first time, I want to search and filter property listings by location and affordability, so that I can find suitable and trustworthy housing near my university without being overwhelmed or misled by inaccurate listings.
+    Acceptance Criteria (Given/When/Then):
+    Success path:
+    - Given a student enters their university name as a reference point, when they search for listings, then results are displayed ranked by proximity to the selected campus
+    - Given a student applies filters for maximum weekly rent, distance from campus, number of bedrooms and move-in date, when they search, then only listings matching all applied filters are displayed
+    - Given a student finds a listing of interest, when they open it, then they can view affordability indicators including weekly rent in AUD, estimated cost per person, a comparison to the local suburb average and a Budget/Moderate/Premium affordability rating
+    Error path:
+    - Given a student searches for listings in an area with no available results, when the search returns empty, then the system notifies them and suggests broadening their search radius or adjusting filters
+    - Given a listing contains inaccurate photos or descriptions, when a student reports it, then the listing is flagged for review and temporarily hidden from search results if multiple reports are received
+    Edge case:
+    - Given a student's preferred university is not listed in the system, when they search, then the system allows them to enter a custom address or suburb as an alternative reference point
+    Functional Requirements:
+    - The system must allow students to search for listings by proximity to a selected university or custom address
+    - The system must support filtering by maximum weekly rent, distance from campus, number of bedrooms, lease duration and available move-in date
+    - The system must display affordability indicators on each listing including weekly rent, estimated cost per person, suburb average comparison and affordability rating
+    - The system must allow students to report inaccurate or misleading listings
+    Non-Functional Requirements:
+    - Search results must load within 3 seconds on a standard mobile connection
+    - Affordability comparisons must be based on current market data updated at least monthly
+    - Reported listings must be reviewed within 48 hours of being flagged
+  customfield_10019: 0|i001kf:9g
+------------------------------------------------------------------------------
+
+[ST4-44] Interim Report - Introduction
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-44
+  customfield_10019: 0|i001kk:
+------------------------------------------------------------------------------
+
+[ST4-45] Interim Report - Stakeholders
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-45
+  customfield_10019: 0|i001kj:i
+------------------------------------------------------------------------------
+
+[ST4-46] Interim Report - Research methods
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Qian Cao
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-46
+  customfield_10019: 0|i001kk:i
+------------------------------------------------------------------------------
+
+[ST4-47] Interim Report - Research Findings
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Qian Cao
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-47
+  customfield_10019: 0|i001kk:r
+------------------------------------------------------------------------------
+
+[ST4-48] Interim Report - Persona, Scenario & User Journey
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-48
+  customfield_10019: 0|i001kk:m
+------------------------------------------------------------------------------
+
+[ST4-49] Interim Report - Common goals and pain points
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: NUODI LIU
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-49
+  customfield_10019: 0|i001kk:v
+------------------------------------------------------------------------------
+
+[ST4-50] Interim Report - Problem definition
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-50
+  customfield_10019: 0|i001kk:t
+------------------------------------------------------------------------------
+
+[ST4-51] Interim Report - Conclusion
+  Type: Task   Status: Done   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-51
+  customfield_10019: 0|i001kk:s
+------------------------------------------------------------------------------
+
+[ST4-52] Interim Report - Common goals + Pain points
+  Type: Story   Status: To Do   Priority: Medium
+  Assignee: NUODI LIU
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-52
+  customfield_10019: 0|i001kk:x
+------------------------------------------------------------------------------
+
+[ST4-53] Preliminary report - Solution Ideation Document
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-53
+  customfield_10019: 0|i001kk:w
+------------------------------------------------------------------------------
+
+[ST4-54] Preliminary report - Subsystem Breakdown Diagram
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-54
+  customfield_10019: 0|i001kk:wi
+------------------------------------------------------------------------------
+
+[ST4-55] Preliminary report - Dependency Table
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: NUODI LIU
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-55
+  customfield_10019: 0|i001kk:wr
+------------------------------------------------------------------------------
+
+[ST4-56] Preliminary report - Updated user stories
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-56
+  customfield_10019: 0|i001kk:wm
+------------------------------------------------------------------------------
+
+[ST4-57] Preliminary report - User story map
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Pranav Shanker
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-57
+  customfield_10019: 0|i001kk:wo
+------------------------------------------------------------------------------
+
+[ST4-58] Preliminary report - HTML prototype
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Qian Cao
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-58
+  customfield_10019: 0|i001kk:wn
+------------------------------------------------------------------------------
+
+[ST4-59] Preliminary report - Technical development evolution
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-59
+  customfield_10019: 0|i001kk:wmi
+------------------------------------------------------------------------------
+
+[ST4-60] Preliminary report - Innovation comparison
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Chien-Kai, Wang
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-60
+  customfield_10019: 0|i001kk:wm9
+------------------------------------------------------------------------------
+
+[ST4-61] Preliminary report - Prototype test plan
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-61
+  customfield_10019: 0|i001kk:wm4
+------------------------------------------------------------------------------
+
+[ST4-62] Preliminary report - Report structuring
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: NUODI LIU
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-62
+  customfield_10019: 0|i001kk:wm2
+------------------------------------------------------------------------------
+
+[ST4-63] Preliminary report - Report editing
+  Type: Task   Status: To Do   Priority: Medium
+  Assignee: Unassigned
+  URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-63
+  customfield_10019: 0|i001kk:wm1
+------------------------------------------------------------------------------

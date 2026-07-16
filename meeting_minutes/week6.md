@@ -3,17 +3,6 @@ use different ideation **technical** to show how to generate different **solutio
 solution ideas e.g.: verified listing platform, housemate compatibility matcher, co-living agreement + chores/bills tracker, safe guided messaging
 
 2. Systematic concept selection (use Decition Metric):
-suggested:
-| Criteria                              |   Weight | Concept A: Trust Flow | Concept B: Compatibility Matching | Concept C: Co-Living Agreement |
-| ------------------------------------- | -------: | --------------------: | --------------------------------: | -----------------------------: |
-| Research evidence fit                 |      30% |                     5 |                                 5 |                              4 |
-| User value / risk reduction           |      20% |                     5 |                                 4 |                              4 |
-| Feasibility in 10-week prototype      |      20% |                     3 |                                 4 |                              5 |
-| Prototype testability                 |      15% |                     4 |                                 5 |                              5 |
-| Innovation beyond existing tools      |      10% |                     3 |                                 4 |                              4 |
-| Accessibility / privacy manageability |       5% |                     3 |                                 4 |                              4 |
-| **Weighted score**                    | **100%** |          **4.15 / 5** |                      **4.45 / 5** |                   **4.35 / 5** |
-
 Tecnical problem selection Example:
 Three technical concepts were generated from the research findings:
 Concept A: Verified Accommodation & Housemate Trust Flow, focused on reducing scam and unsafe contact risk;
@@ -58,6 +47,6 @@ Example:
 9. Week 3–7 technical development evolution
 shows how our concept choice change over time (make up something)
 
-10. what is our innovation comparing to existing system
+10. what is our innovation comparing to existing system (needs some reference when comparing)
 
-11. prototype test plan: test goal, target user, task scenario, success criteria, expected errors, what data to collect
+11. prototype test plan: test goal, target user, task scenario, success criteria, expected errors, what data to collect, who is responsible

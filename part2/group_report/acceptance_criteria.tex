@@ -1,0 +1,349 @@
+% Auto-generated from part2/jira_tickets.txt. Regenerate with scratchpad/gen_ac.py
+\subsection{EP-01 Housemate Discovery and Trust}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-09 (Jira ST4-35).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US09-01 & Success & two users are connected on the platform & they open a conversation & they can send and receive messages through a secure in-app system without either party's personal contact details being visible\\
+        AC-US09-02 & Success & both users mutually agree to share contact details & they both opt in & the system exchanges their contact details between them\\
+        AC-US09-03 & Success & a user feels unsafe & they block or report another user from the messaging interface & the reported user is flagged for review and the conversation is ended\\
+        AC-US09-04 & Error & a user attempts to include personal contact details in a message & the system detects this & it warns the user and recommends using the opt-in contact sharing feature instead\\
+        AC-US09-05 & Error & a user attempts to contact someone who has blocked them & they try to send a message & the system prevents the message from being sent without revealing that they have been blocked\\
+        AC-US09-06 & Edge case & a user's account is flagged as unverified & they attempt to initiate a conversation & the system displays a warning to the recipient that the sender is unverified before they choose to respond\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus09}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-11 (Jira ST4-38).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US11-01 & Success & a user has submitted a valid form of identification & the verification is approved & their profile displays a verified identity badge visible to all other users\\
+        AC-US11-02 & Success & a user is searching for housemates & they apply the verified only filter & only profiles with a verified identity badge appear in search results\\
+        AC-US11-03 & Success & a user views an unverified profile & they open it & a visible warning indicator is displayed clearly at the top of the profile\\
+        AC-US11-04 & Error & a user submits an expired or unreadable identification document & the system processes it & the verification is rejected and the user is notified with instructions to resubmit a valid document\\
+        AC-US11-05 & Error & a user attempts to access the platform's core matching features without completing verification & they try to proceed & the system prompts them to complete verification first\\
+        AC-US11-06 & Edge case & a verified user's identification document expires & the system detects the expiry & it notifies the user to resubmit updated documentation to maintain their verified status\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus11}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-12 (Jira ST4-39).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US12-01 & Success & a user has completed their lifestyle preference profile & they search for housemates & results are automatically ranked by a compatibility score calculated from matching preferences\\
+        AC-US12-02 & Success & a user wants to evaluate a potential housemate & they open their profile & a detailed compatibility summary is displayed showing areas of strong match and potential differences\\
+        AC-US12-03 & Success & a potential housemate views the user's profile & they open it & they receive a notification that someone has viewed their profile\\
+        AC-US12-04 & Error & a user has not completed their lifestyle preference profile & they attempt to search for compatible housemates & the system prompts them to complete their profile before search results can be personalised\\
+        AC-US12-05 & Error & a user sets contradictory preferences (e.g. early riser and late sleeper simultaneously) & they attempt to save & the system flags the conflict and prompts them to review their selections\\
+        AC-US12-06 & Edge case & no housemates match a user's strict preference filters & the search returns zero results & the system suggests broadening one or more filters and displays the closest available matches\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus12}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-13 (Jira ST4-43).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US13-01 & Success & a student enters their university name as a reference point & they search for listings & results are displayed ranked by proximity to the selected campus\\
+        AC-US13-02 & Success & a student applies filters for maximum weekly rent, distance from campus, number of bedrooms and move-in date & they search & only listings matching all applied filters are displayed\\
+        AC-US13-03 & Success & a student finds a listing of interest & they open it & they can view affordability indicators including weekly rent in AUD, estimated cost per person, a comparison to the local suburb average and a Budget/Moderate/Premium affordability rating\\
+        AC-US13-04 & Error & a student searches for listings in an area with no available results & the search returns empty & the system notifies them and suggests broadening their search radius or adjusting filters\\
+        AC-US13-05 & Error & a listing contains inaccurate photos or descriptions & a student reports it & the listing is flagged for review and temporarily hidden from search results if multiple reports are received\\
+        AC-US13-06 & Edge case & a student's preferred university is not listed in the system & they search & the system allows them to enter a custom address or suburb as an alternative reference point\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus13}
+\end{table}
+
+\subsection{EP-02 Shared Household Living}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-01 (Jira ST4-23).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US01-01 & Success & a user has created a household and added housemates & they set up a chore roster with task assignments and a rotation schedule & the system distributes chores evenly and notifies each housemate of their assigned tasks\\
+        AC-US01-02 & Success & a housemate has been assigned a chore & they mark it as complete & the system logs the completion with a timestamp and updates the participation summary\\
+        AC-US01-03 & Success & a user wants to review contributions & they access the chore history & they can see a full log of who completed what and when\\
+        AC-US01-04 & Error & a user attempts to create a roster without assigning all housemates & they submit & the system prompts them to assign at least one task to each housemate before activating\\
+        AC-US01-05 & Error & a chore deadline has passed without being marked complete & the system checks for overdue tasks & it flags the chore as overdue and notifies the assigned housemate\\
+        AC-US01-06 & Edge case & a housemate leaves the household & their assigned chores become unassigned & the system alerts the house admin to reassign those tasks\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus01}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-02 (Jira ST4-24).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US02-01 & Success & a housemate has added household rules and expectations & an international student opens the household rules section & they can view all rules in a single clearly organised list\\
+        AC-US02-02 & Success & a user has set their language preference to a non-English language & they view household rules & the rules are displayed in their preferred language or simplified English\\
+        AC-US02-03 & Success & a user wants clarification on a specific rule & they tap on it & they can view an expanded description or explanation provided by the housemate who created it\\
+        AC-US02-04 & Error & a user attempts to save a rule without a title or description & they submit & the system prompts them to complete all required fields before saving\\
+        AC-US02-05 & Error & no household rules have been added yet & a user opens the rules section & the system displays a prompt encouraging housemates to add expectations\\
+        AC-US02-06 & Edge case & a rule is written in English but the user's preferred language is different & the translation service is unavailable & the system displays the rule in simplified English as a fallback\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus02}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-03 (Jira ST4-26).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US03-01 & Success & a user wants to establish a chore system & they submit a proposed chore system including task assignments and schedules & all housemates receive a notification to review the proposal\\
+        AC-US03-02 & Success & all housemates have reviewed the proposal & they all approve it & the chore system becomes active and assignments are distributed accordingly\\
+        AC-US03-03 & Success & a housemate wants to suggest changes & they submit feedback on the proposal & the proposer receives a notification and can revise and resubmit\\
+        AC-US03-04 & Error & a housemate does not respond to the proposal within 7 days & the deadline passes & the system sends a reminder and flags the proposal as awaiting response\\
+        AC-US03-05 & Error & a user submits a proposal without assigning tasks to all housemates & they attempt to submit & the system prompts them to assign at least one task per housemate\\
+        AC-US03-06 & Edge case & one housemate rejects the proposal & the rejection is submitted & the system notifies the proposer and pauses activation until a revised proposal is approved by all\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus03}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-04 (Jira ST4-28).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US04-01 & Success & a user has paid for a shared expense & they log it with a description, amount, category and payer & the system automatically calculates each selected housemate's share and notifies them\\
+        AC-US04-02 & Success & an expense has been logged & a housemate views their dashboard & they can see all expenses they are involved in and their individual amount owed\\
+        AC-US04-03 & Success & a housemate has paid their share & the payer marks it as settled & the balance between those two housemates updates automatically\\
+        AC-US04-04 & Error & a user submits an expense without entering an amount & they attempt to save & the system prompts them to complete all required fields\\
+        AC-US04-05 & Error & a user attempts to split an expense among housemates not in their household & they submit & the system only allows splitting among confirmed household members\\
+        AC-US04-06 & Edge case & a housemate leaves the household with an outstanding balance & their account is removed & the system retains their balance record and flags it as unresolved for the remaining housemates\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus04}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-05 (Jira ST4-29).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US05-01 & Success & expenses have been logged between housemates & a user opens their balance dashboard & they can see a clear summary of who owes them money and how much\\
+        AC-US05-02 & Success & a housemate has paid their share & the user marks the balance as settled & the dashboard updates automatically to reflect the new balance\\
+        AC-US05-03 & Success & balances exist across multiple housemates & the user views the dashboard & all balances are displayed individually per housemate\\
+        AC-US05-04 & Error & a user attempts to mark a balance as settled that has already been settled & they submit & the system notifies them that the balance is already cleared\\
+        AC-US05-05 & Error & no expenses have been logged yet & a user opens the balance dashboard & the system displays a prompt to add the first shared expense\\
+        AC-US05-06 & Edge case & a balance is disputed by a housemate & they flag it & the system marks the balance as disputed and notifies both parties to resolve it before it can be settled\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus05}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-06 (Jira ST4-32).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US06-01 & Success & a utility bill has been received & a user enters the bill type, total amount and billing period & the system calculates and assigns each housemate's share based on the selected split method\\
+        AC-US06-02 & Success & a bill has been logged & all housemates view the shared bill history & they can see all submitted bills and their individual amounts owed\\
+        AC-US06-03 & Success & a housemate believes a bill is incorrect & they flag it as disputed & all housemates are notified and the bill is marked as under review\\
+        AC-US06-04 & Error & a user submits a bill without entering a total amount & they attempt to save & the system prompts them to complete all required fields\\
+        AC-US06-05 & Error & a user attempts to split a bill among zero housemates & they submit & the system requires at least two participants before allowing submission\\
+        AC-US06-06 & Edge case & a utility bill covers a period during which a housemate was absent & the bill is split & the system allows the user to manually exclude or adjust that housemate's share for that billing period\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus06}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-07 (Jira ST4-33).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US07-01 & Success & a user wants to post a notice & they create a notice with a title, description and optional image & it is immediately visible to all housemates on the noticeboard\\
+        AC-US07-02 & Success & a notice has been posted & a housemate wants to respond & they can leave a limited reaction or reply directly on the notice\\
+        AC-US07-03 & Success & a notice has an expiry date set & the date passes & the notice is automatically archived and removed from the active noticeboard\\
+        AC-US07-04 & Error & a user attempts to post a notice without a title & they submit & the system prompts them to add a title before posting\\
+        AC-US07-05 & Error & a user sets an expiry date in the past & they submit & the system rejects the date and prompts them to select a future date\\
+        AC-US07-06 & Edge case & a notice receives no interaction for 30 days and has no expiry date set & the system checks for inactive notices & it prompts the creator to either renew or archive the notice\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus07}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-08 (Jira ST4-34).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US08-01 & Success & a user wants to raise an issue & they submit it with the anonymous option selected & the issue is posted to the shared household space without revealing the submitter's name or profile\\
+        AC-US08-02 & Success & an issue has been posted & housemates view it & they can vote on whether they agree it is a concern\\
+        AC-US08-03 & Success & all parties have agreed the issue is resolved & the submitter or a majority vote marks it as resolved & the issue is closed and archived\\
+        AC-US08-04 & Error & a user attempts to submit an issue without a description & they submit & the system prompts them to add a description before posting\\
+        AC-US08-05 & Error & a user attempts to identify an anonymous submitter through the system & they try to access submitter information & the system does not reveal any identifying information under any circumstance\\
+        AC-US08-06 & Edge case & an anonymous issue receives no votes or responses within 14 days & the system checks for inactive issues & it sends a reminder to all housemates to review and respond\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus08}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-10 (Jira ST4-36).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US10-01 & Success & a user wants to propose a house rule & they submit it with a title, description and category & all housemates receive a notification to review and acknowledge it\\
+        AC-US10-02 & Success & all housemates have acknowledged a proposed rule & the last acknowledgement is submitted & the rule is officially added to the household rules list with a timestamp\\
+        AC-US10-03 & Success & a user wants to reference a rule during a dispute & they link it to a household issue & the rule is displayed alongside the issue for all housemates to see\\
+        AC-US10-04 & Error & a user attempts to submit a rule without a title or category & they submit & the system prompts them to complete all required fields\\
+        AC-US10-05 & Error & a housemate attempts to edit or remove a rule without majority approval & they submit the change & the system rejects it and notifies all housemates that a change has been requested pending approval\\
+        AC-US10-06 & Edge case & a rule has not been acknowledged by one housemate after 7 days & the system checks for pending acknowledgements & it sends a reminder to that housemate to review and acknowledge the rule\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus10}
+\end{table}
+
+\subsection{EP-03 Accountability Extensions}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-14 (Jira ST4-25).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US14-01 & Success & a chore deadline has passed and the chore has not been marked complete & the system checks for overdue tasks & it automatically sends an in-app notification to the assigned housemate\\
+        AC-US14-02 & Success & the house admin wants to manually remind a housemate & they send a nudge & the assigned housemate receives an in-app notification without any personal contact details being exchanged\\
+        AC-US14-03 & Success & a housemate marks an overdue chore as complete after receiving a reminder & they submit the completion & the system updates the chore log and removes the overdue flag\\
+        AC-US14-04 & Error & a housemate has disabled notifications & a chore becomes overdue & the system still flags the chore as overdue within the app and displays it prominently on their dashboard\\
+        AC-US14-05 & Edge case & a housemate is temporarily removed from the roster (e.g. on leave) & their chore deadline passes & the system does not send them an overdue reminder and reassigns the task to the next available housemate\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus14}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-15 (Jira ST4-41).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US15-01 & Success & a confirmed tenancy period has ended & a user submits a written review and star rating for their previous housemate & the review is displayed on that housemate's profile in chronological order\\
+        AC-US15-02 & Success & a user views a housemate's profile & they scroll to the reviews section & they can see all reviews with the overall star rating displayed prominently at the top\\
+        AC-US15-03 & Success & a housemate receives a review & it is posted & they receive a notification and can submit a single written response\\
+        AC-US15-04 & Error & a user attempts to submit a review before a confirmed tenancy period has ended & they try to submit & the system prevents submission and notifies them that reviews can only be left after a confirmed tenancy\\
+        AC-US15-05 & Error & a user attempts to submit a second review for the same housemate from the same tenancy & they submit & the system rejects the duplicate and notifies the user\\
+        AC-US15-06 & Edge case & a review is flagged as inappropriate by multiple users & the system detects multiple reports & the review is temporarily hidden pending platform review and the reviewer is notified\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus15}
+\end{table}
+
+\subsection{EP-04 Property Management}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-16 (Jira ST4-30).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US16-01 & Success & a property manager has set a rent amount and due date for a tenant & the due date approaches & the system automatically sends a rent reminder to that tenant\\
+        AC-US16-02 & Success & a tenant's payment has been recorded & the property manager views the dashboard & the tenant's status updates to "paid"\\
+        AC-US16-03 & Success & the due date has passed without payment being recorded & the system checks payment status & the tenant's status updates to "overdue" and the property manager is notified\\
+        AC-US16-04 & Error & a property manager attempts to set a rent due date without entering a rent amount & they submit & the system prompts them to complete all required fields\\
+        AC-US16-05 & Error & a tenant's contact details are incomplete & the system attempts to send a reminder & the system flags the tenant's profile as incomplete and alerts the property manager\\
+        AC-US16-06 & Edge case & a tenant disputes a rent amount & they flag it through the app & the system marks the payment status as disputed and notifies the property manager to review\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus16}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-17 (Jira ST4-40).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US17-01 & Success & a property manager has completed a listing with photos, description, rent price, available date and house rules & they publish it & it immediately appears in student search results based on location and filters\\
+        AC-US17-02 & Success & a student finds a listing they are interested in & they send an enquiry & the property manager receives a notification and the message is stored in their centralised inbox\\
+        AC-US17-03 & Success & a listing's available date has passed & the system checks active listings & the listing is automatically removed from search results and the property manager is notified\\
+        AC-US17-04 & Error & a property manager attempts to publish a listing without photos or a rent price & they submit & the system prompts them to complete all required fields before publishing\\
+        AC-US17-05 & Error & a student attempts to enquire about a listing that has already been filled & they submit the enquiry & the system notifies them that the listing is no longer available\\
+        AC-US17-06 & Edge case & a listing has been live for 60 days without being filled & the system checks listing age & it prompts the property manager to review and update the listing details\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus17}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \caption{Acceptance criteria for US-18 (Jira ST4-37).}
+    \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
+        \toprule
+        Acceptance ID & Scenario & Given & When & Then\\
+        \midrule
+        AC-US18-01 & Success & a property manager wants to send an announcement & they compose it with a title, description, category and optional attachment & it is delivered to all tenants in the selected property\\
+        AC-US18-02 & Success & an announcement has been sent & a tenant opens the app & they receive a push notification and can view the announcement in their notification centre\\
+        AC-US18-03 & Success & a property manager wants to schedule a recurring announcement & they set a recurrence schedule & the system automatically sends the announcement at the defined intervals\\
+        AC-US18-04 & Error & a property manager attempts to send an announcement without selecting a property & they submit & the system prompts them to select at least one property before sending\\
+        AC-US18-05 & Error & a scheduled announcement fails to send & the system detects the failure & it retries delivery and notifies the property manager if the issue persists\\
+        AC-US18-06 & Edge case & a tenant has not viewed a high priority announcement within 24 hours & the system checks read receipts & it sends a follow-up push notification to that tenant\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabacus18}
+\end{table}
