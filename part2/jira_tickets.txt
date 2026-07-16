@@ -20,7 +20,7 @@ Total issues: 63
   URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-2
   Description / Acceptance Criteria:
     Pranav - Domestic students survey research
-    Dylan - International students survey research
+    Qian Cao - International students survey research
     Liam - International students interview + Housemates research
     Nicky - Property manager research
   customfield_10019: 0|i0006n:
