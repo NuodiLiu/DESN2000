@@ -17,10 +17,10 @@ corresponding user story.
 | US-07 | Household noticeboard | `US-07_household-noticeboard.png` |
 | US-08 | Anonymous household issue | `US-08_anonymous-household-issue.png` |
 | US-09 | Secure in-app messaging | `US-09_secure-in-app-messaging.png` |
-| US-10 | Agreed noise rules | `US-10_agreed-noise-rules.png` |
+| US-10 | Unanimous house-rule approval and activation | `US-10_agreed-noise-rules.png` |
 | US-11 | Verified housemate profiles | `US-11_verified-housemate-profiles.png` |
-| US-12 | Lifestyle preference filters | `US-12_lifestyle-housemate-filters.png` |
-| US-13 | Property location and budget filters | `US-13_property-search-filters.png` |
+| US-12 | Profile-derived compatibility ranking | `US-12_lifestyle-housemate-filters.png` |
+| US-13 | Multi-criteria property and affordability filters | `US-13_property-search-filters.png` |
 | US-14 | Overdue chore and expense reminders | `US-14_overdue-reminders.png` |
 | US-15 | Verified former-housemate reviews | `US-15_housemate-reviews.png` |
 | US-16 | Rent tracking and reminders | `US-16_rent-tracking-reminders.png` |

@@ -681,7 +681,7 @@ The preliminary prototype is a functional high-fidelity HTML, CSS and JavaScript
     \label{tabprototypescope}
 \end{table}
 
-This fidelity is appropriate because the rubric requires observable, testable interactions linked to user stories. A clickable interface allows the team to measure completion, errors and comprehension, while avoiding the cost and privacy risk of a production backend at this stage. The prototype does not perform real identity checks, encryption, database persistence or translation services. The phone check uses a demonstration code, and the current rule workflow represents rule creation and the agreed outcome but not yet the full unanimous acknowledgement sequence required by AC-US10-02. These limitations define the next iteration rather than being presented as completed functionality.
+This fidelity is appropriate because the rubric requires observable, testable interactions linked to user stories. A clickable interface allows the team to measure completion, errors and comprehension, while avoiding the cost and privacy risk of a production backend at this stage. The prototype does not perform real identity checks, production encryption, database persistence or external translation services. Property filtering, compatibility calculation and unanimous rule approval run locally against seeded data, while the phone check uses a demonstration code. The prototype therefore tests the interaction logic and user comprehension without claiming production security or independently authenticated housemate accounts.
 
 \subsection{Prototype Flow}
 
@@ -722,7 +722,7 @@ This fidelity is appropriate because the rubric requires observable, testable in
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-13_property-search-filters.png}\\[-0.2em]
-        \small\textbf{S-01: Property search.} Location, room type and weekly budget controls support the first narrowing decision.
+        \small\textbf{S-01: Property search.} Location, budget, room type, distance, bedrooms and move-in date combine into one testable result set.
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
@@ -739,7 +739,7 @@ This fidelity is appropriate because the rubric requires observable, testable in
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-12_lifestyle-housemate-filters.png}\\[-0.2em]
-        \small\textbf{S-03: Lifestyle matching.} Filters narrow the ranked results and expose the reasons behind a match.
+        \small\textbf{S-03: Lifestyle matching.} An editable preference profile recalculates scores, explanations and ranking before filters narrow the results.
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
@@ -762,18 +762,18 @@ This fidelity is appropriate because the rubric requires observable, testable in
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-10_agreed-noise-rules.png}\\[-0.2em]
-        \small\textbf{S-06: Agreed rule outcome.} The expanded quiet-hours rule shows the detail required to avoid verbal ambiguity.
+        \small\textbf{S-06: Unanimous rule approval.} A proposal becomes active only after Emily, Daniel and Mia have all approved it.
     \end{minipage}
     \caption{Shared-expectation screens for accessible and explicit household rules.}
     \label{figprototypescreensrules}
 \end{figure}
 
-The screens demonstrate both the normal path and observable system feedback: result counts change after filtering, incompatible housemate cards are removed, messaging remains locked until verification, personal contact details trigger a warning, language changes update the rule content, and incomplete rule forms display field-level errors.
+The screens demonstrate both the normal path and observable system feedback: multi-criteria property filters update and sort the result set, lifestyle preferences recalculate compatibility scores, contradictory schedules are rejected, messaging remains locked until verification, personal contact details trigger a warning, language changes update rule content, and a proposed rule remains inactive until every housemate approves it.
 
 \section{Prototype-to-User-Story Traceability}
 \label{sectraceability}
 
-Each screen is mapped to the user story and acceptance criteria that it demonstrates. Table~\ref{tabprototypetraceability} distinguishes complete interaction evidence from partial representation, so the prototype does not imply that a static field or seeded result satisfies an entire acceptance criterion. The same screen identifiers are used by the test plan in Section~\ref{sectestplan}.
+Each screen is mapped to the user story and acceptance criteria that it demonstrates. Table~\ref{tabprototypetraceability} identifies the exact interaction evidence and keeps production-system boundaries separate from prototype task completion. The same screen identifiers are used by the test plan in Section~\ref{sectestplan}.
 
 \begin{table}[H]
     \centering
@@ -783,12 +783,12 @@ Each screen is mapped to the user story and acceptance criteria that it demonstr
         \toprule
         Screen ID & Prototype screen & Story ID & Acceptance ID & Testable interaction & Link\\
         \midrule
-        S-01 & Property search and budget filtering & US-13 & AC-US13-02 (partial) & Change the weekly budget and submit the search; the visible cards and result count update. Location and room-type fields are represented but are not yet connected to filtering logic. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/properties}{Open}\\
+        S-01 & Multi-criteria property search & US-13 & AC-US13-01--04, AC-US13-06 & Combine university or suburb, budget, room type, distance, bedrooms and move-in date; results update, sort by campus distance, show affordability and provide a broadening suggestion when no exact match exists. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/properties}{Open}\\
         S-02 & Verified housemate results & US-11 & AC-US11-01, AC-US11-02 & Identify identity and phone badges, then inspect the verified-only filter used by the result set. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
-        S-03 & Lifestyle compatibility filters & US-12 & AC-US12-01, AC-US12-02 (partial) & Select ``Very tidy'' and ``Quiet nights''; the results narrow and the visible score and lifestyle facts explain the strongest match. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
+        S-03 & Profile-derived compatibility ranking & US-12 & AC-US12-01, AC-US12-02, AC-US12-04--06 & Edit the lifestyle profile to recalculate and re-rank scores, inspect the explanation, submit incomplete or conflicting preferences for validation, and broaden strict filters after a zero-result state. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
         S-04 & Authentication and secure messages & US-09 & AC-US09-01, AC-US09-04 & Attempt to message while signed out, complete login and the phone check, send a normal message, then enter an email or phone number to trigger blocking and a privacy warning. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#messages}{Open}\\
         S-05 & Multilingual household rule list & US-02 & AC-US02-01, AC-US02-02, AC-US02-03 & View every rule in one list, change the language, and expand a rule to reveal the housemate's explanation. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
-        S-06 & Rule creation and agreed outcome & US-10, US-02 & AC-US10-04, AC-US02-04 & Submit an incomplete rule form to trigger field-level errors, then inspect the existing agreed quiet-hours rule. Unanimous acknowledgement in AC-US10-02 is a next-iteration gap. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
+        S-06 & Rule proposal and unanimous approval & US-10, US-02 & AC-US10-01, AC-US10-02, AC-US10-04, AC-US02-01 & Submit an incomplete rule for validation, send a complete proposal to every housemate, approve or request changes as each reviewer, and confirm the rule enters the active list with an agreement timestamp only after all approvals. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
         \bottomrule
     \end{tabularx}
     \label{tabprototypetraceability}
@@ -807,11 +807,11 @@ The prototype will be evaluated through five moderated usability tests that foll
         \toprule
         Test & Goal & Stories & Acceptance criteria & Responsible\\
         \midrule
-        T1 & Narrow properties by weekly budget & US-13 & AC-US13-02 (partial) & Pranav\\
+        T1 & Narrow properties with combined search criteria & US-13 & AC-US13-01--04, AC-US13-06 & Pranav\\
         T2 & Recognise verified housemate profiles & US-11 & AC-US11-01, AC-US11-02 & Nicky\\
-        T3 & Use lifestyle compatibility to choose a match & US-12 & AC-US12-01, AC-US12-02 (partial) & Liam\\
+        T3 & Build a profile and use recalculated compatibility & US-12 & AC-US12-01, AC-US12-02, AC-US12-04--06 & Liam\\
         T4 & Complete authentication and message safely & US-09 & AC-US09-01, AC-US09-04 & Qian Cao\\
-        T5 & Understand multilingual rules and form errors & US-02, US-10 & AC-US02-01--04, AC-US10-04 & Liam\\
+        T5 & Propose, review and activate a house rule & US-02, US-10 & AC-US02-01--03, AC-US10-01, AC-US10-02, AC-US10-04 & Liam\\
         \bottomrule
     \end{tabularx}
     \label{tabtestoverview}
@@ -820,19 +820,19 @@ The prototype will be evaluated through five moderated usability tests that foll
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T1. Narrow properties by weekly budget.}
+    \caption{Test T1. Narrow properties with combined search criteria.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify that a student can narrow the seeded property results to an affordable option.\\
+        Test goal & Verify that a student can combine location, affordability and availability criteria to identify a suitable property.\\
         Related stories & US-13; S-01\\
-        Acceptance criteria & AC-US13-02, tested only for the currently functional weekly-budget control.\\
+        Acceptance criteria & AC-US13-01, AC-US13-02, AC-US13-03, AC-US13-04 and AC-US13-06\\
         Target user & Student moving near UNSW with a fixed weekly budget.\\
-        Task scenario & ``You need a room near UNSW for no more than \$350 per week. Narrow the results and identify one suitable home.''\\
-        Success criteria & $\geq$4/5 users change the budget, submit the search and identify the remaining listing in $\leq$2 minutes. The visible result count and cards must update without facilitator help.\\
-        Expected errors & Users do not notice the Search button, interpret the price as monthly, or expect the location and room-type fields to update results at this fidelity.\\
-        Data to collect & Completion rate, time on task, selected listing, misclicks and comments about unavailable filters.\\
+        Task scenario & ``Find a private room in Kensington within eight minutes of UNSW, in a household with at least three bedrooms, available by 1 August, for no more than \$350 per week. Explain its affordability rating.''\\
+        Success criteria & $\geq$4/5 users enter all six criteria, reach the single matching listing and explain its Budget indicator in $\leq$3 minutes. A deliberately impossible combination must produce the no-result explanation and broadening action.\\
+        Expected errors & Users overlook a second-row filter, interpret the move-in date in the wrong direction, or confuse household bedrooms with available rooms.\\
+        Data to collect & Completion rate, time on task, filters changed, selected listing, affordability interpretation and recovery from the empty state.\\
         Responsible & Pranav\\
         \bottomrule
     \end{tabularx}
@@ -864,19 +864,19 @@ The prototype will be evaluated through five moderated usability tests that foll
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T3. Use lifestyle compatibility to choose a match.}
+    \caption{Test T3. Build a profile and use recalculated compatibility.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify that users can narrow housemate results and explain a compatibility choice using lifestyle evidence.\\
+        Test goal & Verify that users can create a complete preference profile and understand how it changes compatibility ranking.\\
         Related stories & US-12; S-03\\
-        Acceptance criteria & AC-US12-01 and AC-US12-02, represented by seeded scores and visible lifestyle facts.\\
+        Acceptance criteria & AC-US12-01, AC-US12-02, AC-US12-04, AC-US12-05 and AC-US12-06\\
         Target user & Student who values a tidy home and quiet nights.\\
-        Task scenario & ``Find the strongest verified match for someone who is very tidy and prefers quiet nights. Explain why that person is the best fit.''\\
-        Success criteria & $\geq$4/5 users select both filters, reach the single matching result and cite the match score plus at least one relevant lifestyle fact in $\leq$2 minutes.\\
-        Expected errors & Users treat the score as a safety rating, rely only on the photo, or do not understand why a card disappeared.\\
-        Data to collect & Filter completion, selected profile, reasons given, time on task and score interpretation.\\
+        Task scenario & ``Save a very tidy, mostly quiet profile with occasional guests and a flexible schedule. Identify the best match and explain the score. Then select both Early riser and Late sleeper, and finally apply all three strict lifestyle filters.''\\
+        Success criteria & $\geq$4/5 users save the complete profile, identify Emily as the 94\% top match and cite a profile-derived reason in $\leq$3 minutes. The contradictory schedule must be rejected, and the zero-result state must offer the closest-match recovery action.\\
+        Expected errors & Users treat the score as a safety rating, do not notice that ranking changes after saving, or overlook the schedule conflict message.\\
+        Data to collect & Profile completion, ranking interpretation, conflict recovery, empty-state recovery, time on task and reasons given.\\
         Responsible & Liam\\
         \bottomrule
     \end{tabularx}
@@ -908,26 +908,26 @@ The prototype will be evaluated through five moderated usability tests that foll
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T5. Understand multilingual rules and form errors.}
+    \caption{Test T5. Propose, review and activate a house rule.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify that a user can find, translate and clarify household expectations, and receives clear feedback when a proposed rule is incomplete.\\
+        Test goal & Verify that a household rule remains a proposal until every housemate approves it, while existing expectations remain accessible.\\
         Related stories & US-02, US-10; S-05 and S-06\\
-        Acceptance criteria & AC-US02-01, AC-US02-02, AC-US02-03, AC-US02-04 and AC-US10-04\\
+        Acceptance criteria & AC-US02-01, AC-US02-02, AC-US02-03, AC-US10-01, AC-US10-02 and AC-US10-04\\
         Target user & Student living in a shared apartment for the first time and using English as a second language.\\
-        Task scenario & ``Change the rules to Simplified Chinese, find the quiet-hours expectation and open its explanation. Then start adding a new noise rule and submit it without a title or category.''\\
-        Success criteria & $\geq$4/5 users complete the language change, locate and expand the noise rule, and trigger the required-field messages in $\leq$3 minutes. Each user must correctly state the quiet-hours period after reading the explanation.\\
-        Expected errors & Users overlook the language selector, mistake the summary for the full explanation, or expect an incomplete rule to be saved.\\
-        Data to collect & Completion rate, language-control discovery, comprehension answer, validation errors noticed and time on task.\\
+        Task scenario & ``Open the quiet-hours explanation, then propose a new late-gathering rule. First submit it without a category, then complete it. Record one change request, revise it, and approve as Emily, Daniel and Mia.''\\
+        Success criteria & $\geq$4/5 users trigger the required-field message, send the complete proposal, understand that a change request pauses activation, and reach the Active rule state only after the third approval in $\leq$4 minutes. The rule must then appear in Active expectations with all names and a timestamp.\\
+        Expected errors & Users confuse a proposal with an active rule, expect one approval to be sufficient, or miss the revise-and-resubmit action after a requested change.\\
+        Data to collect & Validation errors noticed, proposal-state comprehension, approval order, time on task and confirmation that the active timestamp was found.\\
         Responsible & Liam\\
         \bottomrule
     \end{tabularx}
     \label{tabtestt5}
 \end{table}
 
-After each round the team will compile results into one summary, rank observed issues by severity and feed them into the next prototype iteration. Failed or partially represented acceptance criteria will be recorded by identifier. The highest-priority planned changes are to connect every property filter, generate compatibility from a completed preference profile, and add the full propose--review--unanimous acknowledgement workflow for US-10.
+After each round the team will compile results into one summary, rank observed issues by severity and feed them into the next prototype iteration. Failed acceptance criteria will be recorded by identifier. The next technical iteration would replace seeded local data with persistent services, run rule approval through independently authenticated housemate accounts, and connect verification to a secure identity provider.
 
 \section{Conclusion}
 
@@ -957,24 +957,24 @@ Each user story maps to exactly one goal-level use case, and both identifiers st
         \toprule
         Story & Epic & Use case & Primary actor & Successful outcome & Scope & Website screenshot\\
         \midrule
-        US-01 & EP-02 & UC-01 Set up and manage chore roster & Domestic student / shared-house resident & The user can create, assign and rotate chores among housemates and track completion history. & MVP & \\
-        US-02 & EP-02 & UC-02 View and manage household rules & International student / shared-house resident & The user can view all household rules and expectations in their preferred language in a single location. & MVP & \\
-        US-03 & EP-02 & UC-03 Propose and approve chore system & Domestic student & All housemates have reviewed and approved a structured chore system before it becomes active. & MVP & \\
-        US-04 & EP-02 & UC-04 Log and split shared expenses & Shared-house resident & The user can log a shared expense and the system automatically calculates and assigns each housemate's share. & MVP & \\
-        US-05 & EP-02 & UC-05 Track outstanding balances & International student / shared-house resident & The user can view a real-time summary of who owes what and mark balances as settled. & MVP & \\
-        US-06 & EP-02 & UC-06 Split utility bills & International student / shared-house resident & The user can input a utility bill and split it equally or by usage among selected housemates. & MVP & \\
-        US-07 & EP-02 & UC-07 Post and view household notices & Shared-house resident & The user can post a notice visible to all housemates on a dedicated noticeboard separate from general messaging. & MVP & \\
-        US-08 & EP-02 & UC-08 Raise anonymous household issues & Domestic student / shared-house resident & A household issue is posted to the shared space without revealing the submitter's identity if the anonymous option is selected. & MVP & \\
-        US-09 & EP-01 & UC-09 Send secure in-app messages & International student / shared-house resident & The user can send and receive messages without either party's personal contact details being visible. & MVP & \\
-        US-10 & EP-02 & UC-10 Set and view agreed house rules & Shared-house resident & All housemates have acknowledged a proposed house rule before it becomes active and can reference it during disputes. & MVP & \\
-        US-11 & EP-01 & UC-11 View verified housemate profiles & International student / accommodation seeker & The user can view verified profiles with identity badges and filter search results to show only verified profiles. & MVP & \\
-        US-12 & EP-01 & UC-12 Filter housemates by lifestyle preferences & Shared-house resident / accommodation seeker & The user can set lifestyle preference filters and view a compatibility score and summary for each potential housemate. & MVP & \\
-        US-13 & EP-01 & UC-13 Search and filter property listings & Domestic student / accommodation seeker & The user can search for listings by university proximity and apply filters for rent, distance, bedrooms and move-in date. & MVP & \\
-        US-14 & EP-03 & UC-14 Receive overdue chore and expense reminders & Shared-house resident & The user receives automatic in-app reminders when a chore or expense payment is overdue. & Extension & \\
-        US-15 & EP-03 & UC-15 Read and submit housemate reviews & Shared-house resident / accommodation seeker & The user can read reviews left by previous housemates and submit a review after a confirmed tenancy ends. & Extension & \\
-        US-16 & EP-04 & UC-16 Track rent and send reminders & Property manager & Rent status is recorded per tenant and overdue tenants receive automatic reminders. & Secondary & \\
-        US-17 & EP-04 & UC-17 Create and manage property listings & Property manager & A complete property listing is published and visible to students searching for accommodation. & Secondary & \\
-        US-18 & EP-04 & UC-18 Send tenant announcements & Property manager & An announcement is delivered to all tenants of a selected property with read receipt tracking. & Secondary & \\
+        US-01 & EP-02 & UC-01 Set up and manage chore roster & Domestic student / shared-house resident & The user can create, assign and rotate chores among housemates and track completion history. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-01}{View}\\
+        US-02 & EP-02 & UC-02 View and manage household rules & International student / shared-house resident & The user can view all household rules and expectations in their preferred language in a single location. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-02}{View}\\
+        US-03 & EP-02 & UC-03 Propose and approve chore system & Domestic student & All housemates have reviewed and approved a structured chore system before it becomes active. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-03}{View}\\
+        US-04 & EP-02 & UC-04 Log and split shared expenses & Shared-house resident & The user can log a shared expense and the system automatically calculates and assigns each housemate's share. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-04}{View}\\
+        US-05 & EP-02 & UC-05 Track outstanding balances & International student / shared-house resident & The user can view a real-time summary of who owes what and mark balances as settled. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-05}{View}\\
+        US-06 & EP-02 & UC-06 Split utility bills & International student / shared-house resident & The user can input a utility bill and split it equally or by usage among selected housemates. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-06}{View}\\
+        US-07 & EP-02 & UC-07 Post and view household notices & Shared-house resident & The user can post a notice visible to all housemates on a dedicated noticeboard separate from general messaging. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-07}{View}\\
+        US-08 & EP-02 & UC-08 Raise anonymous household issues & Domestic student / shared-house resident & A household issue is posted to the shared space without revealing the submitter's identity if the anonymous option is selected. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-08}{View}\\
+        US-09 & EP-01 & UC-09 Send secure in-app messages & International student / shared-house resident & The user can send and receive messages without either party's personal contact details being visible. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-09}{View}\\
+        US-10 & EP-02 & UC-10 Set and view agreed house rules & Shared-house resident & All housemates have acknowledged a proposed house rule before it becomes active and can reference it during disputes. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-10}{View}\\
+        US-11 & EP-01 & UC-11 View verified housemate profiles & International student / accommodation seeker & The user can view verified profiles with identity badges and filter search results to show only verified profiles. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-11}{View}\\
+        US-12 & EP-01 & UC-12 Filter housemates by lifestyle preferences & Shared-house resident / accommodation seeker & The user can set lifestyle preference filters and view a compatibility score and summary for each potential housemate. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-12}{View}\\
+        US-13 & EP-01 & UC-13 Search and filter property listings & Domestic student / accommodation seeker & The user can search for listings by university proximity and apply filters for rent, distance, bedrooms and move-in date. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-13}{View}\\
+        US-14 & EP-03 & UC-14 Receive overdue chore and expense reminders & Shared-house resident & The user receives automatic in-app reminders when a chore or expense payment is overdue. & Extension & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-14}{View}\\
+        US-15 & EP-03 & UC-15 Read and submit housemate reviews & Shared-house resident / accommodation seeker & The user can read reviews left by previous housemates and submit a review after a confirmed tenancy ends. & Extension & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-15}{View}\\
+        US-16 & EP-04 & UC-16 Track rent and send reminders & Property manager & Rent status is recorded per tenant and overdue tenants receive automatic reminders. & Secondary & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-16}{View}\\
+        US-17 & EP-04 & UC-17 Create and manage property listings & Property manager & A complete property listing is published and visible to students searching for accommodation. & Secondary & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-17}{View}\\
+        US-18 & EP-04 & UC-18 Send tenant announcements & Property manager & An announcement is delivered to all tenants of a selected property with read receipt tracking. & Secondary & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-18}{View}\\
         \bottomrule
     \end{tabularx}
     \label{tabusucmapping}
