@@ -12,7 +12,7 @@
 \usepackage[hidelinks]{hyperref}
 \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
 
-\graphicspath{{../../part1/assets/brand/}{../}}
+\graphicspath{{../../part1/assets/brand/}{../}{../user_story_screenshots/}}
 
 \definecolor{accent}{HTML}{0E6B67}
 \definecolor{softgray}{HTML}{F4F6F6}
@@ -375,13 +375,13 @@ The preliminary prototype uses a narrow release slice to control scope. Table~\r
         Must have in Sprint~1 & US-02, US-09, US-10, US-11, US-12, US-13 & These stories form one testable path from search to an acknowledged rule.\\
         Should have later & US-01, US-03, US-04, US-05, US-06, US-14 & These stories extend the agreement into routine household follow through.\\
         Could have & US-07, US-08, US-15 & These stories add supporting communication or reputation value without blocking the core path.\\
-        Will not have in the preliminary prototype & US-16, US-17, US-18 & These stories introduce a separate role and additional permissions. They remain in the product backlog.\\
+        Exploratory only & US-16, US-17, US-18 & Clickable property manager screens communicate future role coverage, but they are excluded from the evaluated Sprint~1 path and test plan.\\
         \bottomrule
     \end{tabularx}
     \label{tabmoscow}
 \end{table}
 
-Only the Must have row defines Sprint~1. The same release slices are used in the backlog tables and must match Jira.
+Only the Must have row defines Sprint~1. The same release slices are used in the backlog tables and must match Jira. Exploratory screens do not change a story's delivery priority.
 
 \section{Product Backlog Structure}
 \label{secbacklog}
@@ -632,21 +632,19 @@ Figure~\ref{figstorydependencies} shows the validated dependency graph for the c
 
 \section{First-Pass User Story Map}
 
-\frameworknote{Required content}{Show the user activities, user tasks and release slices. Clearly identify which stories belong to Sprint 1 and which stories are scheduled for later sprints or the backlog.}
-
 \begin{table}[H]
     \centering
     \scriptsize
-    \caption{First-pass user story map template.}
+    \caption{First-pass user story map for the Trust-to-Agreement journey.}
     \resizebox{\textwidth}{!}{%
         \begin{tabular}{@{}L{2.6cm}L{2.8cm}L{2.8cm}L{2.8cm}L{2.8cm}L{2.8cm}@{}}
             \toprule
-            Release slice & \placeholder{Activity 1} & \placeholder{Activity 2} & \placeholder{Activity 3} & \placeholder{Activity 4} & \placeholder{Activity 5}\\
+            Release slice & Find a place & Evaluate people & Contact safely & Set expectations & Manage the shared home\\
             \midrule
-            User task & \placeholder{Task} & \placeholder{Task} & \placeholder{Task} & \placeholder{Task} & \placeholder{Task}\\
-            Sprint 1 & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs}\\
-            Later sprint & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs}\\
-            Backlog & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs} & \placeholder{US IDs}\\
+            User task & Filter by campus and budget & Read verification and lifestyle fit & Verify identity and message in-app & Propose, understand and agree rules & Coordinate chores, bills and issues\\
+            Sprint~1 & US-13 & US-11, US-12 & US-09 & US-10, US-02 & --\\
+            Later sprint & -- & US-15 & -- & -- & US-01, US-03--US-08, US-14\\
+            Secondary backlog & US-17 & -- & -- & -- & US-16, US-18\\
             \bottomrule
         \end{tabular}%
     }
@@ -655,46 +653,142 @@ Figure~\ref{figstorydependencies} shows the validated dependency graph for the c
 
 \subsection{Sprint 1 Scope and Rationale}
 
-\frameworknote{Required content}{List the Sprint 1 stories and explain why they form a coherent, testable path through the selected concept.}
+Sprint~1 contains US-13, US-11, US-12, US-09, US-10 and US-02. Together they form a coherent end-to-end slice rather than six disconnected features: a student narrows affordable properties, evaluates verified and compatible housemates, completes the trust gate required for private messaging, and then accesses explicit household expectations. This sequence tests the selected concept's central claim that trust information should continue from discovery into the first shared-living agreement.
 
-\placeholder{Insert the approved Sprint 1 story IDs and rationale.}
+The slice is narrow enough to test with seeded listings and profiles, while still covering search, decision support, safety, communication and rule comprehension. Chores, expenses, reminders and property management remain visible as later backlog directions, but they are not required to complete the Sprint~1 evaluation path.
 
 \section{Preliminary Prototype}
 
 \subsection{Prototype Scope}
 
-\frameworknote{Required content}{The preliminary prototype must correspond to the selected user stories. It must demonstrate the main Sprint 1 path and allow the related features to be tested.}
+The preliminary prototype is a functional high-fidelity HTML, CSS and JavaScript proof of concept for students and young professionals who are searching for shared accommodation, particularly users entering an unfamiliar household or communicating in a second language. It uses realistic seeded properties, housemate profiles, messages and house rules so that participants can complete tasks without entering personal data.
 
-\placeholder{Describe the prototype scope, target users and main task flow.}
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Prototype scope and fidelity decisions.}
+    \begin{tabularx}{\textwidth}{@{}L{3.2cm}Y@{}}
+        \toprule
+        Decision & Prototype implementation\\
+        \midrule
+        Core task path & Search and filter properties (US-13), assess verification and lifestyle compatibility (US-11 and US-12), authenticate before messaging (US-09), and understand household rules (US-02 and US-10).\\
+        Fidelity & Functional high fidelity. Navigation, filters, validation, authentication gates, messaging and multilingual rule interactions are clickable rather than represented by static wireframes.\\
+        Visual rationale & Warm photography, warm white surfaces, peach highlights and sage trust signals follow the mood board. Compact layouts and plain labels support repeated use rather than a marketing-style experience.\\
+        Prototype data & Seeded listings and profiles provide repeatable test conditions. Changes last for the current page session and reset on refresh, so every participant begins from the same state.\\
+        Test environment & The prototype is hosted as a web application and can also run locally. Desktop is the primary assessment viewport, with responsive navigation and layouts for smaller screens.\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabprototypescope}
+\end{table}
+
+This fidelity is appropriate because the rubric requires observable, testable interactions linked to user stories. A clickable interface allows the team to measure completion, errors and comprehension, while avoiding the cost and privacy risk of a production backend at this stage. The prototype does not perform real identity checks, encryption, database persistence or translation services. The phone check uses a demonstration code, and the current rule workflow represents rule creation and the agreed outcome but not yet the full unanimous acknowledgement sequence required by AC-US10-02. These limitations define the next iteration rather than being presented as completed functionality.
 
 \subsection{Prototype Flow}
 
-\placeholderfigure{Sprint 1 prototype flow}{5.2cm}{figprototypeflow}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.32cm,
+        flowstep/.style={
+            draw=accent,
+            fill=softaccent,
+            rounded corners=3pt,
+            align=center,
+            text width=2.55cm,
+            minimum height=1.75cm,
+            inner sep=5pt
+        },
+        flowarrow/.style={-{Latex[length=2.2mm]}, thick, draw=accent}
+    ]
+        \node[flowstep] (search) {\textbf{1. Find a place}\\Filter campus and budget\\{\small US-13}};
+        \node[flowstep, right=of search] (assess) {\textbf{2. Evaluate people}\\Check trust and lifestyle fit\\{\small US-11, US-12}};
+        \node[flowstep, right=of assess] (gate) {\textbf{3. Pass safety gate}\\Student login and phone check\\{\small US-09}};
+        \node[flowstep, right=of gate] (message) {\textbf{4. Message in-app}\\Keep personal details hidden\\{\small US-09}};
+        \node[flowstep, right=of message] (rules) {\textbf{5. Set expectations}\\Read and clarify house rules\\{\small US-10, US-02}};
+
+        \draw[flowarrow] (search) -- (assess);
+        \draw[flowarrow] (assess) -- (gate);
+        \draw[flowarrow] (gate) -- (message);
+        \draw[flowarrow] (message) -- (rules);
+    \end{tikzpicture}
+    \caption{Sprint 1 prototype flow from accommodation search to shared expectations.}
+    \label{figprototypeflow}
+\end{figure}
 
 \subsection{Prototype Screens}
 
-\placeholderfigure{Preliminary prototype screens}{8.0cm}{figprototypescreens}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{US-13_property-search-filters.png}\\[-0.2em]
+        \small\textbf{S-01: Property search.} Location, room type and weekly budget controls support the first narrowing decision.
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{US-11_verified-housemate-profiles.png}\\[-0.2em]
+        \small\textbf{S-02: Verified profiles.} Identity and phone badges provide visible trust signals before contact.
+    \end{minipage}
+    \caption{Discovery screens for property affordability and profile verification.}
+    \label{figprototypescreensdiscovery}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{US-12_lifestyle-housemate-filters.png}\\[-0.2em]
+        \small\textbf{S-03: Lifestyle matching.} Filters narrow the ranked results and expose the reasons behind a match.
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{US-09_secure-in-app-messaging.png}\\[-0.2em]
+        \small\textbf{S-04: Secure messaging.} Contact details stay hidden and messaging is available only after login and phone verification.
+    \end{minipage}
+    \caption{Trust and communication screens for comparing and contacting housemates.}
+    \label{figprototypescreenstrust}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{US-02_household-rules.png}\\[-0.2em]
+        \small\textbf{S-05: Household rules.} All expectations appear in one location with language controls and expandable explanations.
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{US-10_agreed-noise-rules.png}\\[-0.2em]
+        \small\textbf{S-06: Agreed rule outcome.} The expanded quiet-hours rule shows the detail required to avoid verbal ambiguity.
+    \end{minipage}
+    \caption{Shared-expectation screens for accessible and explicit household rules.}
+    \label{figprototypescreensrules}
+\end{figure}
+
+The screens demonstrate both the normal path and observable system feedback: result counts change after filtering, incompatible housemate cards are removed, messaging remains locked until verification, personal contact details trigger a warning, language changes update the rule content, and incomplete rule forms display field-level errors.
 
 \section{Prototype-to-User-Story Traceability}
 \label{sectraceability}
 
-Each screen of the HTML prototype is mapped to the user story and the acceptance criteria that it demonstrates, so every Sprint~1 requirement can be traced from the backlog to an interaction that can be exercised in the prototype. Table~\ref{tabprototypetraceability} records this mapping, and the same screen identifiers are used by the test plan in Section~\ref{sectestplan}. Together the two sections close the chain that starts at a research finding and ends at a testable screen. The link column is completed once the prototype pages are hosted.
+Each screen is mapped to the user story and acceptance criteria that it demonstrates. Table~\ref{tabprototypetraceability} distinguishes complete interaction evidence from partial representation, so the prototype does not imply that a static field or seeded result satisfies an entire acceptance criterion. The same screen identifiers are used by the test plan in Section~\ref{sectestplan}.
 
 \begin{table}[H]
     \centering
     \scriptsize
     \caption{Prototype-to-user-story traceability.}
-    \begin{tabularx}{\textwidth}{@{}L{1.1cm}L{2.7cm}L{1.5cm}L{2.5cm}Y L{1.5cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}L{0.9cm}L{2.4cm}L{1.4cm}L{2.5cm}Y L{1.1cm}@{}}
         \toprule
         Screen ID & Prototype screen & Story ID & Acceptance ID & Testable interaction & Link\\
         \midrule
-        S-01 & Lifestyle profile setup & US-12 & AC-US12-04, AC-US12-05 & Complete the required preference fields, submit an incomplete form to trigger the completion prompt, save contradictory selections to trigger the conflict flag. & \\
-        S-02 & Housemate and listing search results & US-13, US-11 & AC-US13-01, AC-US13-02, AC-US11-02 & Search from a university reference point, apply rent and distance filters, switch on the verified-only filter. & \\
-        S-03 & Listing and profile detail & US-11, US-13 & AC-US11-03, AC-US13-03 & Open a verified and an unverified profile to compare the badge with the warning indicator, locate the affordability details. & \\
-        S-04 & Compatibility comparison & US-12 & AC-US12-01, AC-US12-02, AC-US12-06 & Compare two candidate profiles through the compatibility summary, apply a strict filter to reach the zero-result broadening suggestion. & \\
-        S-05 & Guided in-app chat & US-09 & AC-US09-01, AC-US09-04, AC-US09-06 & Send a first message from a guided prompt, type contact details to trigger the warning, view the unverified sender notice. & \\
-        S-06 & House rule proposal & US-10 & AC-US10-01, AC-US10-04 & Propose a rule with a title, description and category, submit with missing fields to trigger the completion prompt. & \\
-        S-07 & Household rules list and acknowledgement & US-10, US-02 & AC-US10-02, AC-US02-01 & Acknowledge a proposed rule as each housemate, then find the active rule in the rules list. & \\
+        S-01 & Property search and budget filtering & US-13 & AC-US13-02 (partial) & Change the weekly budget and submit the search; the visible cards and result count update. Location and room-type fields are represented but are not yet connected to filtering logic. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/properties}{Open}\\
+        S-02 & Verified housemate results & US-11 & AC-US11-01, AC-US11-02 & Identify identity and phone badges, then inspect the verified-only filter used by the result set. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
+        S-03 & Lifestyle compatibility filters & US-12 & AC-US12-01, AC-US12-02 (partial) & Select ``Very tidy'' and ``Quiet nights''; the results narrow and the visible score and lifestyle facts explain the strongest match. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
+        S-04 & Authentication and secure messages & US-09 & AC-US09-01, AC-US09-04 & Attempt to message while signed out, complete login and the phone check, send a normal message, then enter an email or phone number to trigger blocking and a privacy warning. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#messages}{Open}\\
+        S-05 & Multilingual household rule list & US-02 & AC-US02-01, AC-US02-02, AC-US02-03 & View every rule in one list, change the language, and expand a rule to reveal the housemate's explanation. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
+        S-06 & Rule creation and agreed outcome & US-10, US-02 & AC-US10-04, AC-US02-04 & Submit an incomplete rule form to trigger field-level errors, then inspect the existing agreed quiet-hours rule. Unanimous acknowledgement in AC-US10-02 is a next-iteration gap. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
         \bottomrule
     \end{tabularx}
     \label{tabprototypetraceability}
@@ -703,7 +797,7 @@ Each screen of the HTML prototype is mapped to the user story and the acceptance
 \section{Prototype Test Plan}
 \label{sectestplan}
 
-The prototype is validated through five moderated usability tests that follow the Sprint~1 path of the selected concept. Every test is anchored to Sprint~1 user stories and to specific acceptance criteria from Section~\ref{secacceptance}, so a passed test provides direct evidence that the corresponding criteria hold in the prototype. Each test uses five participants with a think-aloud protocol, and every task scenario starts from the prototype screen recorded in Table~\ref{tabprototypetraceability}.
+The prototype will be evaluated through five moderated usability tests that follow the Sprint~1 path. Each test uses five participants and a think-aloud protocol. The facilitator records completion, time, errors and interpretation rather than helping participants through the interface. Because the prototype uses only seeded data and a demonstration verification code, the sessions do not require participants to disclose identification, phone numbers or real household information.
 
 \begin{table}[H]
     \centering
@@ -713,11 +807,11 @@ The prototype is validated through five moderated usability tests that follow th
         \toprule
         Test & Goal & Stories & Acceptance criteria & Responsible\\
         \midrule
-        T1 & Lifestyle preference profile setup & US-12 & AC-US12-04, AC-US12-05 & Pranav\\
-        T2 & Verification trust signals on listings and profiles & US-11, US-13 & AC-US11-02, AC-US11-03, AC-US13-03 & Nicky\\
-        T3 & Compatibility comparison and match choice & US-12 & AC-US12-01, AC-US12-02, AC-US12-06 & Liam\\
-        T4 & Guided safe first contact & US-09 & AC-US09-01, AC-US09-04, AC-US09-06 & Dylan\\
-        T5 & House rule proposal and acknowledgement & US-10, US-02 & AC-US10-01, AC-US10-02, AC-US10-04, AC-US02-01 & Liam\\
+        T1 & Narrow properties by weekly budget & US-13 & AC-US13-02 (partial) & Pranav\\
+        T2 & Recognise verified housemate profiles & US-11 & AC-US11-01, AC-US11-02 & Nicky\\
+        T3 & Use lifestyle compatibility to choose a match & US-12 & AC-US12-01, AC-US12-02 (partial) & Liam\\
+        T4 & Complete authentication and message safely & US-09 & AC-US09-01, AC-US09-04 & Dylan\\
+        T5 & Understand multilingual rules and form errors & US-02, US-10 & AC-US02-01--04, AC-US10-04 & Liam\\
         \bottomrule
     \end{tabularx}
     \label{tabtestoverview}
@@ -726,19 +820,19 @@ The prototype is validated through five moderated usability tests that follow th
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T1. Lifestyle preference profile setup.}
+    \caption{Test T1. Narrow properties by weekly budget.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify users can complete the lifestyle preference profile without guidance.\\
-        Related stories & US-12\\
-        Acceptance criteria & AC-US12-04, AC-US12-05\\
-        Target user & Student new to shared housing.\\
-        Task scenario & ``You just signed up. Set up your lifestyle preferences (cleanliness, sleep schedule, noise, guests, smoking).''\\
-        Success criteria & $\geq$4/5 users complete the profile in $\leq$3 minutes with no facilitator help and all required fields filled. An incomplete submission triggers the completion prompt (AC-US12-04). Contradictory selections trigger the conflict flag (AC-US12-05).\\
-        Expected errors & Users skip required fields thinking they are optional. Users cannot find where profile setup starts. Field labels are unclear.\\
-        Data to collect & Task completion rate, time on task, fields left blank and points where users ask for help.\\
+        Test goal & Verify that a student can narrow the seeded property results to an affordable option.\\
+        Related stories & US-13; S-01\\
+        Acceptance criteria & AC-US13-02, tested only for the currently functional weekly-budget control.\\
+        Target user & Student moving near UNSW with a fixed weekly budget.\\
+        Task scenario & ``You need a room near UNSW for no more than \$350 per week. Narrow the results and identify one suitable home.''\\
+        Success criteria & $\geq$4/5 users change the budget, submit the search and identify the remaining listing in $\leq$2 minutes. The visible result count and cards must update without facilitator help.\\
+        Expected errors & Users do not notice the Search button, interpret the price as monthly, or expect the location and room-type fields to update results at this fidelity.\\
+        Data to collect & Completion rate, time on task, selected listing, misclicks and comments about unavailable filters.\\
         Responsible & Pranav\\
         \bottomrule
     \end{tabularx}
@@ -748,19 +842,19 @@ The prototype is validated through five moderated usability tests that follow th
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T2. Verification trust signals on listings and profiles.}
+    \caption{Test T2. Recognise verified housemate profiles.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify users can find a listing's key details and correctly read the verification status.\\
-        Related stories & US-11, US-13\\
-        Acceptance criteria & AC-US11-02, AC-US11-03, AC-US13-03\\
-        Target user & Student searching for a room.\\
-        Task scenario & ``Find a room under \$350 per week, check whether the listing and the profile behind it are verified, and open the property details.''\\
-        Success criteria & $\geq$4/5 users correctly state the verification status and find the key details in $\leq$2 minutes. The verified-only filter or badge is identified (AC-US11-02). The unverified warning is noticed and explained (AC-US11-03). The affordability details are located (AC-US13-03).\\
-        Expected errors & Users miss the verification badge. Users confuse listing verification with profile verification. Users cannot explain what verified means.\\
-        Data to collect & Verification status identification accuracy, time to locate details and the user's stated meaning of the badge.\\
+        Test goal & Verify that visible identity signals help users recognise which profiles have been checked.\\
+        Related stories & US-11; S-02\\
+        Acceptance criteria & AC-US11-01, AC-US11-02\\
+        Target user & International student assessing unfamiliar potential housemates.\\
+        Task scenario & ``Find housemates whose identity and phone have been verified. Show the control you would use to avoid unverified results and explain what evidence you relied on.''\\
+        Success criteria & $\geq$4/5 users locate the verified-only control and correctly identify both badge types in $\leq$90 seconds. Participants must explain that the badge is a trust signal, not a guarantee of compatibility or safety.\\
+        Expected errors & Users miss the badge, confuse identity and phone verification, or assume a high match score means identity verified.\\
+        Data to collect & Badge identification accuracy, explanation quality, time on task and points of visual confusion.\\
         Responsible & Nicky\\
         \bottomrule
     \end{tabularx}
@@ -770,19 +864,19 @@ The prototype is validated through five moderated usability tests that follow th
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T3. Compatibility comparison and match choice.}
+    \caption{Test T3. Use lifestyle compatibility to choose a match.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify users can compare housemate compatibility and identify the better match.\\
-        Related stories & US-12\\
-        Acceptance criteria & AC-US12-01, AC-US12-02, AC-US12-06\\
-        Target user & Student choosing between candidate housemates.\\
-        Task scenario & ``Compare two housemate profiles against your own preferences and pick the better match. Explain your choice.''\\
-        Success criteria & $\geq$4/5 users pick the higher-compatibility profile and cite at least one specific mismatch from the compatibility summary (AC-US12-02). Users correctly interpret the ranked results (AC-US12-01). When a zero-result filter is applied, users notice the broadening suggestion (AC-US12-06).\\
-        Expected errors & Users misread the comparison layout. Users judge by photo instead of preference data. The comparison entry point is not found.\\
-        Data to collect & Match selection accuracy, reasons given for the choice and misclick count on the comparison screen.\\
+        Test goal & Verify that users can narrow housemate results and explain a compatibility choice using lifestyle evidence.\\
+        Related stories & US-12; S-03\\
+        Acceptance criteria & AC-US12-01 and AC-US12-02, represented by seeded scores and visible lifestyle facts.\\
+        Target user & Student who values a tidy home and quiet nights.\\
+        Task scenario & ``Find the strongest verified match for someone who is very tidy and prefers quiet nights. Explain why that person is the best fit.''\\
+        Success criteria & $\geq$4/5 users select both filters, reach the single matching result and cite the match score plus at least one relevant lifestyle fact in $\leq$2 minutes.\\
+        Expected errors & Users treat the score as a safety rating, rely only on the photo, or do not understand why a card disappeared.\\
+        Data to collect & Filter completion, selected profile, reasons given, time on task and score interpretation.\\
         Responsible & Liam\\
         \bottomrule
     \end{tabularx}
@@ -792,19 +886,19 @@ The prototype is validated through five moderated usability tests that follow th
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T4. Guided safe first contact.}
+    \caption{Test T4. Complete authentication and message safely.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify users can send a guided first message without sharing personal contact details.\\
-        Related stories & US-09\\
-        Acceptance criteria & AC-US09-01, AC-US09-04, AC-US09-06\\
-        Target user & International student making first contact.\\
-        Task scenario & ``You want to ask about this listing. Send a first message using the app.''\\
-        Success criteria & $\geq$4/5 users send a message using at least one guided prompt in $\leq$2 minutes with no contact details visible to either party (AC-US09-01). No user types personal contact details without seeing the warning (AC-US09-04). Users understand the unverified sender warning (AC-US09-06).\\
-        Expected errors & Users ignore the prompts and write free text. Users look for a phone number instead of the in-app chat. Prompt wording is unclear to non-native speakers.\\
-        Data to collect & Prompt usage rate, task completion rate, attempts to share contact details and comprehension issues noted in think-aloud.\\
+        Test goal & Verify that messaging is inaccessible before verification and that personal contact details are intercepted.\\
+        Related stories & US-09; S-04\\
+        Acceptance criteria & AC-US09-01, AC-US09-04\\
+        Target user & International student making first contact with a potential housemate.\\
+        Task scenario & ``Starting signed out, open Messages, sign in with the demo account, verify the phone using code 2468 and send a question about an inspection. Then try to send alex@example.com.''\\
+        Success criteria & $\geq$4/5 users complete login and phone verification and send the normal message in $\leq$3 minutes. Messaging must stay locked beforehand, and the email attempt must not appear in the thread while the privacy warning is visible.\\
+        Expected errors & Users close the login modal and expect guest messaging, cannot find the phone-check screen, or misread the warning as a successfully sent message.\\
+        Data to collect & Completion at each gate, time on task, failed code entries, message outcome and warning comprehension.\\
         Responsible & Dylan\\
         \bottomrule
     \end{tabularx}
@@ -814,26 +908,26 @@ The prototype is validated through five moderated usability tests that follow th
 \begin{table}[H]
     \centering
     \small
-    \caption{Test T5. House rule proposal and acknowledgement.}
+    \caption{Test T5. Understand multilingual rules and form errors.}
     \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify users can propose a house rule and reach an acknowledged agreement.\\
-        Related stories & US-10, US-02\\
-        Acceptance criteria & AC-US10-01, AC-US10-02, AC-US10-04, AC-US02-01\\
-        Target user & Student moving in with new housemates.\\
-        Task scenario & ``Propose a house rule about quiet hours, have your housemates acknowledge it, then find it in the household rules list.''\\
-        Success criteria & $\geq$4/5 users propose a rule with a title, description and category so that housemates are notified (AC-US10-01), and reach the acknowledged state in $\leq$3 minutes (AC-US10-02). A submission with missing fields triggers the completion prompt (AC-US10-04). The active rule is then found in the rules list (AC-US02-01).\\
-        Expected errors & Users cannot find the proposal entry point. Users confuse a proposed rule with an active rule. Users miss the acknowledgement step.\\
-        Data to collect & Task completion rate, time on task, drop-offs at the acknowledgement step and comprehension notes from think-aloud.\\
+        Test goal & Verify that a user can find, translate and clarify household expectations, and receives clear feedback when a proposed rule is incomplete.\\
+        Related stories & US-02, US-10; S-05 and S-06\\
+        Acceptance criteria & AC-US02-01, AC-US02-02, AC-US02-03, AC-US02-04 and AC-US10-04\\
+        Target user & Student living in a shared apartment for the first time and using English as a second language.\\
+        Task scenario & ``Change the rules to Simplified Chinese, find the quiet-hours expectation and open its explanation. Then start adding a new noise rule and submit it without a title or category.''\\
+        Success criteria & $\geq$4/5 users complete the language change, locate and expand the noise rule, and trigger the required-field messages in $\leq$3 minutes. Each user must correctly state the quiet-hours period after reading the explanation.\\
+        Expected errors & Users overlook the language selector, mistake the summary for the full explanation, or expect an incomplete rule to be saved.\\
+        Data to collect & Completion rate, language-control discovery, comprehension answer, validation errors noticed and time on task.\\
         Responsible & Liam\\
         \bottomrule
     \end{tabularx}
     \label{tabtestt5}
 \end{table}
 
-After each round the team compiles the results into one summary, ranks the observed issues by severity and feeds them into the next prototype iteration. Failed acceptance criteria are recorded by their identifiers so that the retest after iteration targets exactly those criteria.
+After each round the team will compile results into one summary, rank observed issues by severity and feed them into the next prototype iteration. Failed or partially represented acceptance criteria will be recorded by identifier. The highest-priority planned changes are to connect every property filter, generate compatibility from a completed preference profile, and add the full propose--review--unanimous acknowledgement workflow for US-10.
 
 \section{Conclusion}
 
@@ -922,7 +1016,42 @@ Supporting use cases enable several user goals at once and therefore do not map 
 
 \section{Prototype Screens and Links}
 
-\frameworknote{Appendix content}{Insert full-size prototype screenshots, hosted page links and any interaction notes needed for assessment.}
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Prototype access information.}
+    \begin{tabularx}{\textwidth}{@{}L{3.4cm}Y@{}}
+        \toprule
+        Item & Access details\\
+        \midrule
+        Hosted prototype & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}{RoomMate Haven on AWS Elastic Beanstalk}\\
+        Demo account & Student email: \texttt{z5555555@ad.unsw.edu.au}; password: \texttt{studentdemo}\\
+        Phone verification & Select ``Send code'' and enter the demonstration code \texttt{2468}.\\
+        Reset behaviour & Refresh the page to restore all seeded data and return the prototype to a repeatable test state.\\
+        Screenshot evidence & \href{https://github.com/NuodiLiu/DESN2000/tree/main/part2/user_story_screenshots}{GitHub screenshot folder containing US-01 to US-18 evidence}\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabprototypeaccess}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Direct evidence states for Sprint 1 user stories.}
+    \begin{tabularx}{\textwidth}{@{}L{1.6cm}L{5.8cm}Y@{}}
+        \toprule
+        Story & Screenshot file & Hosted evidence state\\
+        \midrule
+        US-02 & \path{US-02_household-rules.png} & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-02}{Open capture state}\\
+        US-09 & \path{US-09_secure-in-app-messaging.png} & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-09}{Open capture state}\\
+        US-10 & \path{US-10_agreed-noise-rules.png} & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-10}{Open capture state}\\
+        US-11 & \path{US-11_verified-housemate-profiles.png} & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-11}{Open capture state}\\
+        US-12 & \path{US-12_lifestyle-housemate-filters.png} & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-12}{Open capture state}\\
+        US-13 & \path{US-13_property-search-filters.png} & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-13}{Open capture state}\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabprototypeevidence}
+\end{table}
 
 \section{Jira Evidence}
 
