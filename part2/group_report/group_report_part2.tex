@@ -8,8 +8,10 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{xcolor}
+\usepackage{amssymb}
 \usepackage{tikz}
 \usepackage[hidelinks]{hyperref}
+\usepackage{url}
 \usetikzlibrary{arrows.meta, positioning, shapes.geometric}
 
 \graphicspath{{../../part1/assets/brand/}{../}{../user_story_screenshots/}}
@@ -770,6 +772,76 @@ This fidelity is appropriate because the rubric requires observable, testable in
 
 The screens demonstrate both the normal path and observable system feedback: multi-criteria property filters update and sort the result set, lifestyle preferences recalculate compatibility scores, contradictory schedules are rejected, messaging remains locked until verification, personal contact details trigger a warning, language changes update rule content, and a proposed rule remains inactive until every housemate approves it.
 
+\section{Technical Development Evolution}
+\label{secdevevolution}
+
+During Weeks~3 to~7, the proposed solution gradually evolved as new research findings and team discussions shaped the design. Initially, the project focused on creating a general student accommodation platform where users could browse available properties and contact landlords. However, the user research indicated that students were more concerned about trust and housemate compatibility than simply finding available rooms.
+
+Based on these findings, the team shifted the design towards a compatibility-focused platform. Lifestyle preference profiles and compatibility comparison became the core feature, supported by verified listings and guided in-app messaging to improve trust during communication. Finally, a lightweight co-living agreement was added to encourage discussion of household expectations before students moved in.
+
+This iterative process ensured that the final concept directly addressed the problems identified during the Empathise and Define stages while remaining achievable within the project scope. The resulting Trust-to-Agreement journey described in Section~\ref{secconceptselection} reflects this progression from a broad accommodation search tool to a student-centred decision path.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.28cm,
+        evostep/.style={
+            draw=accent,
+            fill=softaccent,
+            rounded corners=3pt,
+            align=center,
+            text width=6.8cm,
+            minimum height=1.05cm,
+            inner sep=6pt,
+            font=\small
+        },
+        evoarrow/.style={-{Latex[length=2.2mm]}, thick, draw=accent}
+    ]
+        \node[evostep] (w3) {\textbf{Week 3}\\Initial idea: general accommodation search platform};
+        \node[evostep, below=of w3] (w4) {\textbf{Week 4}\\Research findings: students care about trust and housemate compatibility};
+        \node[evostep, below=of w4] (w5) {\textbf{Week 5}\\Concept selection: added lifestyle compatibility matching};
+        \node[evostep, below=of w5] (w6) {\textbf{Week 6}\\System design: added verified listings and guided messaging};
+        \node[evostep, below=of w6] (w7) {\textbf{Week 7}\\Final prototype: integrated compatibility matching, trust indicators and co-living agreement};
+
+        \draw[evoarrow] (w3) -- (w4);
+        \draw[evoarrow] (w4) -- (w5);
+        \draw[evoarrow] (w5) -- (w6);
+        \draw[evoarrow] (w6) -- (w7);
+    \end{tikzpicture}
+    \caption{Technical development evolution from Weeks~3 to~7.}
+    \label{figdevevolution}
+\end{figure}
+
+\section{Innovation Compared to Existing Platforms}
+\label{secinnovation}
+
+Existing accommodation platforms such as Airbnb, Flatmates.com.au and Domain mainly focus on helping users search for available properties and contact landlords or housemates. While these platforms provide useful listing information, they offer limited support for evaluating lifestyle compatibility or preparing users for shared living before moving in.
+
+Our proposed platform goes beyond accommodation search by integrating features specifically designed for university students. It combines lifestyle compatibility matching, verified trust indicators, guided in-app messaging and a simple pre-move-in co-living agreement. These features help users make more informed decisions and reduce potential conflicts before committing to a shared living arrangement.
+
+Rather than replacing existing accommodation platforms, the proposed solution complements them by addressing the trust, compatibility and shared-living challenges identified through our user research. Table~\ref{tabplatformcomparison} summarises how the selected Sprint~1 features compare with three widely used services reviewed during the competitive analysis.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Feature comparison between existing accommodation platforms and our proposed platform.}
+    \begin{tabularx}{\textwidth}{@{}L{3.6cm}*{4}{>{\centering\arraybackslash}X}@{}}
+        \toprule
+        Feature & Airbnb & Flatmates.com.au & Domain & Our Platform\\
+        \midrule
+        Property listings & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$\\
+        Verified listings & Partial & Partial & $\checkmark$ & $\checkmark$\\
+        Lifestyle compatibility matching & -- & Limited & -- & $\checkmark$\\
+        Guided in-app messaging & Limited & Basic & Basic & $\checkmark$\\
+        Pre-move-in co-living agreement & -- & -- & -- & $\checkmark$\\
+        Student-focused experience & -- & Partial & -- & $\checkmark$\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabplatformcomparison}
+\end{table}
+
+Airbnb supports short-term stays and host verification but does not target long-term student housemate matching or pre-move-in household agreements~\cite{refairbnb}. Flatmates.com.au lists shared accommodation and basic profile filters, yet its compatibility support remains limited and it does not provide a structured agreement workflow before move-in~\cite{refflatmates}. Domain offers verified rental listings for the Australian market, but its search flow stops at property discovery and does not extend into housemate fit or shared-living preparation~\cite{refdomain}. Our platform is the only option in this comparison that combines all six capabilities in one student-focused path.
+
 \section{Prototype-to-User-Story Traceability}
 \label{sectraceability}
 
@@ -938,9 +1010,11 @@ After each round the team will compile results into one summary, rank observed i
 \newpage
 \section{References}
 
-\begin{itemize}
-    \item \placeholder{Insert references reused from Part 1 and any new sources used in Part 2.}
-\end{itemize}
+\begin{thebibliography}{9}
+    \bibitem{refairbnb} Airbnb. (n.d.). \textit{Help Centre: How Airbnb works}. \url{https://www.airbnb.com.au/help/article/362}
+    \bibitem{refflatmates} Flatmates.com.au. (n.d.). \textit{Find a flatmate or room}. \url{https://flatmates.com.au/}
+    \bibitem{refdomain} Domain. (n.d.). \textit{Rental property search}. \url{https://www.domain.com.au/rent/}
+\end{thebibliography}
 
 \appendix
 
