@@ -19,7 +19,7 @@ Total issues: 63
   Assignee: Unassigned
   URL: https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-2
   Description / Acceptance Criteria:
-    Pranav - Domestic students survey research
+    Pranav Shanker - Domestic students survey research
     Qian Cao - International students survey research
     Liam - International students interview + Housemates research
     Nicky - Property manager research
