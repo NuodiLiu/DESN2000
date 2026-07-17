@@ -3,18 +3,18 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-09 (Jira ST4-35).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
         Acceptance ID & Scenario & Given & When & Then\\
         \midrule
-        AC-US09-01 & Success & two users are connected on the platform & they open a conversation & they can send and receive messages through a secure in-app system without either party's personal contact details being visible\\
+        AC-US09-01 & Success & two users are connected on the platform & they open a conversation & they can send and receive messages through a private in-app system without either party's personal contact details being visible\\
         AC-US09-02 & Success & both users mutually agree to share contact details & they both opt in & the system exchanges their contact details between them\\
         AC-US09-03 & Success & a user feels unsafe & they block or report another user from the messaging interface & the reported user is flagged for review and the conversation is ended\\
-        AC-US09-04 & Error & a user attempts to include personal contact details in a message & the system detects this & it warns the user and recommends using the opt-in contact sharing feature instead\\
+        AC-US09-04 & Error & a user enters personal contact details in a message & the browser checks the content before submission & it blocks the message and directs the user to the mutual contact sharing feature\\
         AC-US09-05 & Error & a user attempts to contact someone who has blocked them & they try to send a message & the system prevents the message from being sent without revealing that they have been blocked\\
-        AC-US09-06 & Edge case & a user's account is flagged as unverified & they attempt to initiate a conversation & the system displays a warning to the recipient that the sender is unverified before they choose to respond\\
+        AC-US09-06 & Edge case & a phone verified user has not completed identity verification & they initiate a conversation & the recipient sees an unverified identity warning before responding\\
         \bottomrule
     \end{tabularx}
     \label{tabacus09}
@@ -22,7 +22,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-11 (Jira ST4-38).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -32,7 +32,7 @@
         AC-US11-02 & Success & a user is searching for housemates & they apply the verified only filter & only profiles with a verified identity badge appear in search results\\
         AC-US11-03 & Success & a user views an unverified profile & they open it & a visible warning indicator is displayed clearly at the top of the profile\\
         AC-US11-04 & Error & a user submits an expired or unreadable identification document & the system processes it & the verification is rejected and the user is notified with instructions to resubmit a valid document\\
-        AC-US11-05 & Error & a user attempts to access the platform's core matching features without completing verification & they try to proceed & the system prompts them to complete verification first\\
+        AC-US11-05 & Error & a user has not completed identity verification & they attempt to display a verified identity badge & the system keeps the profile unverified and directs them to complete identity verification\\
         AC-US11-06 & Edge case & a verified user's identification document expires & the system detects the expiry & it notifies the user to resubmit updated documentation to maintain their verified status\\
         \bottomrule
     \end{tabularx}
@@ -41,7 +41,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-12 (Jira ST4-39).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -60,7 +60,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-13 (Jira ST4-43).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -81,7 +81,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-01 (Jira ST4-23).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -100,7 +100,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-02 (Jira ST4-24).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -119,7 +119,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-03 (Jira ST4-26).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -138,7 +138,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-04 (Jira ST4-28).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -157,7 +157,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-05 (Jira ST4-29).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -176,7 +176,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-06 (Jira ST4-32).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -195,7 +195,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-07 (Jira ST4-33).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -214,7 +214,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-08 (Jira ST4-34).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -233,7 +233,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-10 (Jira ST4-36).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -254,7 +254,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-14 (Jira ST4-25).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -272,7 +272,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-15 (Jira ST4-41).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -293,15 +293,15 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-16 (Jira ST4-30).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
         Acceptance ID & Scenario & Given & When & Then\\
         \midrule
         AC-US16-01 & Success & a property manager has set a rent amount and due date for a tenant & the due date approaches & the system automatically sends a rent reminder to that tenant\\
-        AC-US16-02 & Success & a tenant's payment has been recorded & the property manager views the dashboard & the tenant's status updates to "paid"\\
-        AC-US16-03 & Success & the due date has passed without payment being recorded & the system checks payment status & the tenant's status updates to "overdue" and the property manager is notified\\
+        AC-US16-02 & Success & a tenant's payment has been recorded & the property manager views the dashboard & the tenant's status updates to paid\\
+        AC-US16-03 & Success & the due date has passed without payment being recorded & the system checks payment status & the tenant's status updates to overdue and the property manager is notified\\
         AC-US16-04 & Error & a property manager attempts to set a rent due date without entering a rent amount & they submit & the system prompts them to complete all required fields\\
         AC-US16-05 & Error & a tenant's contact details are incomplete & the system attempts to send a reminder & the system flags the tenant's profile as incomplete and alerts the property manager\\
         AC-US16-06 & Edge case & a tenant disputes a rent amount & they flag it through the app & the system marks the payment status as disputed and notifies the property manager to review\\
@@ -312,7 +312,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-17 (Jira ST4-40).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule
@@ -331,7 +331,7 @@
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Acceptance criteria for US-18 (Jira ST4-37).}
     \begin{tabularx}{\textwidth}{@{}L{1.9cm}L{1.3cm}Y Y Y@{}}
         \toprule

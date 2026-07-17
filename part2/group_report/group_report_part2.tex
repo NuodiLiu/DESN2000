@@ -7,7 +7,6 @@
 \usepackage{array}
 \usepackage{caption}
 \usepackage{float}
-\usepackage{pdflscape}
 \usepackage{xcolor}
 \usepackage{amssymb}
 \usepackage{tikz}
@@ -71,7 +70,7 @@
     \vspace{1.1cm}
     {\Large DESN2000 SENG\par}
     \vspace{0.3cm}
-    {\Huge\bfseries Prelim Report\par}
+    {\Huge\bfseries Preliminary Report\par}
     \vspace{0.25cm}
 
     \vspace{1.2cm}
@@ -89,18 +88,18 @@
 
 \section{Introduction and Report Scope}
 
-Previous report used surveys and interviews with four stakeholder groups to define the problem and develop
+The previous report used surveys and interviews with four stakeholder groups to define the problem and develop
 personas. This report applies the Ideate stage to that evidence. It compares three technical concepts,
 selects one through a weighted decision matrix, and translates the selected direction into a Jira
 backlog and a preliminary prototype.
 The report focuses on the student journey from accommodation search to an agreed shared living
-arrangement. Property manager stories remain in the backlog as secondary scope.
+arrangement. Property manager stories remain exploratory and are assigned to the product backlog.
 
 \section{Problem Statement and Research Justification}
 
 \subsection{Problem Statement}
 
-As in the previous stage, the statement is:
+The previous stage established the following problem statement.
 
 Create a mobile platform which allows university students and shared accommodation residents to seamlessly manage household responsibilities, expenses and housemate communication, while also enabling property managers to streamline tenancy administration and tenant communication, to reduce conflict between tenants, streamline property management, and improve the overall shared living experience.
 
@@ -177,7 +176,7 @@ The team generated three concepts with different technical boundaries. Table~\re
         \midrule
         A & Verified Contact Gateway & Check status before first contact & Verification state and protected messaging\\
         B & Explainable Compatibility Matcher & Compare practical living fit & Preference model and explainable score\\
-        C & Trust to Agreement Journey & Move from search to an acknowledged rule & Integrated flow across the core services\\
+        C & Shared Living Agreement & Make a shared expectation explicit & Agreement proposal and acknowledgement state\\
         \bottomrule
     \end{tabularx}
     \label{tabconceptoverview}
@@ -220,49 +219,46 @@ The team generated three concepts with different technical boundaries. Table~\re
 \begin{table}[H]
     \centering
     \small
-    \caption{Concept C. Trust to Agreement Journey.}
+    \caption{Concept C. Shared Living Agreement.}
     \begin{tabularx}{\textwidth}{@{}L{3.2cm}Y@{}}
         \toprule
         Aspect & Description\\
         \midrule
-        Purpose & Connect the accommodation decision with an explicit household agreement.\\
-        Operation & The flow links profile setup, status display, compatibility comparison, in app contact, and rule acknowledgement. Each step passes only the data needed by the next step. Later household tools remain outside the first release.\\
-        Research fit & Connects uncertainty before move in with unclear expectations after move in.\\
-        Limitation & Its wider scope raises delivery and privacy risk.\\
+        Purpose & Make a limited household expectation explicit before shared living begins.\\
+        Operation & A user proposes one rule. The rule remains pending until the required household members acknowledge it. Full chore and expense management remains outside this concept.\\
+        Research fit & Responds to the domestic evidence about verbal arrangements and responsibility conflict.\\
+        Limitation & It begins after a household has formed and does not address trust or compatibility alone.\\
         \bottomrule
     \end{tabularx}
     \label{tabconceptc}
 \end{table}
 
-Concepts A and B isolate one decision in the user journey. Concept C integrates those decisions and adds agreement. All three remained candidates for the weighted evaluation.
-
-\subsection{Ideation Outcome}
-\label{subsecideationoutcome}
-
-The ideation stage produced three candidates with different value and delivery risk. No concept was selected at this stage. All three entered the weighted decision matrix in Section~\ref{secconceptselection}.
+Each concept isolates a different technical mechanism. Concept A addresses trust, Concept B addresses compatibility and Concept C addresses agreement state. All three remained candidates for the weighted evaluation.
 
 \subsection{Ideation Method}
 \label{subsecideationmethod}
 
-\frameworknote{Required content}{Name and explain the ideation method used by the team. Show how the method started from the problem definition and produced multiple ideas. Include evidence from the actual ideation activity.}
+The team moved from research to concepts by expanding an early mind map and then bundling related responses. This documented sequence aligns with Stanford d.school's Idea Expedition, which begins with How Might We questions, expands the possible responses, identifies promising ideas and develops them into concepts~\cite{refideaexpedition}. Its guidance treats the question as a focused prompt that can still lead to several relevant answers~\cite{refhmw}. The design question in Section~\ref{subsectransition} served this role.
+
+The team first used a mind map to connect user difficulties with ways the platform might respond. It then kept each recorded response separate long enough to compare how the system might act. In the final pass, related responses were bundled into concept families. This follows the IDEO.org method of grouping related ideas and combining their strongest parts into fuller solutions~\cite{refbundleideas}.
 
 \begin{table}[H]
     \centering
     \small
-    \caption{Ideation method template.}
-    \begin{tabularx}{\textwidth}{@{}L{3.1cm}Y Y Y@{}}
+    \caption{How the team moved from the research evidence to three technical concepts.}
+    \begin{tabularx}{\textwidth}{@{}L{2.2cm}L{2.8cm}Y Y@{}}
         \toprule
-        Ideation stage & Method used & Team activity & Output\\
+        Step & Method used & What the team did & What the discussion produced\\
         \midrule
-        \placeholder{Stage 1} & \placeholder{Method} & \placeholder{What the team did} & \placeholder{Produced artefact}\\
-        \placeholder{Stage 2} & \placeholder{Method} & \placeholder{What the team did} & \placeholder{Produced artefact}\\
-        \placeholder{Stage 3} & \placeholder{Method} & \placeholder{What the team did} & \placeholder{Produced artefact}\\
+        Open the frame & Research led mind mapping & The team linked the difficulties found in Part~1 to ways the platform might respond. It then used the design question in Section~\ref{subsectransition} to decide which responses remained relevant. & The team retained only responses that remained within the final problem statement.\\
+        Keep alternatives open & Mechanism based divergence & As the team discussed, the initial directions asked the system to verify an option, compare daily fit, guide first contact and make an agreement explicit. & The discussion kept four starting directions visible instead of merging them into one product idea.\\
+        Form comparable concepts & Idea bundling & The team grouped guided contact with the trust flow. It kept the matcher focused on explaining daily fit. It formed the agreement concept around how shared expectations become explicit. & Three concepts were ready for the weighted matrix in Section~\ref{secconceptselection}.\\
         \bottomrule
     \end{tabularx}
     \label{tabideationmethod}
 \end{table}
 
-\placeholderfigure{Ideation process and evidence}{5.2cm}{figideationevidence}
+As shown in the mind map in Appendix~\ref{appideationmindmap}, the early activity opened a broad field and included ideas that later moved outside Sprint~1. As the team discussed, this field was narrowed by keeping separate the mechanism that governs first contact, the one that explains daily fit and the one that records an agreement. The team retained three concepts and delayed selection until the weighted comparison.
 
 \section{Concept Selection and Prioritisation}
 \label{secconceptselection}
@@ -299,40 +295,6 @@ where $w_i$ is the criterion weight and $r_{ij}$ is the rating for concept $j$.
     \label{tabcriterionorigin}
 \end{table}
 
-The final ratings in Table~\ref{tabconceptselection} must match the scoring evidence in Figure~\ref{figselectionevidence}.
-
-\begin{figure}[H]
-    \centering
-    \fcolorbox{midgray}{softgray}{%
-        \begin{minipage}{0.92\textwidth}
-            \scriptsize
-            \textbf{Week 6 scoring record reconstructed for team confirmation}\\[0.35em]
-            Rating order: research fit; risk reduction; feasibility; testability; innovation; accessibility/privacy.
-
-            \vspace{0.3em}
-            \begin{tabularx}{\textwidth}{@{}L{2.0cm}Y Y Y@{}}
-                \toprule
-                Team member & Concept A & Concept B & Concept C\\
-                \midrule
-                Nuodi Liu & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 4, 5, 3\\
-                Qian Cao & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 4, 4, 4 & 5, 5, 3, 4, 5, 3\\
-                Chien-Kai Wang & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 2, 4, 5, 3\\
-                Pranav Shanker & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 5, 5, 3\\
-                \midrule
-                Final consensus & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 4, 5, 3\\
-                \bottomrule
-            \end{tabularx}
-
-            \vspace{0.45em}
-            \textbf{Consensus discussion.}
-            Concept A received the highest feasibility score because it has the narrowest technical scope. Concept B received a testability score of 5 because users can complete and assess the compatibility task independently. Concept C received scores of 3 for feasibility and privacy because its integrated flow adds dependencies and data-sharing decisions. The team selected Concept C for its research fit and risk reduction, and used MoSCoW prioritisation to limit the first release.
-            \vspace{0.25em}
-        \end{minipage}%
-    }
-    \caption{Week 6 concept-selection evidence: independent ratings and consensus discussion.}
-    \label{figselectionevidence}
-\end{figure}
-
 \subsection{Decision Matrix}
 
 The weighted total is the sum of each rating multiplied by its weight. The maximum score is 5.00.
@@ -345,53 +307,70 @@ The weighted total is the sum of each rating multiplied by its weight. The maxim
         \toprule
         Selection criterion & Weight & Concept A & Concept B & Concept C\\
         \midrule
-        Research evidence fit & 30\% & 4 & 4 & 5\\
-        User risk reduction & 20\% & 4 & 4 & 5\\
-        Feasibility within ten weeks & 20\% & 5 & 4 & 3\\
-        Prototype testability & 15\% & 4 & 5 & 4\\
-        Innovation beyond isolated tools & 10\% & 3 & 4 & 5\\
-        Accessibility and privacy risk & 5\% & 4 & 4 & 3\\
+        Research evidence fit & 30\% & 5 & 5 & 4\\
+        User risk reduction & 20\% & 5 & 4 & 4\\
+        Feasibility within ten weeks & 20\% & 3 & 4 & 5\\
+        Prototype testability & 15\% & 4 & 5 & 5\\
+        Innovation beyond isolated tools & 10\% & 3 & 4 & 4\\
+        Accessibility and privacy risk & 5\% & 3 & 4 & 4\\
         \midrule
-        Weighted total & 100\% & \textbf{4.10} & \textbf{4.15} & \textbf{4.35}\\
+        Weighted total & 100\% & \textbf{4.15} & \textbf{4.45} & \textbf{4.35}\\
         \bottomrule
     \end{tabularx}
     \label{tabconceptselection}
 \end{table}
 
-Concept C ranks first with 4.35. It fits the research and covers more of the target journey. Its lower feasibility and privacy rating exposes the main delivery risk.
+Concept B ranks first with 4.45. Concept C follows at 4.35, so the team retained one limited agreement transition without adopting the full Concept C scope.
 
-\subsection{Selected Concept and Rationale}
-
-Concept C was selected because it links the strongest research findings in one user path. Concept A stops after safer first contact. Concept B stops after the match decision. Concept C continues to an acknowledged household rule.
-
-The preliminary prototype uses a narrow release slice to control scope. Table~\ref{tabmoscow} aligns the priority of every story with the Sprint~1 path shown later in the report.
-
-% Confirm the non Sprint 1 allocations against the team Jira board before submission.
 \begin{table}[H]
     \centering
     \small
-    \caption{MoSCoW priorities for preliminary prototype delivery.}
-    \begin{tabularx}{\textwidth}{@{}L{2.7cm}L{4.0cm}Y@{}}
+    \caption{Evidence for selected decision matrix scores.}
+    \begin{tabularx}{\textwidth}{@{}L{1.5cm}L{3.3cm}L{1.2cm}Y@{}}
         \toprule
-        Priority & User stories & Delivery decision\\
+        Concept & Criterion & Score & Evidence\\
         \midrule
-        Must have in Sprint~1 & US-02, US-09, US-10, US-11, US-12, US-13 & These stories form one testable path from search to an acknowledged rule.\\
-        Should have later & US-01, US-03, US-04, US-05, US-06, US-14 & These stories extend the agreement into routine household follow through.\\
-        Could have & US-07, US-08, US-15 & These stories add supporting communication or reputation value without blocking the core path.\\
-        Exploratory only & US-16, US-17, US-18 & Clickable property manager screens communicate future role coverage, but they are excluded from the evaluated Sprint~1 path and test plan.\\
+        A & Feasibility within ten weeks & 3 & The concept requires an identity evidence workflow and protected message handling.\\
+        B & Prototype testability & 5 & Seeded profiles make ranking, filtering and explanations directly observable.\\
+        B & Innovation beyond isolated tools & 4 & The journey connects explainable matching to trust and contact but uses established interaction patterns.\\
+        C & Prototype testability & 5 & Seeded users make proposal, review and approval states directly observable.\\
+        C & Research evidence fit & 4 & Domestic student evidence supports explicit agreements, while accommodation seekers provided weaker support.\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabscoringrationale}
+\end{table}
+
+\subsection{Selected Concept and Rationale}
+
+Concept B was selected as the core because it addresses the strongest compatibility evidence and supports an observable comparison task. The final solution is a hybrid. It adds one visible trust state from Concept A and one acknowledgement state from Concept C. Both additions reuse the selected journey and seeded data, so the feasibility rating and Sprint~1 scope remain valid.
+
+The report records product release, sprint assignment and MoSCoW priority as separate fields. Product release records the planned release horizon. Sprint assignment records scheduled work. MoSCoW priority records relative importance.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Product release, sprint assignment and MoSCoW priority.}
+    \begin{tabularx}{\textwidth}{@{}L{2.0cm}L{2.3cm}L{1.9cm}L{3.4cm}Y@{}}
+        \toprule
+        Product release & Sprint assignment & MoSCoW priority & User stories & Delivery decision\\
+        \midrule
+        MVP & Sprint~1 & Must & US-02, US-09, US-10, US-11, US-12, US-13 & These stories form one testable path from search to an acknowledged rule.\\
+        Post-MVP & Product backlog & Should & US-01, US-03, US-04, US-05, US-06, US-14 & These stories extend the agreement into routine household use.\\
+        Post-MVP & Product backlog & Could & US-07, US-08, US-15 & These stories add optional communication and review functions.\\
+        Exploratory & Product backlog & Won't & US-16, US-17, US-18 & These stories are outside the current release and test plan.\\
         \bottomrule
     \end{tabularx}
     \label{tabmoscow}
 \end{table}
 
-Only the Must have row defines Sprint~1. The same release slices are used in the backlog tables and must match Jira. Exploratory screens do not change a story's delivery priority.
+All MVP stories are assigned to Sprint~1 in the current plan. Product backlog stories are not committed for delivery in this preliminary report. The same three fields are used in the story tables, Story Map and Appendix~\ref{appusecasemapping}.
 
 \section{Product Backlog Structure}
 \label{secbacklog}
 
 \subsection{Epic Overview}
 
-The backlog is organised into four Epics that follow the shape of the selected Trust-to-Agreement Co-living Journey. Two Epics deliver the MVP journey before and after move-in, while the remaining two hold extension work together with the secondary property management scope so that the first sprint stays focused. Every story carries a stable identifier, which means a later change of sprint or priority does not break its link to the matching use case in Appendix~\ref{appusecasemapping}.
+The backlog is organised into four Epics that follow the selected journey. EP-01 contains MVP work. EP-02 contains MVP and Post-MVP work. EP-03 is Post-MVP and EP-04 is exploratory. The Epic grouping does not define release or sprint assignment. Every story retains a stable identifier and maps to one use case in Appendix~\ref{appusecasemapping}.
 
 \begin{table}[H]
     \centering
@@ -412,20 +391,20 @@ The backlog is organised into four Epics that follow the shape of the selected T
 
 \subsection{User Stories}
 
-Each story uses the standard user, goal, and value structure. The scope column follows Table~\ref{tabmoscow}.
+Each story uses the standard user, goal and value structure. The three delivery fields follow Table~\ref{tabmoscow}.
 
 \begin{table}[H]
     \centering
-    \small
+    \footnotesize
     \caption{EP-01 Housemate Discovery and Trust user stories.}
-    \begin{tabularx}{\textwidth}{@{}L{1.2cm}Y L{1.5cm}L{1.7cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}L{1.05cm}Y L{1.75cm}L{1.7cm}L{1.2cm}L{1.1cm}@{}}
         \toprule
-        Story ID & User story & Scope & Jira ticket\\
+        Story & User story & Release & Sprint & Priority & Jira\\
         \midrule
-        US-09 & As an international student, I want to message a potential housemate in the app before sharing contact details, so that I can make first contact with less exposure to scams or harassment. & Sprint~1 & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-35}{ST4-35}\\
-        US-11 & As an international student, I want to see a profile's verification status, so that I can assess the identity signal before contacting that person. & Sprint~1 & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-38}{ST4-38}\\
-        US-12 & As an accommodation seeker with an irregular schedule, I want to compare potential housemates against my living preferences, so that I can identify practical mismatches before committing. & Sprint~1 & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-39}{ST4-39}\\
-        US-13 & As a student moving out of home, I want to filter listings by location and cost, so that I can narrow the search to suitable options. & Sprint~1 & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-43}{ST4-43}\\
+        US-09 & As an international student, I want to message a potential housemate in the app before sharing contact details, so that I can make first contact with less exposure to scams or harassment. & MVP & Sprint~1 & Must & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-35}{ST4-35}\\
+        US-11 & As an international student, I want to see a profile's verification status, so that I can assess the identity signal before contacting that person. & MVP & Sprint~1 & Must & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-38}{ST4-38}\\
+        US-12 & As an accommodation seeker with an irregular schedule, I want to compare potential housemates against my living preferences, so that I can identify practical mismatches before committing. & MVP & Sprint~1 & Must & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-39}{ST4-39}\\
+        US-13 & As a student moving out of home, I want to filter listings by location and cost, so that I can narrow the search to suitable options. & MVP & Sprint~1 & Must & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-43}{ST4-43}\\
         \bottomrule
     \end{tabularx}
     \label{tabstoriesep01}
@@ -433,21 +412,21 @@ Each story uses the standard user, goal, and value structure. The scope column f
 
 \begin{table}[H]
     \centering
-    \small
+    \footnotesize
     \caption{EP-02 Shared Household Living user stories.}
-    \begin{tabularx}{\textwidth}{@{}L{1.2cm}Y L{1.5cm}L{1.7cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}L{1.05cm}Y L{1.75cm}L{1.7cm}L{1.2cm}L{1.1cm}@{}}
         \toprule
-        Story ID & User story & Scope & Jira ticket\\
+        Story & User story & Release & Sprint & Priority & Jira\\
         \midrule
-        US-01 & As a new share house resident, I want to assign rotating chores and view completion history, so that each contribution remains visible. & Later sprint & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-23}{ST4-23}\\
-        US-02 & As an international student in a new household, I want to view the accepted house rules in one place, so that I can understand what the household expects. & Sprint~1 & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-24}{ST4-24}\\
-        US-03 & As a new share house resident, I want housemates to review a proposed chore system before it becomes active, so that the roster reflects a shared decision. & Later sprint & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-26}{ST4-26}\\
-        US-04 & As a share house resident, I want to record a shared expense and who paid it, so that the cost can be divided among the relevant housemates. & Later sprint & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-28}{ST4-28}\\
-        US-05 & As a share house resident, I want to view outstanding balances, so that I know who owes money and how much. & Later sprint & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-29}{ST4-29}\\
-        US-06 & As an international student, I want to divide a utility bill among selected housemates, so that my share is clear. & Later sprint & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-32}{ST4-32}\\
-        US-07 & As a resident who is often away, I want to post household notices in a dedicated space, so that important updates are not lost in chat. & Backlog & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-33}{ST4-33}\\
-        US-08 & As a resident, I want to raise a household issue without showing my identity to other residents, so that I can report a sensitive concern with less social pressure. & Backlog & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-34}{ST4-34}\\
-        US-10 & As a resident with different noise habits from my housemates, I want to propose a house rule and record each acknowledgement, so that the active rule is clear during a dispute. & Sprint~1 & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36}{ST4-36}\\
+        US-01 & As a new share house resident, I want to assign rotating chores and view completion history, so that each contribution remains visible. & Post-MVP & Product backlog & Should & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-23}{ST4-23}\\
+        US-02 & As an international student in a new household, I want to view the accepted house rules in one place, so that I can understand what the household expects. & MVP & Sprint~1 & Must & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-24}{ST4-24}\\
+        US-03 & As a new share house resident, I want housemates to review a proposed chore system before it becomes active, so that the roster reflects a shared decision. & Post-MVP & Product backlog & Should & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-26}{ST4-26}\\
+        US-04 & As a share house resident, I want to record a shared expense and who paid it, so that the cost can be divided among the relevant housemates. & Post-MVP & Product backlog & Should & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-28}{ST4-28}\\
+        US-05 & As a share house resident, I want to view outstanding balances, so that I know who owes money and how much. & Post-MVP & Product backlog & Should & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-29}{ST4-29}\\
+        US-06 & As an international student, I want to divide a utility bill among selected housemates, so that my share is clear. & Post-MVP & Product backlog & Should & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-32}{ST4-32}\\
+        US-07 & As a resident who is often away, I want to post household notices in a dedicated space, so that important updates are not lost in chat. & Post-MVP & Product backlog & Could & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-33}{ST4-33}\\
+        US-08 & As a resident, I want to raise a household issue without showing my identity to other residents, so that I can report a sensitive concern with less social pressure. & Post-MVP & Product backlog & Could & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-34}{ST4-34}\\
+        US-10 & As a resident with different noise habits from my housemates, I want to propose a house rule and record each acknowledgement, so that the active rule is clear during a dispute. & MVP & Sprint~1 & Must & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36}{ST4-36}\\
         \bottomrule
     \end{tabularx}
     \label{tabstoriesep02}
@@ -455,14 +434,14 @@ Each story uses the standard user, goal, and value structure. The scope column f
 
 \begin{table}[H]
     \centering
-    \small
+    \footnotesize
     \caption{EP-03 Accountability Extensions user stories.}
-    \begin{tabularx}{\textwidth}{@{}L{1.2cm}Y L{1.5cm}L{1.7cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}L{1.05cm}Y L{1.75cm}L{1.7cm}L{1.2cm}L{1.1cm}@{}}
         \toprule
-        Story ID & User story & Scope & Jira ticket\\
+        Story & User story & Release & Sprint & Priority & Jira\\
         \midrule
-        US-14 & As a resident, I want an in app reminder when my chore or payment is overdue, so that I can act before a housemate must follow up. & Later sprint & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-25}{ST4-25}\\
-        US-15 & As an accommodation seeker, I want to read reviews from confirmed former housemates, so that I can consider past shared living experience before choosing a match. & Backlog & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-41}{ST4-41}\\
+        US-14 & As a resident, I want an in app reminder when my chore or payment is overdue, so that I can act before a housemate must follow up. & Post-MVP & Product backlog & Should & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-25}{ST4-25}\\
+        US-15 & As an accommodation seeker, I want to read reviews from confirmed former housemates, so that I can consider past shared living experience before choosing a match. & Post-MVP & Product backlog & Could & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-41}{ST4-41}\\
         \bottomrule
     \end{tabularx}
     \label{tabstoriesep03}
@@ -470,44 +449,62 @@ Each story uses the standard user, goal, and value structure. The scope column f
 
 \begin{table}[H]
     \centering
-    \small
+    \footnotesize
     \caption{EP-04 Property Management user stories.}
-    \begin{tabularx}{\textwidth}{@{}L{1.2cm}Y L{1.5cm}L{1.7cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}L{1.05cm}Y L{1.75cm}L{1.7cm}L{1.2cm}L{1.1cm}@{}}
         \toprule
-        Story ID & User story & Scope & Jira ticket\\
+        Story & User story & Release & Sprint & Priority & Jira\\
         \midrule
-        US-16 & As a property manager, I want to record rent status and send overdue reminders, so that I can follow up late payments efficiently. & Secondary & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-30}{ST4-30}\\
-        US-17 & As a property manager, I want to publish an accurate rental listing, so that students can assess the property and enquire through the platform. & Secondary & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-40}{ST4-40}\\
-        US-18 & As a property manager, I want to send an update to every current tenant at a property, so that important information reaches the correct audience. & Secondary & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-37}{ST4-37}\\
+        US-16 & As a property manager, I want to record rent status and send overdue reminders, so that I can follow up late payments efficiently. & Exploratory & Product backlog & Won't & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-30}{ST4-30}\\
+        US-17 & As a property manager, I want to publish an accurate rental listing, so that students can assess the property and enquire through the platform. & Exploratory & Product backlog & Won't & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-40}{ST4-40}\\
+        US-18 & As a property manager, I want to send an update to every current tenant at a property, so that important information reaches the correct audience. & Exploratory & Product backlog & Won't & \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-37}{ST4-37}\\
         \bottomrule
     \end{tabularx}
     \label{tabstoriesep04}
 \end{table}
-
 \section{Acceptance Criteria}
 \label{secacceptance}
 
-Every user story in the backlog has measurable acceptance criteria written in the Given When Then form, so each table in this section can be executed directly as a test skeleton. Each story covers the successful path together with at least one error scenario and one edge scenario. The same criteria are recorded on the matching Jira ticket, whose key appears in each caption so that the backlog in Jira and this report stay verifiable against each other. The tables are grouped under the Epics defined in Table~\ref{tabepics}.
-
-\input{acceptance_criteria}
+The Sprint~1 criteria are linked to prototype evidence in Section~\ref{sectraceability}. The complete Given When Then criteria for every backlog story appear in Appendix~\ref{appfullacceptance} and on the linked Jira tickets.
 
 \section{Functional and Non-Functional Requirements}
 
-\subsection{Functional Requirements}
+\subsection{Verification Access Policy}
 
-\frameworknote{Required content}{Define what the system must do. Link every requirement to one or more user stories and state how the requirement will be verified.}
+Phone verification controls messaging access. Identity verification supplies a trust signal and does not unlock discovery or compatibility functions. Table~\ref{tabaccesspolicy} separates these states.
 
 \begin{table}[H]
     \centering
     \small
-    \caption{Functional requirements template.}
-    \begin{tabularx}{\textwidth}{@{}L{2.1cm}Y L{3.0cm}L{2.8cm}@{}}
+    \caption{Access policy for phone and identity verification.}
+    \begin{tabularx}{\textwidth}{@{}L{3.2cm}L{2.2cm}L{2.2cm}L{2.4cm}Y@{}}
         \toprule
-        Requirement ID & Functional requirement & Related stories & Verification method\\
+        Account state & Browse listings & View profiles & Compatibility & Send message\\
         \midrule
-        FR-01 & The system shall \placeholder{required behaviour}. & \placeholder{US IDs} & \placeholder{Test or prototype evidence}\\
-        FR-02 & The system shall \placeholder{required behaviour}. & \placeholder{US IDs} & \placeholder{Test or prototype evidence}\\
-        FR-03 & The system shall \placeholder{required behaviour}. & \placeholder{US IDs} & \placeholder{Test or prototype evidence}\\
+        Guest or email only & Yes & Yes & Yes & No\\
+        Phone verified and identity pending & Yes & Yes & Yes & Yes, with an unverified identity warning\\
+        Phone and identity verified & Yes & Yes & Yes & Yes, with a verified identity badge\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabaccesspolicy}
+\end{table}
+
+\subsection{Functional Requirements}
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Sprint 1 functional requirements.}
+    \begin{tabularx}{\textwidth}{@{}L{1.7cm}Y L{1.7cm}L{4.4cm}@{}}
+        \toprule
+        ID & Functional requirement & Related stories & Verification method\\
+        \midrule
+        FR-01 & The system shall search from a campus or custom address, apply every active filter and show an affordability comparison. It shall accept reports of misleading listings. & US-13 & Prototype AC-US13-01 to 04 and 06. Future system validation AC-US13-05.\\
+        FR-02 & The system shall record identity review status. Profiles shall show that status, and search shall support a verified only filter. & US-11 & Prototype AC-US11-01 is simulated and AC-US11-02 is implemented. Future system validation AC-US11-03 to 06.\\
+        FR-03 & The system shall rank profiles from stored lifestyle preferences. Each profile shall show the score and explain key differences before contact. & US-12 & Prototype AC-US12-01, 02 and 04 to 06. Future system validation AC-US12-03.\\
+        FR-04 & Phone verified users shall send messages without exposing contact details. The browser shall reject contact details before submission. An identity pending sender shall produce a recipient warning. & US-09 & Prototype AC-US09-01 and 03 are simulated, while AC-US09-04 is implemented. Future system validation AC-US09-02, 05 and 06.\\
+        FR-05 & The system shall show all household rules in one view. It shall use the selected language and fall back to simplified English when translation is unavailable. & US-02 & Prototype AC-US02-01 to 03. Future system validation AC-US02-04 to 06.\\
+        FR-06 & The system shall collect acknowledgement from every housemate before a proposed rule becomes active. Later changes shall require majority approval. & US-10 & Prototype AC-US10-01, 02 and 04. Future system validation AC-US10-03, 05 and 06.\\
         \bottomrule
     \end{tabularx}
     \label{tabfunctionalrequirements}
@@ -515,21 +512,21 @@ Every user story in the backlog has measurable acceptance criteria written in th
 
 \subsection{Non-Functional Requirements}
 
-\frameworknote{Required content}{Include measurable requirements for privacy, security, accessibility, performance and usability. Add other categories where they are relevant to the solution.}
-
 \begin{table}[H]
     \centering
     \small
-    \caption{Non-functional requirements template.}
-    \begin{tabularx}{\textwidth}{@{}L{2.1cm}L{2.5cm}Y L{2.7cm}@{}}
+    \caption{Non-functional requirements.}
+    \begin{tabularx}{\textwidth}{@{}L{1.8cm}L{2.2cm}Y L{3.5cm}@{}}
         \toprule
-        Requirement ID & Category & Measurable requirement & Verification method\\
+        ID & Category & Measurable requirement & Verification method\\
         \midrule
-        NFR-01 & Privacy & \placeholder{Privacy target} & \placeholder{Verification method}\\
-        NFR-02 & Security & \placeholder{Security target} & \placeholder{Verification method}\\
-        NFR-03 & Accessibility & \placeholder{Accessibility target} & \placeholder{Verification method}\\
-        NFR-04 & Performance & \placeholder{Performance target} & \placeholder{Verification method}\\
-        NFR-05 & Usability & \placeholder{Usability target} & \placeholder{Verification method}\\
+        NFR-01 & Privacy & Personal contact data shall remain hidden until both users consent. Every role except the verification role shall be denied access to identity evidence. & Run AC-US09-01 and AC-US09-02. Test every role against stored identity evidence.\\
+        NFR-02a & Prototype privacy & Contact detail detection shall run in the browser before message submission. A rejected message shall not enter the conversation. & Enter email addresses and phone numbers. Confirm that local validation blocks each message before submission.\\
+        NFR-02b & Production security & Message content shall use end-to-end encryption with message keys unavailable to the platform server. Identity evidence shall remain encrypted during transfer and storage. & Inspect the production architecture and run interception and role access tests. This control is outside the preliminary prototype.\\
+        NFR-03 & Accessibility & Every Sprint~1 screen shall support keyboard use and meet WCAG~2.2 AA contrast thresholds. & Run a keyboard walkthrough and contrast audit on S-01 to S-06.\\
+        NFR-04 & Performance & Under Chrome 150.0.7871.125 at a 390 by 844 pixel viewport using the DevTools Fast 4G profile with 1.6 Mbps downstream, 750 Kbps upstream and 150 ms RTT, search and compatibility results shall render within 3.0 seconds at p95 across 20 warm cache runs with 50 seeded listings and 100 seeded profiles. & Run one untimed warm up followed by 20 consecutive searches. The requirement passes when p95 is no more than 3.0 seconds.\\
+        NFR-05 & Usability & The household rules view shall be reachable within two taps from the home screen. & Count taps from the home screen on each supported mobile layout.\\
+        NFR-06 & Language access & The rules view shall support at least five target languages. It shall show simplified English if translation fails. & Run AC-US02-02 and AC-US02-06 for every supported language.\\
         \bottomrule
     \end{tabularx}
     \label{tabnonfunctionalrequirements}
@@ -592,9 +589,10 @@ Each user story maps one to one onto a goal-level use case, so the dependency an
         \toprule
         Dependent use case & Depends on & Type & Reason\\
         \midrule
-        UC-09 Secure messaging & UC-11 Verified profiles & Optional & Core secure messaging works on its own with personal contact details hidden, while UC-11 adds the flag that marks unverified counterparties for extra caution.\\
+        UC-09 Private in-app messaging & SUP-01 Account and role access & Required & Messaging remains locked until the user signs in and completes phone verification.\\
+        UC-09 Private in-app messaging & UC-11 Verified profiles & Optional & Messaging needs phone verification but not identity approval. UC-11 supplies the pending warning and verified badge.\\
         UC-11 Verified profiles & SUP-04 Verification status or DATA-02 Seeded profiles & Required data (OR) & A stored verification status or a seeded sample profile must exist before a badge can be shown.\\
-        UC-12 Lifestyle filtering & UC-11 Verified profiles & Required & Compatibility matching is only offered between verified profiles to preserve trust, and a match does not grant household access.\\
+        UC-12 Lifestyle filtering & UC-11 Verified profiles & Optional & Compatibility remains available before identity approval. UC-11 adds identity badges and the verified only filter.\\
         UC-13 Search listings & UC-17 Managed listings or DATA-01 Seeded listings & Required data (OR) & At least one published listing, whether managed or seeded, must exist before a student can search it.\\
         \bottomrule
     \end{tabularx}
@@ -624,7 +622,7 @@ Each user story maps one to one onto a goal-level use case, so the dependency an
 
 \subsection{Dependency Graph}
 
-Figure~\ref{figstorydependencies} shows the validated dependency graph for the complete backlog. Solid arrows mark required relationships while dotted arrows mark optional or conditional support. The diamond nodes are OR points where any single source is sufficient, which allows the Sprint~1 prototype to rely on seeded data instead of the secondary property management workflow.
+Figure~\ref{figstorydependencies} summarises the use case dependencies across the product backlog.
 
 \begin{figure}[H]
     \centering
@@ -633,40 +631,43 @@ Figure~\ref{figstorydependencies} shows the validated dependency graph for the c
     \label{figstorydependencies}
 \end{figure}
 
-\section{First-Pass User Story Map}
+\section{Initial User Story Map}
 
-Table~\ref{tabstorymap} summarises the release slice used to define Sprint~1. The complete team map, including personas, all four activities, backbone tasks and release priorities, is provided in Figure~\ref{figfullstorymap} in Appendix~\ref{appusecasemapping}.
+Table~\ref{tabstorymap} applies the same product release, sprint assignment and MoSCoW priority used in the backlog tables.
 
 \begin{table}[H]
     \centering
-    \scriptsize
-    \caption{First-pass user story map for the Trust-to-Agreement journey.}
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{@{}L{2.6cm}L{2.8cm}L{2.8cm}L{2.8cm}L{2.8cm}L{2.8cm}@{}}
-            \toprule
-            Release slice & Find a place & Evaluate people & Contact safely & Set expectations & Manage the shared home\\
-            \midrule
-            User task & Filter by campus and budget & Read verification and lifestyle fit & Verify identity and message in-app & Propose, understand and agree rules & Coordinate chores, bills and issues\\
-            Sprint~1 & US-13 & US-11, US-12 & US-09 & US-10, US-02 & --\\
-            Later sprint & -- & US-15 & -- & -- & US-01, US-03--US-08, US-14\\
-            Secondary backlog & US-17 & -- & -- & -- & US-16, US-18\\
-            \bottomrule
-        \end{tabular}%
-    }
+    \footnotesize
+    \caption{User story map with separate delivery fields.}
+    \begin{tabularx}{\textwidth}{@{}L{1.8cm}L{1.8cm}L{1.3cm}L{2.2cm}Y L{1.8cm}@{}}
+        \toprule
+        Release & Sprint & Priority & Journey activity & User task & Stories\\
+        \midrule
+        MVP & Sprint~1 & Must & Find a place & Filter by campus and budget & US-13\\
+        MVP & Sprint~1 & Must & Evaluate people & Read identity status and lifestyle fit & US-11, US-12\\
+        MVP & Sprint~1 & Must & Contact safely & Complete phone verification and message in the app & US-09\\
+        MVP & Sprint~1 & Must & Set expectations & Propose and agree household rules & US-10, US-02\\
+        Post-MVP & Product backlog & Should & Manage the shared home & Coordinate chores, bills and reminders & US-01, US-03 to US-06, US-14\\
+        Post-MVP & Product backlog & Could & Evaluate people & Read confirmed housemate reviews & US-15\\
+        Post-MVP & Product backlog & Could & Manage the shared home & Post notices and raise anonymous issues & US-07, US-08\\
+        Exploratory & Product backlog & Won't & Find a place & Create and manage property listings & US-17\\
+        Exploratory & Product backlog & Won't & Manage the shared home & Track rent and send tenant announcements & US-16, US-18\\
+        \bottomrule
+    \end{tabularx}
     \label{tabstorymap}
 \end{table}
 
 \subsection{Sprint 1 Scope and Rationale}
 
-Sprint~1 contains US-13, US-11, US-12, US-09, US-10 and US-02. Together they form a coherent end-to-end slice rather than six disconnected features: a student narrows affordable properties, evaluates verified and compatible housemates, completes the trust gate required for private messaging, and then accesses explicit household expectations. This sequence tests the selected concept's central claim that trust information should continue from discovery into the first shared-living agreement.
+Sprint~1 contains US-13, US-11, US-12, US-09, US-10 and US-02. Together they form one coherent path. A student narrows affordable properties, evaluates housemates, completes phone verification for private messaging and then accesses explicit household expectations. This sequence tests whether trust information can continue from discovery into the first shared living agreement.
 
-The slice is narrow enough to test with seeded listings and profiles, while still covering search, decision support, safety, communication and rule comprehension. Chores, expenses, reminders and property management remain visible as later backlog directions, but they are not required to complete the Sprint~1 evaluation path.
+The slice is narrow enough to test with seeded listings and profiles. Post-MVP and exploratory stories remain visible in the product backlog but are not committed to Sprint~1.
 
 \section{Preliminary Prototype}
 
 \subsection{Prototype Scope}
 
-The preliminary prototype is a functional high-fidelity HTML, CSS and JavaScript proof of concept for students and young professionals who are searching for shared accommodation, particularly users entering an unfamiliar household or communicating in a second language. It uses realistic seeded properties, housemate profiles, messages and house rules so that participants can complete tasks without entering personal data.
+The preliminary prototype is an HTML, CSS and JavaScript proof of concept with high visual fidelity. It supports students and young professionals who are searching for shared accommodation. Seeded content allows participants to complete tasks without entering personal data.
 
 \begin{table}[H]
     \centering
@@ -676,17 +677,17 @@ The preliminary prototype is a functional high-fidelity HTML, CSS and JavaScript
         \toprule
         Decision & Prototype implementation\\
         \midrule
-        Core task path & Search and filter properties (US-13), assess verification and lifestyle compatibility (US-11 and US-12), authenticate before messaging (US-09), and understand household rules (US-02 and US-10).\\
-        Fidelity & Functional high fidelity. Navigation, filters, validation, authentication gates, messaging and multilingual rule interactions are clickable rather than represented by static wireframes.\\
+        Core task path & Search and filter properties (US-13), assess identity status and compatibility (US-11 and US-12), complete phone verification before messaging (US-09), and understand household rules (US-02 and US-10).\\
+        Fidelity & Functional high fidelity. Mobile navigation, filters, validation, authentication gates, messaging and multilingual rule interactions are clickable rather than represented by static wireframes.\\
         Visual rationale & Warm photography, warm white surfaces, peach highlights and sage trust signals follow the mood board. Compact layouts and plain labels support repeated use rather than a marketing-style experience.\\
         Prototype data & Seeded listings and profiles provide repeatable test conditions. Changes last for the current page session and reset on refresh, so every participant begins from the same state.\\
-        Test environment & The prototype is hosted as a web application and can also run locally. Desktop is the primary assessment viewport, with responsive navigation and layouts for smaller screens.\\
+        Test environment & The primary assessment viewport is 390 by 844 pixels in Chrome mobile emulation. The responsive desktop layout remains available for secondary review.\\
         \bottomrule
     \end{tabularx}
     \label{tabprototypescope}
 \end{table}
 
-This fidelity is appropriate because the rubric requires observable, testable interactions linked to user stories. A clickable interface allows the team to measure completion, errors and comprehension, while avoiding the cost and privacy risk of a production backend at this stage. The prototype does not perform real identity checks, production encryption, database persistence or external translation services. Property filtering, compatibility calculation and unanimous rule approval run locally against seeded data, while the phone check uses a demonstration code. The prototype therefore tests the interaction logic and user comprehension without claiming production security or independently authenticated housemate accounts.
+This fidelity supports observable interactions linked to user stories without a production backend. Property filtering, compatibility calculation and rule approval run against seeded local data. The phone check uses a demonstration code. Contact detail validation runs in the browser before message submission. Production message encryption and key management are outside the preliminary prototype scope.
 
 \subsection{Prototype Flow}
 
@@ -727,13 +728,13 @@ This fidelity is appropriate because the rubric requires observable, testable in
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-13_property-search-filters.png}\\[-0.2em]
-        \small\textbf{S-01: Property search.} Location, budget, room type, distance, bedrooms and move-in date combine into one testable result set.
+        \small\textbf{S-01. Property search.} Location, budget, room type, distance, bedrooms and move-in date combine into one testable result set.
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-11_verified-housemate-profiles.png}\\[-0.2em]
-        \small\textbf{S-02: Verified profiles.} Identity and phone badges provide visible trust signals before contact.
+        \small\textbf{S-02. Verified profiles.} Identity and phone badges provide visible trust signals before contact.
     \end{minipage}
     \caption{Discovery screens for property affordability and profile verification.}
     \label{figprototypescreensdiscovery}
@@ -744,13 +745,13 @@ This fidelity is appropriate because the rubric requires observable, testable in
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-12_lifestyle-housemate-filters.png}\\[-0.2em]
-        \small\textbf{S-03: Lifestyle matching.} An editable preference profile recalculates scores, explanations and ranking before filters narrow the results.
+        \small\textbf{S-03. Lifestyle matching.} An editable preference profile recalculates scores, explanations and ranking before filters narrow the results.
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-09_secure-in-app-messaging.png}\\[-0.2em]
-        \small\textbf{S-04: Secure messaging.} Contact details stay hidden and messaging is available only after login and phone verification.
+        \small\textbf{S-04. Private in-app messaging.} Contact details stay hidden and messaging is available only after login and phone verification.
     \end{minipage}
     \caption{Trust and communication screens for comparing and contacting housemates.}
     \label{figprototypescreenstrust}
@@ -761,28 +762,24 @@ This fidelity is appropriate because the rubric requires observable, testable in
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-02_household-rules.png}\\[-0.2em]
-        \small\textbf{S-05: Household rules.} All expectations appear in one location with language controls and expandable explanations.
+        \small\textbf{S-05. Household rules.} All expectations appear in one location with language controls and expandable explanations.
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{US-10_agreed-noise-rules.png}\\[-0.2em]
-        \small\textbf{S-06: Unanimous rule approval.} A proposal becomes active only after Emily, Daniel and Mia have all approved it.
+        \small\textbf{S-06. Unanimous rule approval.} A proposal becomes active only after Emily, Daniel and Mia have all approved it.
     \end{minipage}
     \caption{Shared-expectation screens for accessible and explicit household rules.}
     \label{figprototypescreensrules}
 \end{figure}
 
-The screens demonstrate both the normal path and observable system feedback: multi-criteria property filters update and sort the result set, lifestyle preferences recalculate compatibility scores, contradictory schedules are rejected, messaging remains locked until verification, personal contact details trigger a warning, language changes update rule content, and a proposed rule remains inactive until every housemate approves it.
+These screens expose the feedback required by the Sprint~1 tasks. Section~\ref{sectraceability} links each interaction to its acceptance criteria.
 
 \section{Technical Development Evolution}
 \label{secdevevolution}
 
-During Weeks~3 to~7, the proposed solution gradually evolved as new research findings and team discussions shaped the design. Initially, the project focused on creating a general student accommodation platform where users could browse available properties and contact landlords. However, the user research indicated that students were more concerned about trust and housemate compatibility than simply finding available rooms.
-
-Based on these findings, the team shifted the design towards a compatibility-focused platform. Lifestyle preference profiles and compatibility comparison became the core feature, supported by verified listings and guided in-app messaging to improve trust during communication. Finally, a lightweight co-living agreement was added to encourage discussion of household expectations before students moved in.
-
-This iterative process ensured that the final concept directly addressed the problems identified during the Empathise and Define stages while remaining achievable within the project scope. The resulting Trust-to-Agreement journey described in Section~\ref{secconceptselection} reflects this progression from a broad accommodation search tool to a student-centred decision path.
+Figure~\ref{figdevevolution} shows how research narrowed a general accommodation concept into the current Sprint~1 journey.
 
 \begin{figure}[H]
     \centering
@@ -800,11 +797,11 @@ This iterative process ensured that the final concept directly addressed the pro
         },
         evoarrow/.style={-{Latex[length=2.2mm]}, thick, draw=accent}
     ]
-        \node[evostep] (w3) {\textbf{Week 3}\\Initial idea: general accommodation search platform};
-        \node[evostep, below=of w3] (w4) {\textbf{Week 4}\\Research findings: students care about trust and housemate compatibility};
-        \node[evostep, below=of w4] (w5) {\textbf{Week 5}\\Concept selection: added lifestyle compatibility matching};
-        \node[evostep, below=of w5] (w6) {\textbf{Week 6}\\System design: added verified listings and guided messaging};
-        \node[evostep, below=of w6] (w7) {\textbf{Week 7}\\Final prototype: integrated compatibility matching, trust indicators and co-living agreement};
+        \node[evostep] (w3) {\textbf{Week 3}\\General accommodation search concept};
+        \node[evostep, below=of w3] (w4) {\textbf{Week 4}\\Research prioritised trust and housemate compatibility};
+        \node[evostep, below=of w4] (w5) {\textbf{Week 5}\\Concept generation separated the three technical mechanisms};
+        \node[evostep, below=of w5] (w6) {\textbf{Week 6}\\Concept selection chose compatibility as the core path};
+        \node[evostep, below=of w6] (w7) {\textbf{Week 7}\\Prototype integrated compatibility, trust states and one household rule};
 
         \draw[evoarrow] (w3) -- (w4);
         \draw[evoarrow] (w4) -- (w5);
@@ -848,31 +845,50 @@ Airbnb supports short-term stays and host verification but does not target long-
 \section{Prototype-to-User-Story Traceability}
 \label{sectraceability}
 
-Each screen is mapped to the user story and acceptance criteria that it demonstrates. Table~\ref{tabprototypetraceability} identifies the exact interaction evidence and keeps production-system boundaries separate from prototype task completion. The same screen identifiers are used by the test plan in Section~\ref{sectestplan}.
+Each screen maps to the criteria it demonstrates. Table~\ref{tabprototypetraceability} separates implemented interactions from simulated outcomes. Table~\ref{tabprototypeacstatus} records every Sprint~1 criterion that remains deferred or production only.
 
 \begin{table}[H]
     \centering
-    \scriptsize
+    \footnotesize
     \caption{Prototype-to-user-story traceability.}
-    \begin{tabularx}{\textwidth}{@{}L{0.9cm}L{2.4cm}L{1.4cm}L{2.5cm}Y L{1.1cm}@{}}
+    \begin{tabularx}{\textwidth}{@{}L{0.8cm}L{2.1cm}L{1.0cm}L{2.2cm}L{2.0cm}Y L{0.9cm}@{}}
         \toprule
-        Screen ID & Prototype screen & Story ID & Acceptance ID & Testable interaction & Link\\
+        ID & Prototype screen & Story & Acceptance criterion & Prototype status & Testable interaction & Link\\
         \midrule
-        S-01 & Multi-criteria property search & US-13 & AC-US13-01--04, AC-US13-06 & Combine university or suburb, budget, room type, distance, bedrooms and move-in date; results update, sort by campus distance, show affordability and provide a broadening suggestion when no exact match exists. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/properties}{Open}\\
-        S-02 & Verified housemate results & US-11 & AC-US11-01, AC-US11-02 & Identify identity and phone badges, then inspect the verified-only filter used by the result set. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
-        S-03 & Profile-derived compatibility ranking & US-12 & AC-US12-01, AC-US12-02, AC-US12-04--06 & Edit the lifestyle profile to recalculate and re-rank scores, inspect the explanation, submit incomplete or conflicting preferences for validation, and broaden strict filters after a zero-result state. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
-        S-04 & Authentication and secure messages & US-09 & AC-US09-01, AC-US09-04 & Attempt to message while signed out, complete login and the phone check, send a normal message, then enter an email or phone number to trigger blocking and a privacy warning. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#messages}{Open}\\
-        S-05 & Multilingual household rule list & US-02 & AC-US02-01, AC-US02-02, AC-US02-03 & View every rule in one list, change the language, and expand a rule to reveal the housemate's explanation. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
-        S-06 & Rule proposal and unanimous approval & US-10, US-02 & AC-US10-01, AC-US10-02, AC-US10-04, AC-US02-01 & Submit an incomplete rule for validation, send a complete proposal to every housemate, approve or request changes as each reviewer, and confirm the rule enters the active list with an agreement timestamp only after all approvals. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
+        S-01 & Property search & US-13 & AC-US13-01 to 04, 06 & Implemented & Apply filters, inspect affordability and recover from no results. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/properties}{Open}\\
+        S-02 & Identity status & US-11 & AC-US11-01 & Simulated & Inspect a seeded approved identity badge. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
+        S-02 & Identity filter & US-11 & AC-US11-02 & Implemented & Apply the verified only filter. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
+        S-03 & Compatibility ranking & US-12 & AC-US12-01, 02, 04 to 06 & Implemented & Recalculate ranking and test validation and recovery states. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#discover/housemates}{Open}\\
+        S-04 & Private messaging & US-09 & AC-US09-01 & Simulated & Use a seeded local conversation after phone verification. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#messages}{Open}\\
+        S-04 & Contact validation & US-09 & AC-US09-04 & Implemented & Block contact details in the browser before submission. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#messages}{Open}\\
+        S-05 & Household rule list & US-02 & AC-US02-01 to 03 & Implemented & Change language and expand a rule explanation. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
+        S-06 & Rule approval & US-10 & AC-US10-01, 02, 04 & Implemented & Validate a proposal and activate it after all approvals. & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/\#household/rules}{Open}\\
         \bottomrule
     \end{tabularx}
     \label{tabprototypetraceability}
 \end{table}
 
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Prototype status for every Sprint 1 acceptance criterion.}
+    \begin{tabularx}{\textwidth}{@{}L{1.2cm}Y Y Y Y@{}}
+        \toprule
+        Story & Implemented & Simulated & Deferred & Production-only\\
+        \midrule
+        US-13 & 01 to 04, 06 & -- & -- & 05\\
+        US-11 & 02 & 01 & 03, 05 & 04, 06\\
+        US-12 & 01, 02, 04 to 06 & -- & 03 & --\\
+        US-09 & 04 & 01, 03 & 02, 06 & 05\\
+        US-02 & 01 to 03 & -- & 04, 05 & 06\\
+        US-10 & 01, 02, 04 & -- & 03, 05 & 06\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabprototypeacstatus}
+\end{table}
+
 \section{Prototype Test Plan}
 \label{sectestplan}
-
-The prototype will be evaluated through five moderated usability tests that follow the Sprint~1 path. Each test uses five participants and a think-aloud protocol. The facilitator records completion, time, errors and interpretation rather than helping participants through the interface. Because the prototype uses only seeded data and a demonstration verification code, the sessions do not require participants to disclose identification, phone numbers or real household information.
 
 \begin{table}[H]
     \centering
@@ -883,10 +899,10 @@ The prototype will be evaluated through five moderated usability tests that foll
         Test & Goal & Stories & Acceptance criteria & Responsible\\
         \midrule
         T1 & Narrow properties with combined search criteria & US-13 & AC-US13-01--04, AC-US13-06 & Pranav Shanker\\
-        T2 & Recognise verified housemate profiles & US-11 & AC-US11-01, AC-US11-02 & Nicky\\
-        T3 & Build a profile and use recalculated compatibility & US-12 & AC-US12-01, AC-US12-02, AC-US12-04--06 & Liam\\
+        T2 & Recognise verified housemate profiles & US-11 & AC-US11-01 simulated, AC-US11-02 implemented & Chien-Kai Wang\\
+        T3 & Build a profile and use recalculated compatibility & US-12 & AC-US12-01, AC-US12-02, AC-US12-04--06 & Nuodi Liu\\
         T4 & Complete authentication and message safely & US-09 & AC-US09-01, AC-US09-04 & Qian Cao\\
-        T5 & Propose, review and activate a house rule & US-02, US-10 & AC-US02-01--03, AC-US10-01, AC-US10-02, AC-US10-04 & Liam\\
+        T5 & Propose, review and activate a house rule & US-02, US-10 & AC-US02-01--03, AC-US10-01, AC-US10-02, AC-US10-04 & Nuodi Liu\\
         \bottomrule
     \end{tabularx}
     \label{tabtestoverview}
@@ -904,7 +920,7 @@ The prototype will be evaluated through five moderated usability tests that foll
         Related stories & US-13; S-01\\
         Acceptance criteria & AC-US13-01, AC-US13-02, AC-US13-03, AC-US13-04 and AC-US13-06\\
         Target user & Student moving near UNSW with a fixed weekly budget.\\
-        Task scenario & ``Find a private room in Kensington within eight minutes of UNSW, in a household with at least three bedrooms, available by 1 August, for no more than \$350 per week. Explain its affordability rating.''\\
+        Task scenario & Find a private room in Kensington within eight minutes of UNSW, in a household with at least three bedrooms, available by 1 August, for no more than \$350 per week. Explain its affordability rating.\\
         Success criteria & $\geq$4/5 users enter all six criteria, reach the single matching listing and explain its Budget indicator in $\leq$3 minutes. A deliberately impossible combination must produce the no-result explanation and broadening action.\\
         Expected errors & Users overlook a second-row filter, interpret the move-in date in the wrong direction, or confuse household bedrooms with available rooms.\\
         Data to collect & Completion rate, time on task, filters changed, selected listing, affordability interpretation and recovery from the empty state.\\
@@ -926,11 +942,11 @@ The prototype will be evaluated through five moderated usability tests that foll
         Related stories & US-11; S-02\\
         Acceptance criteria & AC-US11-01, AC-US11-02\\
         Target user & International student assessing unfamiliar potential housemates.\\
-        Task scenario & ``Find housemates whose identity and phone have been verified. Show the control you would use to avoid unverified results and explain what evidence you relied on.''\\
+        Task scenario & Find housemates whose identity and phone have been verified. Show the control used to avoid unverified results and explain the evidence used.\\
         Success criteria & $\geq$4/5 users locate the verified-only control and correctly identify both badge types in $\leq$90 seconds. Participants must explain that the badge is a trust signal, not a guarantee of compatibility or safety.\\
         Expected errors & Users miss the badge, confuse identity and phone verification, or assume a high match score means identity verified.\\
         Data to collect & Badge identification accuracy, explanation quality, time on task and points of visual confusion.\\
-        Responsible & Nicky\\
+        Responsible & Chien-Kai Wang\\
         \bottomrule
     \end{tabularx}
     \label{tabtestt2}
@@ -948,11 +964,11 @@ The prototype will be evaluated through five moderated usability tests that foll
         Related stories & US-12; S-03\\
         Acceptance criteria & AC-US12-01, AC-US12-02, AC-US12-04, AC-US12-05 and AC-US12-06\\
         Target user & Student who values a tidy home and quiet nights.\\
-        Task scenario & ``Save a very tidy, mostly quiet profile with occasional guests and a flexible schedule. Identify the best match and explain the score. Then select both Early riser and Late sleeper, and finally apply all three strict lifestyle filters.''\\
+        Task scenario & Save a very tidy, mostly quiet profile with occasional guests and a flexible schedule. Identify the best match and explain the score. Select both Early riser and Late sleeper, then apply all three strict lifestyle filters.\\
         Success criteria & $\geq$4/5 users save the complete profile, identify Emily as the 94\% top match and cite a profile-derived reason in $\leq$3 minutes. The contradictory schedule must be rejected, and the zero-result state must offer the closest-match recovery action.\\
         Expected errors & Users treat the score as a safety rating, do not notice that ranking changes after saving, or overlook the schedule conflict message.\\
         Data to collect & Profile completion, ranking interpretation, conflict recovery, empty-state recovery, time on task and reasons given.\\
-        Responsible & Liam\\
+        Responsible & Nuodi Liu\\
         \bottomrule
     \end{tabularx}
     \label{tabtestt3}
@@ -966,11 +982,11 @@ The prototype will be evaluated through five moderated usability tests that foll
         \toprule
         Aspect & Description\\
         \midrule
-        Test goal & Verify that messaging is inaccessible before verification and that personal contact details are intercepted.\\
+        Test goal & Verify that messaging is inaccessible before phone verification and that the browser blocks personal contact details.\\
         Related stories & US-09; S-04\\
         Acceptance criteria & AC-US09-01, AC-US09-04\\
         Target user & International student making first contact with a potential housemate.\\
-        Task scenario & ``Starting signed out, open Messages, sign in with the demo account, verify the phone using code 2468 and send a question about an inspection. Then try to send alex@example.com.''\\
+        Task scenario & Start signed out and open Messages. Sign in with the demo account, verify the phone using code 2468 and send a question about an inspection. Then try to send alex@example.com.\\
         Success criteria & $\geq$4/5 users complete login and phone verification and send the normal message in $\leq$3 minutes. Messaging must stay locked beforehand, and the email attempt must not appear in the thread while the privacy warning is visible.\\
         Expected errors & Users close the login modal and expect guest messaging, cannot find the phone-check screen, or misread the warning as a successfully sent message.\\
         Data to collect & Completion at each gate, time on task, failed code entries, message outcome and warning comprehension.\\
@@ -992,11 +1008,11 @@ The prototype will be evaluated through five moderated usability tests that foll
         Related stories & US-02, US-10; S-05 and S-06\\
         Acceptance criteria & AC-US02-01, AC-US02-02, AC-US02-03, AC-US10-01, AC-US10-02 and AC-US10-04\\
         Target user & Student living in a shared apartment for the first time and using English as a second language.\\
-        Task scenario & ``Open the quiet-hours explanation, then propose a new late-gathering rule. First submit it without a category, then complete it. Record one change request, revise it, and approve as Emily, Daniel and Mia.''\\
+        Task scenario & Open the quiet hours explanation, then propose a new late gathering rule. Submit it without a category, then complete it. Record one change request, revise it and approve as Emily, Daniel and Mia.\\
         Success criteria & $\geq$4/5 users trigger the required-field message, send the complete proposal, understand that a change request pauses activation, and reach the Active rule state only after the third approval in $\leq$4 minutes. The rule must then appear in Active expectations with all names and a timestamp.\\
         Expected errors & Users confuse a proposal with an active rule, expect one approval to be sufficient, or miss the revise-and-resubmit action after a requested change.\\
         Data to collect & Validation errors noticed, proposal-state comprehension, approval order, time on task and confirmation that the active timestamp was found.\\
-        Responsible & Liam\\
+        Responsible & Nuodi Liu\\
         \bottomrule
     \end{tabularx}
     \label{tabtestt5}
@@ -1006,14 +1022,18 @@ After each round the team will compile results into one summary, rank observed i
 
 \section{Conclusion}
 
-\frameworknote{Section purpose}{Summarise the selected concept, the Sprint 1 scope, the preliminary prototype and the next validation step. Do not introduce new evidence in the conclusion.}
+The report defines a Sprint~1 journey in which students compare housemates before phone verified contact and then record one agreed household rule. The seeded prototype demonstrates this journey without claiming production identity checks, encryption or persistence.
 
-\placeholder{Insert the conclusion after the report content is complete.}
+The next step is to recruit five participants for the moderated tasks. The team will revise any failed acceptance criteria before adding persistent services.
 
 \newpage
 \section{References}
 
+\renewcommand{\refname}{}
 \begin{thebibliography}{9}
+    \bibitem{refideaexpedition} Both, T. and Roumani, N. (n.d.). \textit{Idea Expedition}. Hasso Plattner Institute of Design at Stanford University. \url{https://dschool.stanford.edu/tools/idea-expedition}.
+    \bibitem{refhmw} Hasso Plattner Institute of Design at Stanford University. (n.d.). \textit{How Might We Questions}. \url{https://dschool.stanford.edu/tools/how-might-we-questions}.
+    \bibitem{refbundleideas} IDEO.org. (n.d.). \textit{Bundle Ideas}. Design Kit. \url{https://www.designkit.org/methods/30.html}.
     \bibitem{refairbnb} Airbnb. (n.d.). \textit{Help Centre: How Airbnb works}. \url{https://www.airbnb.com.au/help/article/362}
     \bibitem{refflatmates} Flatmates.com.au. (n.d.). \textit{Find a flatmate or room}. \url{https://flatmates.com.au/}
     \bibitem{refdomain} Domain. (n.d.). \textit{Rental property search}. \url{https://www.domain.com.au/rent/}
@@ -1021,52 +1041,57 @@ After each round the team will compile results into one summary, rank observed i
 
 \appendix
 
-\begin{landscape}
-\section{Full User Story and Use Case Mapping}
-\label{appusecasemapping}
+\clearpage
+\section{Ideation Mind Map}
+\label{appideationmindmap}
 
-Figure~\ref{figfullstorymap} presents the complete User Story Map used to organise personas, product activities, backbone tasks and release priorities. It provides the visual planning context for the detailed traceability that follows, where each stable story identifier maps to one goal-level use case in Table~\ref{tabusucmapping}.
+Figure~\ref{figideationevidence} shows the early mind map used to widen the solution space before the team formed the three technical concepts.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\linewidth]{user-story-map.png}
-    \caption{Complete User Story Map showing personas, activities, backbone tasks and release priorities.}
-    \label{figfullstorymap}
+    \includegraphics[width=\textwidth]{../../part1/assets/synthesis/mindmap_overview.png}
+    \caption{Early mind map used during ideation.}
+    \label{figideationevidence}
 \end{figure}
-\end{landscape}
+
+\clearpage
+\section{Full User Story and Use Case Mapping}
+\label{appusecasemapping}
+
+The Story Map in Table~\ref{tabstorymap} uses the same delivery fields as this appendix. Product release records the planned horizon. Sprint assignment records scheduled work. MoSCoW priority records relative importance.
 
 \begin{table}[H]
     \centering
-    \scriptsize
-    \caption{User story to use case mapping.}
-    \begin{tabularx}{\textwidth}{@{}L{0.9cm}L{0.9cm}L{2.4cm}L{2.2cm}Y L{1.1cm}L{1.7cm}@{}}
+    \footnotesize
+    \caption{User story, use case and delivery classification.}
+    \begin{tabularx}{\textwidth}{@{}L{1.05cm}L{1.0cm}Y L{1.75cm}L{1.8cm}L{1.2cm}@{}}
         \toprule
-        Story & Epic & Use case & Primary actor & Successful outcome & Scope & Website screenshot\\
+        Story & Epic & Use case & Release & Sprint & Priority\\
         \midrule
-        US-01 & EP-02 & UC-01 Set up and manage chore roster & Domestic student / shared-house resident & The user can create, assign and rotate chores among housemates and track completion history. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-01}{View}\\
-        US-02 & EP-02 & UC-02 View and manage household rules & International student / shared-house resident & The user can view all household rules and expectations in their preferred language in a single location. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-02}{View}\\
-        US-03 & EP-02 & UC-03 Propose and approve chore system & Domestic student & All housemates have reviewed and approved a structured chore system before it becomes active. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-03}{View}\\
-        US-04 & EP-02 & UC-04 Log and split shared expenses & Shared-house resident & The user can log a shared expense and the system automatically calculates and assigns each housemate's share. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-04}{View}\\
-        US-05 & EP-02 & UC-05 Track outstanding balances & International student / shared-house resident & The user can view a real-time summary of who owes what and mark balances as settled. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-05}{View}\\
-        US-06 & EP-02 & UC-06 Split utility bills & International student / shared-house resident & The user can input a utility bill and split it equally or by usage among selected housemates. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-06}{View}\\
-        US-07 & EP-02 & UC-07 Post and view household notices & Shared-house resident & The user can post a notice visible to all housemates on a dedicated noticeboard separate from general messaging. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-07}{View}\\
-        US-08 & EP-02 & UC-08 Raise anonymous household issues & Domestic student / shared-house resident & A household issue is posted to the shared space without revealing the submitter's identity if the anonymous option is selected. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-08}{View}\\
-        US-09 & EP-01 & UC-09 Send secure in-app messages & International student / shared-house resident & The user can send and receive messages without either party's personal contact details being visible. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-09}{View}\\
-        US-10 & EP-02 & UC-10 Set and view agreed house rules & Shared-house resident & All housemates have acknowledged a proposed house rule before it becomes active and can reference it during disputes. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-10}{View}\\
-        US-11 & EP-01 & UC-11 View verified housemate profiles & International student / accommodation seeker & The user can view verified profiles with identity badges and filter search results to show only verified profiles. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-11}{View}\\
-        US-12 & EP-01 & UC-12 Filter housemates by lifestyle preferences & Shared-house resident / accommodation seeker & The user can set lifestyle preference filters and view a compatibility score and summary for each potential housemate. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-12}{View}\\
-        US-13 & EP-01 & UC-13 Search and filter property listings & Domestic student / accommodation seeker & The user can search for listings by university proximity and apply filters for rent, distance, bedrooms and move-in date. & MVP & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-13}{View}\\
-        US-14 & EP-03 & UC-14 Receive overdue chore and expense reminders & Shared-house resident & The user receives automatic in-app reminders when a chore or expense payment is overdue. & Extension & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-14}{View}\\
-        US-15 & EP-03 & UC-15 Read and submit housemate reviews & Shared-house resident / accommodation seeker & The user can read reviews left by previous housemates and submit a review after a confirmed tenancy ends. & Extension & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-15}{View}\\
-        US-16 & EP-04 & UC-16 Track rent and send reminders & Property manager & Rent status is recorded per tenant and overdue tenants receive automatic reminders. & Secondary & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-16}{View}\\
-        US-17 & EP-04 & UC-17 Create and manage property listings & Property manager & A complete property listing is published and visible to students searching for accommodation. & Secondary & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-17}{View}\\
-        US-18 & EP-04 & UC-18 Send tenant announcements & Property manager & An announcement is delivered to all tenants of a selected property with read receipt tracking. & Secondary & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com/?capture=US-18}{View}\\
+        US-01 & EP-02 & UC-01 Set up and manage chore roster & Post-MVP & Product backlog & Should\\
+        US-02 & EP-02 & UC-02 View and manage household rules & MVP & Sprint~1 & Must\\
+        US-03 & EP-02 & UC-03 Propose and approve chore system & Post-MVP & Product backlog & Should\\
+        US-04 & EP-02 & UC-04 Log and split shared expenses & Post-MVP & Product backlog & Should\\
+        US-05 & EP-02 & UC-05 Track outstanding balances & Post-MVP & Product backlog & Should\\
+        US-06 & EP-02 & UC-06 Split utility bills & Post-MVP & Product backlog & Should\\
+        US-07 & EP-02 & UC-07 Post and view household notices & Post-MVP & Product backlog & Could\\
+        US-08 & EP-02 & UC-08 Raise anonymous household issues & Post-MVP & Product backlog & Could\\
+        US-09 & EP-01 & UC-09 Send private in-app messages & MVP & Sprint~1 & Must\\
+        US-10 & EP-02 & UC-10 Set and view agreed house rules & MVP & Sprint~1 & Must\\
+        US-11 & EP-01 & UC-11 View identity status & MVP & Sprint~1 & Must\\
+        US-12 & EP-01 & UC-12 Filter housemates by lifestyle preferences & MVP & Sprint~1 & Must\\
+        US-13 & EP-01 & UC-13 Search and filter property listings & MVP & Sprint~1 & Must\\
+        US-14 & EP-03 & UC-14 Receive overdue chore and expense reminders & Post-MVP & Product backlog & Should\\
+        US-15 & EP-03 & UC-15 Read and submit housemate reviews & Post-MVP & Product backlog & Could\\
+        US-16 & EP-04 & UC-16 Track rent and send reminders & Exploratory & Product backlog & Won't\\
+        US-17 & EP-04 & UC-17 Create and manage property listings & Exploratory & Product backlog & Won't\\
+        US-18 & EP-04 & UC-18 Send tenant announcements & Exploratory & Product backlog & Won't\\
         \bottomrule
     \end{tabularx}
     \label{tabusucmapping}
 \end{table}
 
-Supporting use cases enable several user goals at once and therefore do not map to a single story. Two seeded data sources let the prototype demonstrate the discovery features without implementing the secondary property workflow first.
+Supporting use cases enable several user goals and do not map to one story. Seeded data lets the prototype demonstrate discovery without implementing the exploratory property workflow.
 
 \begin{table}[H]
     \centering
@@ -1093,12 +1118,18 @@ Supporting use cases enable several user goals at once and therefore do not map 
         \toprule
         Data ID & Data source & Purpose\\
         \midrule
-        DATA-01 & Seeded property listings & Provides published sample listings when the MVP prototype does not implement the secondary property-listing workflow.\\
-        DATA-02 & Seeded housemate profiles & Provides sample verified and unverified profiles for compatibility matching and verification testing in the MVP prototype.\\
+        DATA-01 & Seeded property listings & Provides sample listings while the exploratory property listing workflow remains outside the current release.\\
+        DATA-02 & Seeded housemate profiles & Provides sample profiles for compatibility and identity badge testing.\\
         \bottomrule
     \end{tabularx}
     \label{tabprototypedata}
 \end{table}
+
+\clearpage
+\section{Complete Acceptance Criteria}
+\label{appfullacceptance}
+
+\input{acceptance_criteria}
 
 \section{Prototype Screens and Links}
 
@@ -1111,8 +1142,8 @@ Supporting use cases enable several user goals at once and therefore do not map 
         Item & Access details\\
         \midrule
         Hosted prototype & \href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}{RoomMate Haven on AWS Elastic Beanstalk}\\
-        Demo account & Student email: \texttt{z5555555@ad.unsw.edu.au}; password: \texttt{studentdemo}\\
-        Phone verification & Select ``Send code'' and enter the demonstration code \texttt{2468}.\\
+        Demo account & Student email \texttt{z5555555@ad.unsw.edu.au}. Password \texttt{studentdemo}.\\
+        Phone verification & Select Send code and enter the demonstration code \texttt{2468}.\\
         Reset behaviour & Refresh the page to restore all seeded data and return the prototype to a repeatable test state.\\
         Screenshot evidence & \href{https://github.com/NuodiLiu/DESN2000/tree/main/part2/user_story_screenshots}{GitHub screenshot folder containing US-01 to US-18 evidence}\\
         \bottomrule
@@ -1139,8 +1170,23 @@ Supporting use cases enable several user goals at once and therefore do not map 
     \label{tabprototypeevidence}
 \end{table}
 
+\clearpage
 \section{Jira Evidence}
 
-\frameworknote{Appendix content}{Insert Jira backlog exports, screenshots or links showing Epics, user stories, acceptance criteria and sprint assignment.}
+The project space provides Jira and Confluence evidence for the backlog.
+
+\begin{table}[H]
+    \centering
+    \small
+    \caption{Atlassian project evidence access.}
+    \begin{tabularx}{\textwidth}{@{}L{4.2cm}Y@{}}
+        \toprule
+        Evidence item & Access link\\
+        \midrule
+        Jira and Confluence project space & \href{https://unsw-team-desn-seng2026.atlassian.net/wiki/spaces/XULKS/overview?homepageId=11600102}{Open the Atlassian project evidence space}\\
+        \bottomrule
+    \end{tabularx}
+    \label{tabjiraevidence}
+\end{table}
 
 \end{document}

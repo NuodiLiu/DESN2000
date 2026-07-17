@@ -1,0 +1,22 @@
+Tasks completed before week 5 ends:
+
+Liam: integrate the LaTeX report, align the mind map terminology, add persona and meeting evidence, correct the team member name and rebuild the final PDF.
+
+Qian: revise the stakeholder priorities, add the source survey reports and correct the domestic survey sample to three responses.
+
+Decisions:
+
+Use the final problem statement as the boundary for technical concepts.
+
+Keep trust, lifestyle compatibility and shared expectations as separate mechanisms during ideation.
+
+Do not select a solution before comparing alternatives through weighted criteria.
+
+Use the small domestic sample as directional evidence rather than a general result.
+
+Keep property managers as a secondary stakeholder in the final problem boundary.
+
+
+Next step:
+
+Generate distinct technical concepts, compare them through one matrix and document the selected subsystem path in Week 6.

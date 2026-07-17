@@ -392,8 +392,8 @@ Total issues: 63
     Acceptance Criteria (Given/When/Then):
     Success path:
     - Given a property manager has set a rent amount and due date for a tenant, when the due date approaches, then the system automatically sends a rent reminder to that tenant
-    - Given a tenant's payment has been recorded, when the property manager views the dashboard, then the tenant's status updates to "paid"
-    - Given the due date has passed without payment being recorded, when the system checks payment status, then the tenant's status updates to "overdue" and the property manager is notified
+    - Given a tenant's payment has been recorded, when the property manager views the dashboard, then the tenant's status updates to paid
+    - Given the due date has passed without payment being recorded, when the system checks payment status, then the tenant's status updates to overdue and the property manager is notified
     Error path:
     - Given a property manager attempts to set a rent due date without entering a rent amount, when they submit, then the system prompts them to complete all required fields
     - Given a tenant's contact details are incomplete, when the system attempts to send a reminder, then the system flags the tenant's profile as incomplete and alerts the property manager
@@ -513,14 +513,14 @@ Total issues: 63
     As an international student new to Australia and unfamiliar with who to trust, I want to communicate with potential housemates securely through the app before sharing my personal contact details, so that I can evaluate compatibility and build trust without exposing myself to scams or harassment during early interactions.
     Acceptance Criteria (Given/When/Then):
     Success path:
-    - Given two users are connected on the platform, when they open a conversation, then they can send and receive messages through a secure in-app system without either party's personal contact details being visible
+    - Given two users are connected on the platform, when they open a conversation, then they can send and receive messages through a private in-app system without either party's personal contact details being visible
     - Given both users mutually agree to share contact details, when they both opt in, then the system exchanges their contact details between them
     - Given a user feels unsafe, when they block or report another user from the messaging interface, then the reported user is flagged for review and the conversation is ended
     Error path:
-    - Given a user attempts to include personal contact details in a message, when the system detects this, then it warns the user and recommends using the opt-in contact sharing feature instead
+    - Given a user enters personal contact details in a message, when the browser checks the content before submission, then it blocks the message and directs the user to the mutual contact sharing feature
     - Given a user attempts to contact someone who has blocked them, when they try to send a message, then the system prevents the message from being sent without revealing that they have been blocked
     Edge case:
-    - Given a user's account is flagged as unverified, when they attempt to initiate a conversation, then the system displays a warning to the recipient that the sender is unverified before they choose to respond
+    - Given a phone verified user has not completed identity verification, when they initiate a conversation, then the recipient sees an unverified identity warning before responding
     Functional Requirements:
     - The system must provide secure in-app messaging that does not expose personal contact details
     - The system must support mutual opt-in contact detail sharing
@@ -607,7 +607,7 @@ Total issues: 63
     - Given a user views an unverified profile, when they open it, then a visible warning indicator is displayed clearly at the top of the profile
     Error path:
     - Given a user submits an expired or unreadable identification document, when the system processes it, then the verification is rejected and the user is notified with instructions to resubmit a valid document
-    - Given a user attempts to access the platform's core matching features without completing verification, when they try to proceed, then the system prompts them to complete verification first
+    - Given a user has not completed identity verification, when they attempt to display a verified identity badge, then the system keeps the profile unverified and directs them to complete identity verification
     Edge case:
     - Given a verified user's identification document expires, when the system detects the expiry, then it notifies the user to resubmit updated documentation to maintain their verified status
     Functional Requirements:
@@ -646,7 +646,7 @@ Total issues: 63
     - The system must notify users when their profile has been viewed
     Non-Functional Requirements:
     - Compatibility scores must be recalculated in real time when a user updates their preferences
-    - Search results must load within 3 seconds on a standard mobile connection
+    - Compatibility results must satisfy NFR-04 under the report's specified Chrome, viewport, network, dataset and p95 test conditions
   customfield_10019: 0|i001kl:
 ------------------------------------------------------------------------------
 
@@ -740,7 +740,7 @@ Total issues: 63
     - The system must display affordability indicators on each listing including weekly rent, estimated cost per person, suburb average comparison and affordability rating
     - The system must allow students to report inaccurate or misleading listings
     Non-Functional Requirements:
-    - Search results must load within 3 seconds on a standard mobile connection
+    - Search results must satisfy NFR-04 under the report's specified Chrome, viewport, network, dataset and p95 test conditions
     - Affordability comparisons must be based on current market data updated at least monthly
     - Reported listings must be reviewed within 48 hours of being flagged
   customfield_10019: 0|i001kf:9g

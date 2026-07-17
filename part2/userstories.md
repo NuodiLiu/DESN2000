@@ -1,8 +1,33 @@
 # User Stories
 
-The IDs below are stable references for the use-case mapping, dependency analysis, acceptance criteria, and Jira tasks. Scope and sprint names are kept separate from the IDs because priorities may change.
+The IDs below are stable references for the use-case mapping, dependency analysis, acceptance criteria and Jira tasks. Product release, sprint assignment and MoSCoW priority are recorded independently because planning decisions may change.
 
-## MVP User Stories
+## Scope Assignment
+
+| Story | Product release | Sprint assignment | MoSCoW priority |
+|---|---|---|---|
+| US-01 | Post-MVP | Product backlog | Should |
+| US-02 | MVP | Sprint 1 | Must |
+| US-03 | Post-MVP | Product backlog | Should |
+| US-04 | Post-MVP | Product backlog | Should |
+| US-05 | Post-MVP | Product backlog | Should |
+| US-06 | Post-MVP | Product backlog | Should |
+| US-07 | Post-MVP | Product backlog | Could |
+| US-08 | Post-MVP | Product backlog | Could |
+| US-09 | MVP | Sprint 1 | Must |
+| US-10 | MVP | Sprint 1 | Must |
+| US-11 | MVP | Sprint 1 | Must |
+| US-12 | MVP | Sprint 1 | Must |
+| US-13 | MVP | Sprint 1 | Must |
+| US-14 | Post-MVP | Product backlog | Should |
+| US-15 | Post-MVP | Product backlog | Could |
+| US-16 | Exploratory | Product backlog | Won't |
+| US-17 | Exploratory | Product backlog | Won't |
+| US-18 | Exploratory | Product backlog | Won't |
+
+Product backlog assignment does not commit a story to delivery in the current report.
+
+## Student and Resident User Stories
 
 **US-01. As a** domestic student managing shared living for the first time, **I want to** set up a rotating chore roster and track completion history, **so that** household responsibilities are distributed fairly and I can refer back to who has and hasn't been contributing.
 
@@ -29,8 +54,6 @@ The IDs below are stable references for the use-case mapping, dependency analysi
 **US-12. As a** social worker with a demanding and irregular work schedule seeking shared accommodation, **I want to** filter potential housemates by lifestyle preferences such as cleanliness standards, sleep schedule, and daily routine, **so that** I can find someone whose habits are compatible with mine before committing to living together.
 
 **US-13. As a** domestic student moving out of home for the first time, **I want to** search and filter property listings by location and affordability, **so that** I can find suitable and trustworthy housing near my university without being overwhelmed or misled by inaccurate listings.
-
-## Extension User Stories
 
 **US-14. As a** young professional living in shared accommodation, **I want to** automatically receive in-app reminders when I have an overdue chore or expense, **so that** I can stay on top of my responsibilities without housemates needing to confront me directly.
 
