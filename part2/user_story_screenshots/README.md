@@ -3,8 +3,12 @@
 RoomMate Haven prototype evidence for the 18 stable user story IDs in
 [`part2/userstories.md`](../userstories.md).
 
-Each PNG is 1200 x 900 and shows the website state that best demonstrates the
-corresponding user story.
+`user-story-map.png` is the complete planning map used in Appendix A of the
+group report. It links the personas, four product activities, backbone tasks
+and release priorities that frame the detailed user-story evidence below.
+
+Each numbered evidence PNG is 1200 x 900 and shows the website state that best
+demonstrates the corresponding user story.
 
 | User story | Prototype evidence | Screenshot |
 | --- | --- | --- |

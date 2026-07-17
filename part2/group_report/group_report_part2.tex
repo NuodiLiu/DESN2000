@@ -7,6 +7,7 @@
 \usepackage{array}
 \usepackage{caption}
 \usepackage{float}
+\usepackage{pdflscape}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage[hidelinks]{hyperref}
@@ -73,7 +74,7 @@
 
     \vspace{1.2cm}
     \begin{tabularx}{0.88\textwidth}{@{}L{3.2cm}Y@{}}
-        Team members & Nuodi Liu (z5403196), Qian Cao (z5569891), Chien-Kai Wang (z5505220), Pranav (z5589687)\\
+        Team members & Nuodi Liu (z5403196), Qian Cao (z5569891), Chien-Kai Wang (z5505220), Pranav Shanker (z5589687)\\
     \end{tabularx}
 
     \vfill
@@ -314,7 +315,7 @@ The final ratings in Table~\ref{tabconceptselection} must match the scoring evid
                 Nuodi Liu & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 4, 5, 3\\
                 Qian Cao & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 4, 4, 4 & 5, 5, 3, 4, 5, 3\\
                 Chien-Kai Wang & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 2, 4, 5, 3\\
-                Pranav & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 5, 5, 3\\
+                Pranav Shanker & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 5, 5, 3\\
                 \midrule
                 Final consensus & 4, 4, 5, 4, 3, 4 & 4, 4, 4, 5, 4, 4 & 5, 5, 3, 4, 5, 3\\
                 \bottomrule
@@ -632,6 +633,8 @@ Figure~\ref{figstorydependencies} shows the validated dependency graph for the c
 
 \section{First-Pass User Story Map}
 
+Table~\ref{tabstorymap} summarises the release slice used to define Sprint~1. The complete team map, including personas, all four activities, backbone tasks and release priorities, is provided in Figure~\ref{figfullstorymap} in Appendix~\ref{appusecasemapping}.
+
 \begin{table}[H]
     \centering
     \scriptsize
@@ -807,7 +810,7 @@ The prototype will be evaluated through five moderated usability tests that foll
         \toprule
         Test & Goal & Stories & Acceptance criteria & Responsible\\
         \midrule
-        T1 & Narrow properties with combined search criteria & US-13 & AC-US13-01--04, AC-US13-06 & Pranav\\
+        T1 & Narrow properties with combined search criteria & US-13 & AC-US13-01--04, AC-US13-06 & Pranav Shanker\\
         T2 & Recognise verified housemate profiles & US-11 & AC-US11-01, AC-US11-02 & Nicky\\
         T3 & Build a profile and use recalculated compatibility & US-12 & AC-US12-01, AC-US12-02, AC-US12-04--06 & Liam\\
         T4 & Complete authentication and message safely & US-09 & AC-US09-01, AC-US09-04 & Qian Cao\\
@@ -833,7 +836,7 @@ The prototype will be evaluated through five moderated usability tests that foll
         Success criteria & $\geq$4/5 users enter all six criteria, reach the single matching listing and explain its Budget indicator in $\leq$3 minutes. A deliberately impossible combination must produce the no-result explanation and broadening action.\\
         Expected errors & Users overlook a second-row filter, interpret the move-in date in the wrong direction, or confuse household bedrooms with available rooms.\\
         Data to collect & Completion rate, time on task, filters changed, selected listing, affordability interpretation and recovery from the empty state.\\
-        Responsible & Pranav\\
+        Responsible & Pranav Shanker\\
         \bottomrule
     \end{tabularx}
     \label{tabtestt1}
@@ -944,10 +947,19 @@ After each round the team will compile results into one summary, rank observed i
 
 \appendix
 
+\begin{landscape}
 \section{Full User Story and Use Case Mapping}
 \label{appusecasemapping}
 
-Each user story maps to exactly one goal-level use case, and both identifiers stay stable even when a sprint or priority changes. Table~\ref{tabusucmapping} records the complete mapping together with the primary actor and the successful outcome of each use case.
+Figure~\ref{figfullstorymap} presents the complete User Story Map used to organise personas, product activities, backbone tasks and release priorities. It provides the visual planning context for the detailed traceability that follows, where each stable story identifier maps to one goal-level use case in Table~\ref{tabusucmapping}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{user-story-map.png}
+    \caption{Complete User Story Map showing personas, activities, backbone tasks and release priorities.}
+    \label{figfullstorymap}
+\end{figure}
+\end{landscape}
 
 \begin{table}[H]
     \centering
