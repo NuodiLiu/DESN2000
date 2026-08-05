@@ -31,7 +31,435 @@
 
 \begin{document}
 
-\setcounter{section}{2}
+\setcounter{section}{1}
+
+\section{Accessibility Report}
+\label{secaccessibilityreport}
+
+\subsection{Rationale and Requirements Traceability}
+\label{subseca11yrationale}
+
+Accessibility was treated as a condition for completing the core journey, not
+as a visual enhancement. Part 1 defined an international student persona who
+must judge unfamiliar listings and people with limited local knowledge and
+English, and a domestic shared-living persona who depends on household
+agreements staying visible after move-in. Both rely on interface information
+that survives a change of device, language or input method. The test group
+reflected this: a participant with colour vision deficiency, a mobile-first
+international student and a participant whose first language was not English.
+If status depends on colour alone, dialogs lose keyboard focus or translated
+rules are read with English pronunciation, these users cannot judge trust
+information, message safely or understand a household agreement.
+
+Two requirements set the baseline. NFR-03 requires every Sprint 1 screen
+(S-01 to S-06) to support keyboard use and meet WCAG 2.2 AA contrast
+thresholds, and NFR-06 requires the household rules view to serve at least
+five languages. The assessment brief, however, requests the WCAG 2.0
+checklist. Therefore, Table~\ref{taba11ychecklist} reports WCAG 2.0 success
+criteria with their conformance level while retaining WCAG 2.2 AA as the
+broader target. Accessibility was traced to the functional work it enabled:
+US-11 with AC-US11-01 and AC-US11-02 for recognising verified profiles; US-09
+and AC-US09-04 for understanding a blocked contact-detail message; US-02 and
+AC-US02-02 for translated household rules; and US-10 with AC-US10-02 and
+AC-US10-04 for proposing a rule and interpreting approval and activation
+states.
+
+\subsection{Evaluation Scope and Method}
+\label{subseca11ymethod}
+
+The report structure adapts the W3C accessibility evaluation report
+template:\footnote{W3C Web Accessibility Initiative, \textit{Accessibility
+Evaluation Report Template}, \url{https://www.w3.org/WAI/test-evaluate/report-template/}.}
+scope and methods, findings, recommended actions and limitations. The success
+criteria and conformance levels follow the WCAG 2.0 checklist named in the
+assessment brief, supplemented by the A11Y Project checklist for plain-language
+phrasing.\footnote{W3C, \textit{WCAG 2.0 Checklist (Working Draft, Appendix B)},
+\url{https://www.w3.org/TR/2006/WD-WCAG20-20060427/appendixB.html}; The A11Y
+Project, \textit{Checklist}, \url{https://www.a11yproject.com/checklist/}.}
+
+The scope covered the six Sprint 1 screens (S-01 to S-06) of the hosted
+prototype together with the login and notification dialogs that gate or
+interrupt those tasks.\footnote{Evaluated build:
+\url{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}.}
+The Create roster dialog is outside the Sprint 1 release scope defined in
+Part 2, but it reuses the dialog and form-validation components that S-05 and
+S-06 depend on, so it was sampled as a component-level proxy and is labelled as
+such below. On 27 July 2026, a Playwright-assisted review of keyboard
+behaviour, focus, DOM and ARIA state, language metadata, contrast and
+responsive layouts at 1470 by 726 and 390 by 844 pixels identified nine
+accessibility findings. Screenshots recorded visible states; focus and
+announcement claims came from interaction and DOM assertions.
+
+Between 25 and 27 July, five participants completed moderated tasks T1 to T5
+using tablet, laptop and mobile devices. Think-aloud comments, errors, assistance and task effects
+were recorded. This added human evidence: User A lost context when focus escaped
+a dialog, and User B could not operate Discover tabs with arrow keys and found
+their colour-dependent selected state unclear. After Sprint 2 changes, the team
+ran Node tests (7/7 passed) and Playwright regression checks at 1440 by 1000 and
+390 by 844 pixels. A criterion was marked \textit{Met} only where the revised
+prototype and regression evidence addressed the WCAG requirement; unresolved
+or incompletely sampled requirements were marked \textit{Partially met}.
+
+\subsection{WCAG Checklist Results and Actions}
+\label{subseca11yresults}
+
+{\footnotesize
+\begin{longtable}{@{}L{1.1cm}L{0.85cm}L{2.25cm}L{2.35cm}L{1.3cm}L{5.05cm}@{}}
+    \caption{WCAG 2.0 checklist results, traceability and actions.}
+    \label{taba11ychecklist}\\
+    \toprule
+    SC & Level & Requirement & Traceability & Result & Evidence, consequence and action\\
+    \midrule
+    \endfirsthead
+    \caption[]{WCAG 2.0 checklist results continued.}\\
+    \toprule
+    SC & Level & Requirement & Traceability & Result & Evidence, consequence and action\\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{6}{r}{Continued on next page}\\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+
+    1.1.1 &
+    A &
+    Non-text Content &
+    US-09, AC-US09-04; US-11 &
+    Partially met &
+    Icon controls sampled during the review carried accessible names, and
+    verification cues now pair an icon with status text. The desktop
+    mutual-sharing icon remains the known exception. Audit accessible names
+    across every icon control before claiming conformance.\\
+
+    1.3.1 &
+    A &
+    Info and Relationships &
+    NFR-03; US-09, US-10 &
+    Met &
+    On the sampled components, structure is now programmatic rather than
+    visual: tabs expose \texttt{role="tab"}, \texttt{tabpanel} and
+    \texttt{aria-controls}; form errors use \texttt{aria-describedby}; and the
+    blocked-message warning is associated with the composer. Extend the same
+    audit to S-01 and S-03.\\
+
+    1.4.1 &
+    A &
+    Use of Colour &
+    NFR-03; US-11, AC-US11-01 &
+    Partially met &
+    Verification cues now pair text with icons and tabs expose
+    \texttt{aria-selected}. However, User B found that the original selected
+    state relied mainly on green text and a thin underline. Retain programmatic
+    state and add a stronger visible non-colour cue such as weight or a
+    selected label.\\
+
+    1.4.3 &
+    AA &
+    Contrast (Minimum) &
+    NFR-03; S-01 to S-06 &
+    Met &
+    The initial white-on-sage controls measured about 3.57:1 and small sage
+    labels about 3.20:1, below the 4.5:1 AA threshold. Sprint 2 changed the
+    palette; automated checks reported sage 4.95:1, coral 4.91:1, blue 4.56:1
+    and amber 5.59:1. Recheck after future palette changes.\\
+
+    2.1.1 &
+    A &
+    Keyboard &
+    NFR-03; US-11; US-02 and US-10 &
+    Partially met &
+    The login dialog, notification drawer and the roster proxy dialog now trap
+    focus, close with Escape and return focus. Tabs support Left/Right, Home
+    and End keys. These fixes address the observed T2 and T5 failures, but a
+    complete keyboard walkthrough of S-01 to S-06 has not been recorded. Add
+    this as a release regression test.\\
+
+    2.1.2 &
+    A &
+    No Keyboard Trap &
+    NFR-03; US-09, US-10 &
+    Met &
+    Focus containment uses the standard exit method: Escape closes the
+    top-most dialog and restores focus to the opening control, so keyboard
+    users are never held inside a surface. Re-verify whenever a new dialog is
+    added.\\
+
+    2.4.1 &
+    A &
+    Bypass Blocks &
+    NFR-03; S-01 to S-06 &
+    Met &
+    The original Skip to content link changed the hash but left focus on the
+    page body. The revised link moves focus to \texttt{\#main-content}, allowing
+    keyboard and screen-reader users to bypass repeated navigation. Retest
+    whenever routing or landmarks change.\\
+
+    2.4.3 &
+    A &
+    Focus Order &
+    NFR-03; US-09, US-10 &
+    Met &
+    Opening a dialog or the notification drawer moves focus into it and makes
+    the background inert, and closing returns focus to the trigger. This
+    removed the User A failure in which focus escaped into an
+    \texttt{aria-hidden} drawer. Sample the remaining screens in Iteration 3.\\
+
+    2.4.7 &
+    AA &
+    Focus Visible &
+    NFR-03; S-01 to S-06 &
+    Met &
+    A visible focus indicator was confirmed on the login dialog, skip link,
+    Discover tabs and roster fields during regression capture. Keep the
+    indicator when the palette changes, because contrast and focus styling
+    share the same tokens.\\
+
+    3.1.2 &
+    AA &
+    Language of Parts &
+    NFR-06; US-02, AC-US02-02 &
+    Partially met &
+    Simplified Chinese rule content now receives \texttt{lang="zh-CN"}, so
+    assistive technology can select appropriate pronunciation. Surrounding
+    headings and actions remain English after Chinese is selected. Translate
+    the complete task flow or mark each remaining language change.\\
+
+    3.2.2 &
+    A &
+    On Input &
+    NFR-06; US-02, AC-US02-02 &
+    Met &
+    Changing the rules language or moving between tabs updates content in
+    place without navigating, submitting or opening a new context. Retain this
+    behaviour when translation moves to a service call.\\
+
+    3.3.1 &
+    A &
+    Error Identification &
+    NFR-03; US-10, AC-US10-04 &
+    Partially met &
+    Verified on the roster proxy dialog: validation applies
+    \texttt{aria-invalid}, links the error through \texttt{aria-describedby}
+    and focuses the first invalid field. The AC-US10-04 rule-proposal form and
+    the login and profile inputs are not yet verified; apply and test the same
+    pattern on all Sprint 1 forms.\\
+
+    3.3.2 &
+    A &
+    Labels or Instructions &
+    NFR-03; US-10, AC-US10-04 &
+    Met &
+    Sampled inputs carry persistent visible labels, and the roster error states
+    the required action rather than only reporting failure. Review the same
+    wording once the rule-proposal form is retested.\\
+
+    4.1.2 &
+    A &
+    Name, Role, Value &
+    US-09, AC-US09-04; US-10 &
+    Partially met &
+    Revised tabs expose tab, tabpanel, selected and controlled relationships,
+    and the blocked-message warning is programmatically associated with the
+    composer. The desktop mutual-sharing action still appears icon-only without
+    hover. Add a persistent visible name and verify accessible names for every
+    icon control.\\
+\end{longtable}
+}
+
+Eight criteria are met and six are partially met. The remaining checklist
+items were classified rather than omitted, so that the recommendations which
+belong to the final coded solution stay visible (Table~\ref{taba11ydeferred}).
+
+{\footnotesize
+\begin{longtable}{@{}L{3.2cm}L{0.9cm}L{2.7cm}L{6.0cm}@{}}
+    \caption{Checklist items that are not applicable, deferred to the coded
+    solution, or not yet assessed.}
+    \label{taba11ydeferred}\\
+    \toprule
+    SC & Level & Classification & Reason and planned action\\
+    \midrule
+    \endfirsthead
+    \toprule
+    SC & Level & Classification & Reason and planned action\\
+    \midrule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    1.2.1 to 1.2.5 (time-based media) &
+    A, AA &
+    Not applicable &
+    The prototype contains no prerecorded or live audio or video. Captions and
+    audio description will be authored alongside any future demonstration
+    media.\\
+
+    1.4.2 Audio Control &
+    A &
+    Not applicable &
+    No audio plays automatically anywhere in the build.\\
+
+    2.3.1 Three Flashes &
+    A &
+    Not applicable &
+    No flashing, blinking or auto-playing motion content is present.\\
+
+    2.2.1, 2.2.2 Timing and moving content &
+    A &
+    Final coded solution &
+    Seeded sessions never expire and no content auto-updates. Production
+    sign-in must warn before session expiry and allow the user to extend it.\\
+
+    3.3.4 Error Prevention &
+    AA &
+    Final coded solution &
+    Rule activation and rent payments are currently one-step. The coded product
+    will add a review-and-confirm step and a reversal path before submission.\\
+
+    2.4.5 Multiple Ways &
+    AA &
+    Final coded solution &
+    The seeded build offers one navigation route per destination. Production
+    will add site search and a rules index.\\
+
+    1.4.4 Resize Text; 4.1.1 Parsing &
+    A, AA &
+    Not yet assessed &
+    Add a 200 per cent zoom and reflow pass and an automated markup validation
+    step to the Iteration 3 regression suite.\\
+\end{longtable}
+}
+
+\subsection{Evaluation Evidence}
+\label{subseca11yevidence}
+
+Figures~\ref{figa11ycontrast}--\ref{figa11ywarning} pair each original finding
+with the revised state, showing how the evidence led to a specific change.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/QA-14-low-contrast-controls-and-labels.png}
+        \caption{Iteration 1: small controls and status labels failed the AA
+        contrast threshold.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/FIX-14-aa-contrast-palette.png}
+        \caption{Sprint 2: revised status colours measured at least 4.56:1.}
+    \end{subfigure}
+    \caption{WCAG 1.4.3 contrast evidence before and after palette revision.}
+    \label{figa11ycontrast}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/QA-02-modal-focus-escape.png}
+        \caption{Iteration 1: the dialog remained open after focus moved to a
+        hidden background control.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/FIX-02-modal-focus-trap.png}
+        \caption{Sprint 2: the visible focus indicator remains within the login
+        dialog; Playwright verified the active element.}
+    \end{subfigure}
+    \caption{WCAG 2.1.1 modal keyboard evidence before and after focus
+    management.}
+    \label{figa11yfocus}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/UserB-T2-tab-keyboard-selected-state.png}
+        \caption{User B/T2: the selected tab relied mainly on colour and did not
+        respond to arrow keys.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/ITER2-T2-discover-keyboard-tabs.png}
+        \caption{Iteration 2: keyboard navigation exposes focus and the
+        programmatic selected state.}
+    \end{subfigure}
+    \caption{WCAG 1.4.1, 2.1.1 and 4.1.2 evidence for the Discover tabs.}
+    \label{figa11ytabs}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/QA-06-message-warning-not-announced.png}
+        \caption{Iteration 1: the blocked-contact warning was visible but had no
+        alert or live-region semantics.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.19\textheight,
+            keepaspectratio
+        ]{tests/FIX-06-message-warning-live-alert.png}
+        \caption{Sprint 2: the warning is associated with the composer and
+        announced as an assertive alert.}
+    \end{subfigure}
+    \caption{Programmatic warning evidence supporting AC-US09-04 and WCAG
+    4.1.2; live announcement is an additional WCAG 2.1/2.2 improvement.}
+    \label{figa11ywarning}
+\end{figure}
+
+\subsection{Limitations and Next Steps}
+\label{subseca11ylimitations}
+
+This evaluation does not establish full conformance. Results marked
+\textit{Met} are met on the components sampled, not proven across every
+screen. No participant used a screen reader, switch device or voice control,
+and seeded session data may hide barriers that production authentication,
+asynchronous errors and dynamic updates will introduce. The team will next run
+NVDA with Chrome and VoiceOver with Safari, add automated axe checks to
+Playwright, and repeat the keyboard walkthrough for S-01 to S-06. The
+remaining interface work is to label the desktop contact-sharing icon, combine
+approval count and activation condition into one announced status, translate
+the full household-rule workflow, and apply the roster error pattern to all
+Sprint 1 forms. Screen-reader and low-vision participants will then validate
+these changes in practice.
 
 \section{Testing Report}
 \label{sectestingreport}
