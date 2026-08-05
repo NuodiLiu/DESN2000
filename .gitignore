@@ -3,6 +3,7 @@ tmp/
 
 # Large/raw local media
 *.mp4
+!part3/media/*.mp4
 
 # LaTeX build artifacts
 *.aux
