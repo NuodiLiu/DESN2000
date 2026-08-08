@@ -39,66 +39,87 @@
 \subsection{Rationale and Requirements Traceability}
 \label{subseca11yrationale}
 
-Accessibility was treated as a condition for completing the core journey, not
-as a visual enhancement. Part 1 defined an international student persona who
-must judge unfamiliar listings and people with limited local knowledge and
-English, and a domestic shared-living persona who depends on household
-agreements staying visible after move-in. Both rely on interface information
-that survives a change of device, language or input method. The test group
-reflected this: a participant with colour vision deficiency, a mobile-first
-international student and a participant whose first language was not English.
-If status depends on colour alone, dialogs lose keyboard focus or translated
-rules are read with English pronunciation, these users cannot judge trust
-information, message safely or understand a household agreement.
+Accessibility was considered an essential part of the user experience rather than
+just a visual feature. In interim report, we identified an international student persona
+who needs to evaluate unfamiliar accommodation listings and potential housemates
+despite having limited local knowledge and English proficiency. We also identified
+a domestic shared-living persona who relies on household agreements remaining
+clear and accessible after moving in. Both users depend on information that can
+be understood across different devices, languages, and interaction methods.
 
-Two requirements set the baseline. NFR-03 requires every Sprint 1 screen
-(S-01 to S-06) to support keyboard use and meet WCAG 2.2 AA contrast
-thresholds, and NFR-06 requires the household rules view to serve at least
-five languages. The assessment brief, however, requests the WCAG 2.0
-checklist. Therefore, Table~\ref{taba11ychecklist} reports WCAG 2.0 success
-criteria with their conformance level while retaining WCAG 2.2 AA as the
-broader target. Accessibility was traced to the functional work it enabled:
-US-11 with AC-US11-01 and AC-US11-02 for recognising verified profiles; US-09
-and AC-US09-04 for understanding a blocked contact-detail message; US-02 and
-AC-US02-02 for translated household rules; and US-10 with AC-US10-02 and
-AC-US10-04 for proposing a rule and interpreting approval and activation
-states.
+This was also reflected in our user testing. Participants included a user with
+colour vision deficiency, a mobile-first international student, and a participant
+whose first language was not English. Their feedback showed that if important
+information relies only on colour, keyboard navigation is interrupted, or
+translated content is difficult to understand, users may struggle to judge the
+trustworthiness of listings, communicate safely, or understand household
+agreements.
+
+Two non-functional requirements formed the basis of the accessibility evaluation.
+NFR-03 requires all Sprint 1 screens (S-01 to S-06) to support keyboard
+navigation and meet WCAG 2.2 AA colour contrast requirements, while NFR-06
+requires the household rules page to support at least five languages. However,
+the assessment brief recommends evaluating the prototype using the WCAG 2.0
+checklist. Therefore, Table~\ref{taba11ychecklist} reports the prototype against
+the relevant WCAG 2.0 success criteria while using WCAG 2.2 AA as the overall
+design target.
+
+Accessibility requirements were also linked directly to the project's user
+stories and acceptance criteria. US-11 (AC-US11-01 and AC-US11-02) supports
+recognition of verified profiles, US-09 (AC-US09-04) ensures users can
+understand blocked contact-detail messages, US-02 (AC-US02-02) focuses on
+translated household rules, and US-10 (AC-US10-02 and AC-US10-04) supports
+creating, approving, and activating household rules. Linking accessibility to
+these user stories ensured that accessibility requirements were considered
+throughout the design process instead of being added at the end.
 
 \subsection{Evaluation Scope and Method}
 \label{subseca11ymethod}
 
-The report structure adapts the W3C accessibility evaluation report
-template:\footnote{W3C Web Accessibility Initiative, \textit{Accessibility
+This report follows the structure of the W3C Accessibility Evaluation Report
+Template,\footnote{W3C Web Accessibility Initiative, \textit{Accessibility
 Evaluation Report Template}, \url{https://www.w3.org/WAI/test-evaluate/report-template/}.}
-scope and methods, findings, recommended actions and limitations. The success
-criteria and conformance levels follow the WCAG 2.0 checklist named in the
-assessment brief, supplemented by the A11Y Project checklist for plain-language
-phrasing.\footnote{W3C, \textit{WCAG 2.0 Checklist (Working Draft, Appendix B)},
+including the evaluation scope, methods, findings, recommended actions, and
+limitations. Accessibility was evaluated using the WCAG 2.0 success criteria
+specified in the assessment brief, with the A11Y Project checklist used as an
+additional reference to support plain-language interpretation of the
+guidelines.\footnote{W3C, \textit{WCAG 2.0 Checklist (Working Draft, Appendix B)},
 \url{https://www.w3.org/TR/2006/WD-WCAG20-20060427/appendixB.html}; The A11Y
 Project, \textit{Checklist}, \url{https://www.a11yproject.com/checklist/}.}
 
-The scope covered the six Sprint 1 screens (S-01 to S-06) of the hosted
-prototype together with the login and notification dialogs that gate or
-interrupt those tasks.\footnote{Evaluated build:
+The evaluation covered the six Sprint 1 prototype screens (S-01 to S-06),
+together with the login and notification dialogs that support these user
+tasks.\footnote{Evaluated build:
 \url{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}.}
-The Create roster dialog is outside the Sprint 1 release scope defined in
-Part 2, but it reuses the dialog and form-validation components that S-05 and
-S-06 depend on, so it was sampled as a component-level proxy and is labelled as
-such below. On 27 July 2026, a Playwright-assisted review of keyboard
-behaviour, focus, DOM and ARIA state, language metadata, contrast and
-responsive layouts at 1470 by 726 and 390 by 844 pixels identified nine
-accessibility findings. Screenshots recorded visible states; focus and
-announcement claims came from interaction and DOM assertions.
+Although the Create Roster dialog was outside the Sprint 1 release scope, it
+reused the same dialog and form-validation components as Screens S-05 and
+S-06. It was therefore included as a component-level sample to assess the
+accessibility of shared interface elements.
 
-Between 25 and 27 July, five participants completed moderated tasks T1 to T5
-using tablet, laptop and mobile devices. Think-aloud comments, errors, assistance and task effects
-were recorded. This added human evidence: User A lost context when focus escaped
-a dialog, and User B could not operate Discover tabs with arrow keys and found
-their colour-dependent selected state unclear. After Sprint 2 changes, the team
-ran Node tests (7/7 passed) and Playwright regression checks at 1440 by 1000 and
-390 by 844 pixels. A criterion was marked \textit{Met} only where the revised
-prototype and regression evidence addressed the WCAG requirement; unresolved
-or incompletely sampled requirements were marked \textit{Partially met}.
+The prototype was reviewed using Playwright-assisted testing to examine
+keyboard navigation, focus management, DOM and ARIA attributes, language
+metadata, colour contrast, and responsive layouts at resolutions of
+1470 × 726 and 390 × 844 pixels. Nine accessibility issues were identified.
+Screenshots were captured to document the interface state, while focus
+behaviour and screen-reader related observations were verified through user
+interaction and DOM inspection.
+
+Five participants completed moderated usability tasks (T1–T5) on laptop,
+tablet, and mobile devices. Think-aloud comments, task completion, user
+errors, requests for assistance, and task outcomes were recorded throughout
+the sessions. These observations provided additional evidence beyond
+automated testing. For example, one participant lost context when keyboard
+focus escaped from a dialog, while another participant found the Discover
+tabs difficult to navigate using the keyboard and reported that the selected
+tab relied too heavily on colour alone.
+
+Following the Sprint 2 improvements, the team repeated automated Node testing
+(7 of 7 tests passed) together with Playwright regression testing at
+1440 × 1000 and 390 × 844 pixels. A WCAG criterion was recorded as
+\textit{Met} only when both the updated prototype and the supporting
+regression evidence demonstrated compliance. Criteria that could not yet be
+fully verified or required implementation beyond the prototype were recorded
+as \textit{Partially met}.
 
 \subsection{WCAG Checklist Results and Actions}
 \label{subseca11yresults}
