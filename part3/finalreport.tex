@@ -1332,4 +1332,250 @@ finding rule proposals. They also struggled in both rounds to connect approval
 progress with activation. These problems caused repeated checking and left
 users uncertain about which household rules applied.
 
+\section{Final Prototype}
+\label{secfinalprototype}
+
+\subsection{Overview and Fidelity}
+\label{subsecfinalprototypeoverview}
+
+The final RoomMate Haven prototype is available as a deployed browser build:
+\href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}
+{open the final prototype}. A matching 60-second walkthrough is stored in the
+repository at \path{media/RoomMate-Haven-Prototype-Demo-60s.mp4}. The final
+prototype retains the six-screen Sprint~1 journey: property search (S-01),
+verified housemate discovery (S-02), lifestyle compatibility (S-03), private
+messaging (S-04), household rules (S-05), and rule approval (S-06).
+
+The build is a high-fidelity, seeded HTML prototype rather than a production
+service. It provides realistic interaction, presentation and content for the
+assessed journey while keeping test conditions repeatable. The evidence in
+Table~\ref{tabfinalprototypefidelity} is limited to behaviour recorded in the
+repository and does not imply production identity verification, encrypted
+messaging, server-side persistence or complete WCAG conformance.
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Final prototype fidelity and repository evidence.}
+    \label{tabfinalprototypefidelity}
+    \begin{tabularx}{\textwidth}{@{}L{2.3cm}Y Y@{}}
+        \toprule
+        Fidelity dimension & Implemented evidence & Scope boundary\\
+        \midrule
+        Interactivity &
+        Filters produce result and no-result states; saved lifestyle choices
+        recalculate rankings; contact details are blocked before sending;
+        dialogs manage focus and validation; tabs respond to keyboard input;
+        and saved actions provide confirmation. Figures~\ref{figiterationtwocore},
+        \ref{figiterationtwotabs}, \ref{figiterationtwomessaging} and
+        \ref{figiterationtwohousehold} show the revised states. &
+        Interactions use seeded browser data. The Accessibility Report records
+        7/7 automated Node checks plus targeted Playwright regression, not a
+        production back end.\\
+
+        Visual &
+        Responsive desktop and mobile layouts use a consistent warm-white,
+        sage and peach system, repeated cards and controls, readable type,
+        visible focus and status styling. The revised status colours measured
+        between 4.56:1 and 5.59:1 in the recorded contrast checks
+        (Figure~\ref{figa11ycontrast}). &
+        Visual evidence covers the tested 1440 by 1000 and 390 by 844 layouts;
+        it is not evidence for every possible viewport.\\
+
+        Content &
+        Seeded properties, profiles, compatibility explanations,
+        conversations, verification states, household members and rule
+        proposals provide realistic labels, values, warnings and state changes
+        for T1--T5. &
+        Seeded identities and household data are demonstration content and
+        reset with the prototype; they are not live records.\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Design Principle Evidence Matrix}
+\label{subsecdesignprinciples}
+
+Table~\ref{tabdesignprinciples} applies the information-architecture, visual-
+hierarchy and interface principles documented in the Week~7 design notes to
+observable prototype states. It contains more than the rubric minimum of five
+information architecture principles, three visual hierarchy principles and
+five UI principles.
+
+{\footnotesize
+\begin{longtable}{@{}L{1.8cm}L{2.7cm}L{7.2cm}L{2.7cm}@{}}
+    \caption{Design principles implemented in the final prototype.}
+    \label{tabdesignprinciples}\\
+    \toprule
+    Category & Principle & Prototype implementation & Evidence\\
+    \midrule
+    \endfirsthead
+    \caption[]{Design principles implemented in the final prototype continued.}\\
+    \toprule
+    Category & Principle & Prototype implementation & Evidence\\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{4}{r}{Continued on next page}\\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+
+    Information architecture & Objects &
+    Properties, housemate profiles, conversations and household rules are
+    treated as distinct objects with their own attributes, statuses and
+    actions. & Figures~\ref{figiterationtwocore}--\ref{figiterationtwohousehold}\\
+
+    Information architecture & Choices &
+    Each surface prioritises a small task-relevant set of controls, such as
+    property filters, lifestyle chips or approval actions, rather than exposing
+    the full product backlog at once. & Figures~\ref{figiterationtwocore} and
+    \ref{figiterationtwohousehold}\\
+
+    Information architecture & Progressive disclosure &
+    Match cards first show score, source and one discussion point; validation,
+    warnings and recovery guidance appear when the corresponding state is
+    reached. & Figures~\ref{figiterationtwocore} and
+    \ref{figiterationtwomessaging}\\
+
+    Information architecture & Exemplars &
+    Seeded listings, profiles, messages and proposals demonstrate the expected
+    content and status format before a participant creates or changes data. &
+    Figures~\ref{figiterationtwocore}--\ref{figiterationtwohousehold}\\
+
+    Information architecture & Front doors &
+    Direct routes such as \texttt{\#discover/properties},
+    \texttt{\#discover/housemates}, \texttt{\#messages} and
+    \texttt{\#household/rules} open a labelled task surface with a visible
+    current state. & Deployed prototype links for S-01--S-06\\
+
+    Information architecture & Multiple classification &
+    Properties can be narrowed by location, budget, room type, distance,
+    bedrooms and date, while housemates can be classified by lifestyle and
+    verification attributes. & Figure~\ref{figiterationtwocore}\\
+
+    Visual hierarchy & Scale and typography &
+    Large page headings establish context, card titles identify objects, and
+    smaller labels and metadata provide supporting detail in a consistent
+    reading order. & Figures~\ref{figiterationtwocore} and
+    \ref{figiterationtwomessaging}\\
+
+    Visual hierarchy & Colour and contrast &
+    Sage identifies primary and trusted states, coral identifies blocked or
+    urgent states, and text/icons supplement colour. Recorded status colours
+    meet the sampled AA contrast threshold. & Figures~\ref{figa11ycontrast}
+    and \ref{figa11ywarning}\\
+
+    Visual hierarchy & Proximity and spacing &
+    Filters are grouped above results, conversation controls stay beside their
+    message context, and each member's approval state stays within the same rule
+    card. & Figures~\ref{figiterationtwocore},
+    \ref{figiterationtwomessaging} and \ref{figiterationtwohousehold}\\
+
+    Visual hierarchy & Repetition and alignment &
+    Repeated cards, status chips, aligned form controls and recurring navigation
+    patterns let users scan comparable content across desktop and mobile. &
+    Figures~\ref{figiterationtwocore}--\ref{figiterationtwohousehold}\\
+
+    UI & Visibility of system status &
+    Compatibility recalculation, draft saving, contact blocking and approval
+    progress all produce visible state or confirmation feedback. &
+    Figures~\ref{figiterationtwocore}, \ref{figiterationtwomessaging} and
+    \ref{figiterationtwohousehold}\\
+
+    UI & User control and freedom &
+    Users can cancel dialogs, close them with Escape, return focus to the
+    opening control, change filters and reset the demonstration state. &
+    Figure~\ref{figa11yfocus}\\
+
+    UI & Consistency and standards &
+    Shared buttons, fields, cards, dialogs and tab patterns use consistent
+    placement and interaction behaviour across the tested tasks. &
+    Figures~\ref{figiterationtwotabs} and \ref{figiterationtwohousehold}\\
+
+    UI & Error prevention &
+    Contact details are stopped before message submission, and incomplete
+    roster data prevents activation while identifying the invalid field. &
+    Figures~\ref{figiterationtwomessaging} and
+    \ref{figiterationtwohousehold}\\
+
+    UI & Recognition over recall &
+    Persistent field labels, text-plus-icon verification cues, selected tabs
+    and visible household-member statuses reduce the need to remember earlier
+    screens. & Figures~\ref{figa11ytabs} and
+    \ref{figiterationtwohousehold}\\
+
+    UI & Error recovery &
+    The empty search state explains which inputs can change and offers a
+    \texttt{Broaden search} action; validation moves focus to the first field
+    requiring correction. & Figures~\ref{figiterationtwocore} and
+    \ref{figiterationtwohousehold}\\
+\end{longtable}
+}
+
+\subsection{Accessibility Integration}
+\label{subsecfinalprototypeaccessibility}
+
+Table~\ref{tabfinalprototypea11y} is a concise integration summary, not a
+second accessibility audit. It includes only requirements recorded as
+\textit{Met}. The evaluation method, participant evidence, partially met
+criteria, deferred items and limitations remain in
+Section~\ref{secaccessibilityreport}, especially
+Table~\ref{taba11ychecklist}.
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Implemented WCAG requirements in the final prototype.}
+    \label{tabfinalprototypea11y}
+    \begin{tabularx}{\textwidth}{@{}L{1.4cm}L{3.1cm}Y L{2.5cm}@{}}
+        \toprule
+        WCAG SC & Requirement & Implemented evidence & Detailed evidence\\
+        \midrule
+        1.3.1 & Info and Relationships &
+        Tabs expose programmatic roles and relationships; form errors and the
+        blocked-message warning are associated with their controls. &
+        Table~\ref{taba11ychecklist}\\
+
+        1.4.3 & Contrast (Minimum) &
+        Revised sage, coral, blue and amber status colours measured at least
+        4.56:1 in the recorded checks. & Figure~\ref{figa11ycontrast}\\
+
+        2.1.2 & No Keyboard Trap &
+        Escape closes the top-most dialog and restores focus to its trigger. &
+        Figure~\ref{figa11yfocus}\\
+
+        2.4.1 & Bypass Blocks &
+        The skip link moves keyboard focus to \texttt{\#main-content}. &
+        Table~\ref{taba11ychecklist}\\
+
+        2.4.3 & Focus Order &
+        Dialogs and the notification drawer receive focus, make the background
+        inert and return focus when closed. & Figure~\ref{figa11yfocus}\\
+
+        2.4.7 & Focus Visible &
+        Visible focus was captured on the login dialog, skip link, Discover
+        tabs and roster fields. & Figures~\ref{figa11yfocus} and
+        \ref{figa11ytabs}\\
+
+        3.3.2 & Labels or Instructions &
+        Sampled inputs retain visible labels and validation describes the
+        action needed to correct an error. &
+        Table~\ref{taba11ychecklist}\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Evidence Boundaries}
+\label{subsecfinalprototypelimitations}
+
+The matrices describe implemented prototype evidence, not unqualified success
+across the whole product. The second iteration passed the targeted T1 and T4
+criteria, while the compatibility-score interpretation remained partial and
+the rule-activation explanation remained failed. Testing also retained the
+Household/House rules label mismatch, confusion between identity and phone
+verification, an icon-only desktop sharing action and mixed-language controls.
+These open findings are reported in Section~\ref{subsecpersistentissues} and
+are not counted as completed principles or accessibility requirements above.
+
 \end{document}
