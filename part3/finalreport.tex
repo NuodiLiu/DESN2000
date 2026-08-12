@@ -31,7 +31,103 @@
 
 \begin{document}
 
-\setcounter{section}{1}
+\section{Updated Software Requirements}
+\label{secupdatedrequirements}
+
+This section logs the acceptance criteria that changed as a direct result of
+Sprint 1 and Sprint 2 prototype testing (Section~\ref{subseciterationone} and
+Section~\ref{subseciterationtwotest}). Each row links the original acceptance
+criterion, the testing feedback that prompted the change, the resulting
+modification, and the criterion's validation status after retesting. The same
+changes are reflected as issue history on the team Jira board (project ST4).
+
+{\footnotesize
+\begin{longtable}{@{}L{2.1cm}L{3.0cm}L{2.6cm}L{2.9cm}L{2.6cm}L{1.6cm}@{}}
+    \caption{Requirements changelog: acceptance criteria updated as a result of user testing.}
+    \label{tabrequirementschangelog}\\
+    \toprule
+    Requirement & Testing feedback & Original version & Modification & New version & Validation result\\
+    \midrule
+    \endfirsthead
+    \caption[]{Requirements changelog continued.}\\
+    \toprule
+    Requirement & Testing feedback & Original version & Modification & New version & Validation result\\
+    \midrule
+    \endhead
+    \midrule
+    \multicolumn{6}{r}{Continued on next page}\\
+    \endfoot
+    \bottomrule
+    \endlastfoot
+
+    US-13 / AC-US13-04 &
+    In Iteration 1, participants who reached a no-results state could not
+    independently recover; the criterion failed. &
+    The system notifies the user of an empty search but does not name a
+    recovery action. &
+    Added a \texttt{Broaden search} action beside guidance that names which
+    inputs can be changed to return results. &
+    AC-US13-04 revised to require a visible recovery action and named
+    changeable inputs, not just an empty-state notification. &
+    Pass (Iteration 2: 4/5 independent, 44s median)\\
+
+    US-11 / AC-US11-02 &
+    Verification cues relying on an icon alone made verified-only filtering
+    hard to confirm; users also could not distinguish identity verification
+    from phone verification. &
+    Only profiles with a verified badge appear under the verified-only
+    filter; the badge is icon-only. &
+    Paired the verification icon with readable status text and made the
+    supporting tabs keyboard-operable (arrow, Home, End). &
+    AC-US11-02 retained, with the verified-only filter result now
+    required to expose readable status text alongside the icon. &
+    Pass, but flagged: identity vs.\ phone verification confusion persisted
+    into Iteration 2\\
+
+    US-12 / AC-US12-02 &
+    Three participants could not explain what the compatibility score
+    measured; some read a high score as a safety signal rather than a
+    preference match. &
+    Only a percentage compatibility score was displayed. &
+    Added a match-card explanation naming which saved preferences drove the
+    score and which differences remain. &
+    AC-US12-02 revised to require the detailed compatibility summary to
+    state the evidence the score is based on. &
+    Partial (Iteration 2: 2/5 correctly explained; treated as a persistent
+    issue, Section~\ref{subsecpersistentissues})\\
+
+    US-09 / AC-US09-04 &
+    Participants sending a message with personal contact details received
+    no clear confirmation that the details were blocked. &
+    The system blocks a message containing contact details and directs the
+    user to mutual contact sharing, with no explicit confirmation step. &
+    The warning now blocks the content, explains the mutual-sharing
+    condition, and announces the result through a live alert; the mobile
+    view retains the conversation selector and New control. &
+    AC-US09-04 retained, with the blocked-message result required to be
+    explicitly announced to the user. &
+    Pass (changed from Fail in Iteration 1 to Pass in Iteration 2)\\
+
+    US-10 / AC-US10-02 &
+    Participants could not tell whether a proposed rule had finished
+    collecting acknowledgements or when it would activate. &
+    The rule is added to the household rules list once the last
+    acknowledgement is submitted, with no separate progress indicator. &
+    Partial fixes applied to related household flows (dialog focus, roster
+    validation, draft save confirmation); the approval-status indicator
+    itself was not yet revised. &
+    No revised acceptance-criteria text yet -- carried forward as an open
+    item for the next iteration. &
+    Fail (remained Fail in both Iteration 1 and Iteration 2)\\
+
+\end{longtable}
+}
+
+All five rows above are also being maintained as Jira issue history under
+project ST4 (\url{https://unsw-team-desn-seng2026.atlassian.net}), with each
+acceptance-criteria change linked to the corresponding test task (T1--T5) and
+sprint. AC-US10-02 remains open in Jira pending a further design iteration on
+the rule-approval status indicator.
 
 \section{Accessibility Report}
 \label{secaccessibilityreport}
