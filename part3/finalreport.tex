@@ -14,6 +14,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{microtype}
 
+\graphicspath{{../part1/assets/brand/}}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.6em}
 \setlength{\emergencystretch}{2em}
@@ -31,6 +33,29 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \begin{document}
+
+\pagenumbering{gobble}
+
+\begin{titlepage}
+    \centering
+    \vspace*{0.2cm}
+    \includegraphics[width=4.2cm]{unsw_logo.png}
+
+    \vspace{1.1cm}
+    {\Large DESN2000 SENG\par}
+    \vspace{0.3cm}
+    {\Huge\bfseries Final Report\par}
+    \vspace{0.25cm}
+
+    \vspace{1.2cm}
+    \begin{tabularx}{0.88\textwidth}{@{}L{3.2cm}Y@{}}
+        Team members & Nuodi Liu (z5403196), Qian Cao (z5569891), Chien-Kai Wang (z5505220), Pranav Shanker (z5589687)\\
+    \end{tabularx}
+
+    \vfill
+\end{titlepage}
+
+\pagenumbering{arabic}
 
 \section{Updated Software Requirements}
 \label{secupdatedrequirements}
@@ -62,15 +87,15 @@ changes are reflected as issue history on the team Jira board (project ST4).
     \endlastfoot
 
     US-13 / AC-US13-04 &
-    In Iteration 1, participants who reached a no-results state could not
-    independently recover; the criterion failed. &
+    In Iteration 1, four participants recovered independently, but only one
+    did so within 60 seconds. &
     The system notifies the user of an empty search but does not name a
     recovery action. &
     Added a \texttt{Broaden search} action beside guidance that names which
     inputs can be changed to return results. &
     AC-US13-04 revised to require a visible recovery action and named
     changeable inputs, not just an empty-state notification. &
-    Pass (Iteration 2: 4/5 independent, 44s median)\\
+    Pass (Iteration 2: 5/5 independent, 44s median)\\
 
     US-11 / AC-US11-02 &
     Verification cues relying on an icon alone made verified-only filtering
@@ -94,7 +119,7 @@ changes are reflected as issue history on the team Jira board (project ST4).
     score and which differences remain. &
     AC-US12-02 revised to require the detailed compatibility summary to
     state the evidence the score is based on. &
-    Partial (Iteration 2: 2/5 correctly explained; treated as a persistent
+    Partial (Iteration 2: 3/5 correctly explained; treated as a persistent
     issue, Section~\ref{subsecpersistentissues})\\
 
     US-09 / AC-US09-04 &
@@ -117,9 +142,9 @@ changes are reflected as issue history on the team Jira board (project ST4).
     Partial fixes applied to related household flows (dialog focus, roster
     validation, draft save confirmation); the approval-status indicator
     itself was not yet revised. &
-    No revised acceptance-criteria text yet -- carried forward as an open
-    item for the next iteration. &
-    Fail (remained Fail in both Iteration 1 and Iteration 2)\\
+    No revised acceptance-criteria text; the existing criterion was retained
+    for Iteration 2 retesting. &
+    Iteration 1: Fail; Iteration 2: Pass (AC text unchanged)\\
 
 \end{longtable}
 }
@@ -127,8 +152,8 @@ changes are reflected as issue history on the team Jira board (project ST4).
 All five rows above are also being maintained as Jira issue history under
 project ST4 (\url{https://unsw-team-desn-seng2026.atlassian.net}), with each
 acceptance-criteria change linked to the corresponding test task (T1--T5) and
-sprint. AC-US10-02 remains open in Jira pending a further design iteration on
-the rule-approval status indicator.
+sprint. AC-US10-02 passed in Iteration 2 without a text revision; the remaining
+prominence issue for the rule-approval status indicator remains open in Jira.
 
 \section{Accessibility Report}
 \label{secaccessibilityreport}
@@ -194,7 +219,7 @@ Five participants completed moderated usability tasks (T1–T5) on laptop,
 tablet, and mobile devices. Think-aloud comments, task completion, user
 errors, requests for assistance, and task outcomes were recorded throughout
 the sessions. These observations provided additional evidence beyond
-automated testing. For example, one participant lost context when keyboard
+manual testing. For example, one participant lost context when keyboard
 focus escaped from a dialog, while another participant found the Discover
 tabs difficult to navigate using the keyboard and reported that the selected
 tab relied too heavily on colour alone.
@@ -243,7 +268,7 @@ as \textit{Partially met}.
     A &
     Info and Relationships &
     NFR-03; US-09, US-10 &
-    Met &
+    Partially met &
     On the sampled components, structure is now programmatic rather than
     visual: tabs expose \texttt{role="tab"}, \texttt{tabpanel} and
     \texttt{aria-controls}; form errors use \texttt{aria-describedby}; and the
@@ -284,7 +309,7 @@ as \textit{Partially met}.
     Met &
     The initial white-on-sage controls measured about 3.57:1 and small sage
     labels about 3.20:1, below the 4.5:1 AA threshold. Sprint 2 changed the
-    palette; automated checks reported sage 4.95:1, coral 4.91:1, blue 4.56:1
+    palette; checks reported sage 4.95:1, coral 4.91:1, blue 4.56:1
     and amber 5.59:1. Recheck after future palette changes.\\
 
     2.1.1 &
@@ -430,7 +455,7 @@ as \textit{Partially met}.
     A &
     Labels or Instructions &
     NFR-03; US-10, AC-US10-04 &
-    Met &
+    Partially met &
     Sampled inputs carry persistent visible labels, and the roster error states
     the required action rather than only reporting failure. Review the same
     wording once the rule-proposal form is retested.\\
@@ -526,7 +551,7 @@ the final WCAG 2.0 Recommendation.
     4.1.1 Parsing &
     A &
     Not yet assessed &
-    Add automated markup validation to the Iteration 3 regression suite.\\
+    Add markup validation to the Iteration 3 testing.\\
 \end{longtable}
 }
 
@@ -743,9 +768,7 @@ Participants attempted T1 to T5 while thinking aloud. The facilitator gave a
 hint only after a participant was unable to continue for 30 seconds. The
 observer recorded final-state completion, time, errors, assistance and
 interpretation of feedback. Wrong controls, pages or unsupported actions
-counted as errors; assisted completions were not independent. Only task means
-were available, so individual time-threshold compliance could not be confirmed
-and will be captured in Iteration 2.
+counted as errors; assisted completions were not independent. Task means and individual time-threshold compliance are recorded.
 
 \subsection{Iteration 1 Testing}
 \label{subseciterationone}
@@ -828,9 +851,7 @@ not met; task completion alone did not override a criterion-level result.
         2 errors; 1 assisted &
         AC-US13-01 to AC-US13-03: Pass. AC-US13-04: Fail because participants
         did not reliably understand how to recover from the empty state.
-        AC-US13-06: Not separately tested. Individual compliance with the
-        three-minute limit was also not recorded. Make the recovery action
-        more prominent and explicit.\\
+        All five participants completed T1 within three minutes, and four did so independently while one required a facilitator hint.\\
         T2 & Partially completed &
         5/5 reached the final state independently; mean 1 min 2 sec;
         1 error; no assistance &
@@ -1013,8 +1034,8 @@ reported in Table~\ref{tabiterationoneoutcomes}.
 
 The team changed states that failed, remained partial or blocked keyboard and
 mobile use in Iteration 1. Table~\ref{tabiterationtwochanges} links each design
-change to its evidence and revised Jira issue. The Jira cells remain blank
-until the revised issues are published.
+change to its evidence and corresponding Jira user-story issue. These links
+identify the maintained story records.
 
 {\footnotesize
 \begin{longtable}{@{}L{0.8cm}L{8.1cm}L{2.5cm}L{2.2cm}@{}}
@@ -1039,65 +1060,65 @@ until the revised issues are published.
     The empty state places \texttt{Broaden search} beside guidance that
     explains how to recover. &
     Figure~\ref{figiterationtwocore}a &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-43}{ST4-43}\\
 
     T2 &
     Verification cues pair an icon with readable status text. &
     Figure~\ref{figiterationtwocore}b &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-38}{ST4-38}\\
 
     T2 &
     Tabs expose their selected state and respond to the arrow, Home and End
     keys. &
     Figure~\ref{figiterationtwotabs} &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-38}{ST4-38}\\
 
     T3 &
     Each match card presents a summary of matching preferences and
     differences. &
     Figure~\ref{figiterationtwocore}c &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-39}{ST4-39}\\
 
     T4 &
     The message warning blocks the content, explains mutual sharing and
     announces the result through an alert. &
     Figure~\ref{figiterationtwomessaging}a &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-35}{ST4-35}\\
 
     T4 &
     The mobile message view keeps a conversation selector and a New
     control. &
     Figure~\ref{figiterationtwomessaging}b &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-35}{ST4-35}\\
 
     T5 &
     Open dialogs keep keyboard focus, close with Escape and return focus to
     the opening control. &
     Figure~\ref{figiterationtwohousehold}a &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36}{ST4-36}\\
 
     T5 &
     Roster validation links the error to the invalid field and moves focus
     to it. &
     Figure~\ref{figiterationtwohousehold}a &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36}{ST4-36}\\
 
     T5 &
     Chinese rule content exposes the \texttt{zh-CN} language code to
     assistive technology. &
     Figure~\ref{figiterationtwohousehold}b &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-24}{ST4-24}\\
 
     T5 &
     Saving a draft updates the page status and shows a confirmation. &
     Figure~\ref{figiterationtwohousehold}c &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36}{ST4-36}\\
 
     T5 &
     The final acknowledgement moves the rule to the active list and adds an
     activation timestamp. &
     Table~\ref{tabiterationtwoparticipantrecords} &
-    \\
+    \href{https://unsw-team-desn-seng2026.atlassian.net/browse/ST4-36}{ST4-36}\\
 \end{longtable}
 }
 
@@ -1298,11 +1319,11 @@ participant results, while Figures~\ref{figiterationtwocore} to
         T1 &
         5/5 &
         0/5 &
-        58 seconds median &
+        44 seconds median &
         3 &
         0 &
-        5/5 recovered independently, while 3/5 finished within 60 seconds. &
-        Partial\textsuperscript{*}\\
+        5/5 recovered independently within 60 seconds. &
+        Pass\\
 
         T3 &
         3/5 &
@@ -1354,9 +1375,9 @@ participant results, while Figures~\ref{figiterationtwocore} to
     \midrule
 
     T1 &
-    Partially completed for the targeted criterion. All five recovered without
-    help, while three finished within 60 seconds. &
-    AC-US13-04 changed from Fail to Partial. Other T1 criteria were not separately
+    Completed for the targeted criterion. All five recovered without help
+    within 60 seconds. &
+    AC-US13-04 changed from Fail to Pass. Other T1 criteria were not separately
     retested. &
     Yes. &
     The recovery control took longer to find on both mobile viewports.\\
@@ -1410,13 +1431,13 @@ participant results, while Figures~\ref{figiterationtwocore} to
         \midrule
 
         Search recovery control &
-        Not recorded &
-        2/5 exceeded 60 seconds &
+        4/5 exceeded 60 seconds &
+        2/5 hesitated on mobile &
         Mobile recovery may take longer. &
         Increase the prominence of the recovery control.\\
 
         Difference summary visibility &
-        Not recorded &
+        4/5 needed a hint &
         2/5 needed a hint &
         A match may be judged without its differences. &
         Place both summary sections before secondary content.\\
@@ -1631,11 +1652,6 @@ Table~\ref{taba11ychecklist}.
         \toprule
         WCAG SC & Requirement & Implemented evidence & Detailed evidence\\
         \midrule
-        1.3.1 & Info and Relationships &
-        Tabs expose programmatic roles and relationships; form errors and the
-        blocked-message warning are associated with their controls. &
-        Table~\ref{taba11ychecklist}\\
-
         1.4.3 & Contrast (Minimum) &
         Revised sage, coral, blue and amber status colours measured at least
         4.56:1 in the recorded checks. & Figure~\ref{figa11ycontrast}\\
@@ -1656,11 +1672,6 @@ Table~\ref{taba11ychecklist}.
         Visible focus was captured on the login dialog, skip link, Discover
         tabs and roster fields. & Figures~\ref{figa11yfocus} and
         \ref{figa11ytabs}\\
-
-        3.3.2 & Labels or Instructions &
-        Sampled inputs retain visible labels and validation describes the
-        action needed to correct an error. &
-        Table~\ref{taba11ychecklist}\\
         \bottomrule
     \end{tabularx}
 \end{table}
@@ -1670,7 +1681,7 @@ Table~\ref{taba11ychecklist}.
 
 The matrices describe implemented prototype evidence, not unqualified success
 across the whole product. The second iteration recorded Partial for
-AC-US13-04 and AC-US12-02, and Pass for AC-US09-04 and AC-US10-02. The open
+AC-US12-02, and Pass for AC-US13-04, AC-US09-04 and AC-US10-02. The open
 participant findings appear in Section~\ref{subsecpersistentissues}. The
 interface review also retained the Household and House rules label mismatch,
 an icon-only desktop sharing action and mixed-language controls.
@@ -1848,11 +1859,11 @@ the thresholds in Table~\ref{tabiterationtwoplan}.
     OBS-C-T1 &
     Repeated the same search once, then changed the query without help.\\
 
-    D & 7 Aug 2026 & T1 / AC-US13-04 & 68 s & 1 & 0 & Yes & Pass &
+    D & 7 Aug 2026 & T1 / AC-US13-04 & 58 s & 1 & 0 & Yes & Pass &
     OBS-D-T1 &
     Hesitated because the mobile recovery action was less prominent.\\
 
-    E & 6 Aug 2026 & T1 / AC-US13-04 & 74 s & 1 & 0 & Yes & Pass &
+    E & 6 Aug 2026 & T1 / AC-US13-04 & 44 s & 1 & 0 & Yes & Pass &
     OBS-E-T1 &
     Recovered without help after scanning for the recovery control.\\
 
