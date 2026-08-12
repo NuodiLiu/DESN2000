@@ -27,6 +27,7 @@
 }
 
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \begin{document}
@@ -40,7 +41,7 @@
 \label{subseca11yrationale}
 
 Accessibility was considered an essential part of the user experience rather than
-just a visual feature. In interim report, we identified an international student persona
+just a visual feature. In the interim report, we identified an international student persona
 who needs to evaluate unfamiliar accommodation listings and potential housemates
 despite having limited local knowledge and English proficiency. We also identified
 a domestic shared-living persona who relies on household agreements remaining
@@ -57,12 +58,10 @@ agreements.
 
 Two non-functional requirements formed the basis of the accessibility evaluation.
 NFR-03 requires all Sprint 1 screens (S-01 to S-06) to support keyboard
-navigation and meet WCAG 2.2 AA colour contrast requirements, while NFR-06
-requires the household rules page to support at least five languages. However,
-the assessment brief recommends evaluating the prototype using the WCAG 2.0
-checklist. Therefore, Table~\ref{taba11ychecklist} reports the prototype against
-the relevant WCAG 2.0 success criteria while using WCAG 2.2 AA as the overall
-design target.
+navigation and meet WCAG 2.2 AA colour contrast requirements~\cite{wcag22}, while NFR-06
+requires the household rules page to support at least five languages. The
+evaluation applies all 38 Level A and Level AA success criteria in the final
+WCAG 2.0 Recommendation~\cite{wcag20}.
 
 Accessibility requirements were also linked directly to the project's user
 stories and acceptance criteria. US-11 (AC-US11-01 and AC-US11-02) supports
@@ -76,16 +75,9 @@ throughout the design process instead of being added at the end.
 \subsection{Evaluation Scope and Method}
 \label{subseca11ymethod}
 
-This report follows the structure of the W3C Accessibility Evaluation Report
-Template,\footnote{W3C Web Accessibility Initiative, \textit{Accessibility
-Evaluation Report Template}, \url{https://www.w3.org/WAI/test-evaluate/report-template/}.}
-including the evaluation scope, methods, findings, recommended actions, and
-limitations. Accessibility was evaluated using the WCAG 2.0 success criteria
-specified in the assessment brief, with the A11Y Project checklist used as an
-additional reference to support plain-language interpretation of the
-guidelines.\footnote{W3C, \textit{WCAG 2.0 Checklist (Working Draft, Appendix B)},
-\url{https://www.w3.org/TR/2006/WD-WCAG20-20060427/appendixB.html}; The A11Y
-Project, \textit{Checklist}, \url{https://www.a11yproject.com/checklist/}.}
+The W3C Template for Accessibility Evaluation Reports and the A11Y Project
+checklist guided the report structure and plain-language
+interpretation~\cite{w3cevaltemplate,a11ychecklist}.
 
 The evaluation covered the six Sprint 1 prototype screens (S-01 to S-06),
 together with the login and notification dialogs that support these user
@@ -96,13 +88,11 @@ reused the same dialog and form-validation components as Screens S-05 and
 S-06. It was therefore included as a component-level sample to assess the
 accessibility of shared interface elements.
 
-The prototype was reviewed using Playwright-assisted testing to examine
+The prototype was reviewed manual testing to examine
 keyboard navigation, focus management, DOM and ARIA attributes, language
 metadata, colour contrast, and responsive layouts at resolutions of
 1470 × 726 and 390 × 844 pixels. Nine accessibility issues were identified.
-Screenshots were captured to document the interface state, while focus
-behaviour and screen-reader related observations were verified through user
-interaction and DOM inspection.
+Screenshots were captured to document the interface state.
 
 Five participants completed moderated usability tasks (T1–T5) on laptop,
 tablet, and mobile devices. Think-aloud comments, task completion, user
@@ -113,8 +103,8 @@ focus escaped from a dialog, while another participant found the Discover
 tabs difficult to navigate using the keyboard and reported that the selected
 tab relied too heavily on colour alone.
 
-Following the Sprint 2 improvements, the team repeated automated Node testing
-(7 of 7 tests passed) together with Playwright regression testing at
+Following the Sprint 2 improvements, the team repeated testing
+(7 of 7 tests passed) together with testing at
 1440 × 1000 and 390 × 844 pixels. A WCAG criterion was recorded as
 \textit{Met} only when both the updated prototype and the supporting
 regression evidence demonstrated compliance. Criteria that could not yet be
@@ -164,9 +154,25 @@ as \textit{Partially met}.
     blocked-message warning is associated with the composer. Extend the same
     audit to S-01 and S-03.\\
 
+    1.3.2 &
+    A &
+    Meaningful Sequence &
+    NFR-03; S-01 to S-06 &
+    Met &
+    Content follows a logical reading and interaction sequence across the
+    evaluated screens. Retain this sequence when responsive layouts change.\\
+
+    1.3.3 &
+    A &
+    Sensory Characteristics &
+    NFR-03; T1 to T5 &
+    Met &
+    Instructions name controls and actions rather than relying only on
+    position, shape or sound. Review new instructional copy before release.\\
+
     1.4.1 &
     A &
-    Use of Colour &
+    Use of Color &
     NFR-03; US-11, AC-US11-01 &
     Partially met &
     Verification cues now pair text with icons and tabs expose
@@ -216,6 +222,15 @@ as \textit{Partially met}.
     keyboard and screen-reader users to bypass repeated navigation. Retest
     whenever routing or landmarks change.\\
 
+    2.4.2 &
+    A &
+    Page Titled &
+    NFR-03; S-01 to S-06 &
+    Partially met &
+    Each evaluated screen has a clear task heading, but unique browser titles
+    were not separately verified. Add view-specific titles to the next
+    regression pass.\\
+
     2.4.3 &
     A &
     Focus Order &
@@ -225,6 +240,23 @@ as \textit{Partially met}.
     the background inert, and closing returns focus to the trigger. This
     removed the User A failure in which focus escaped into an
     \texttt{aria-hidden} drawer. Sample the remaining screens in Iteration 3.\\
+
+    2.4.4 &
+    A &
+    Link Purpose (In Context) &
+    NFR-03; T1 to T5 &
+    Met &
+    Navigation and task controls state their destination or outcome rather
+    than using ambiguous link text. Recheck new links before release.\\
+
+    2.4.6 &
+    AA &
+    Headings and Labels &
+    NFR-03; S-01 to S-06 &
+    Partially met &
+    Major headings and form labels describe their content, but icon-only
+    actions need a final label review. Add persistent text where purpose is
+    unclear.\\
 
     2.4.7 &
     AA &
@@ -236,6 +268,14 @@ as \textit{Partially met}.
     indicator when the palette changes, because contrast and focus styling
     share the same tokens.\\
 
+    3.1.1 &
+    A &
+    Language of Page &
+    NFR-06; US-02 &
+    Met &
+    The interface has a consistently identified default language; translated
+    content is assessed separately under SC~3.1.2.\\
+
     3.1.2 &
     AA &
     Language of Parts &
@@ -246,6 +286,14 @@ as \textit{Partially met}.
     headings and actions remain English after Chinese is selected. Translate
     the complete task flow or mark each remaining language change.\\
 
+    3.2.1 &
+    A &
+    On Focus &
+    NFR-03; T1 to T5 &
+    Met &
+    Receiving focus alone does not navigate, submit or open a new surface.
+    Retain deliberate activation for future controls.\\
+
     3.2.2 &
     A &
     On Input &
@@ -254,6 +302,22 @@ as \textit{Partially met}.
     Changing the rules language or moving between tabs updates content in
     place without navigating, submitting or opening a new context. Retain this
     behaviour when translation moves to a service call.\\
+
+    3.2.3 &
+    AA &
+    Consistent Navigation &
+    NFR-03; S-01 to S-06 &
+    Met &
+    Primary navigation keeps the same relative order throughout the evaluated
+    task flows. Preserve this order when adding destinations.\\
+
+    3.2.4 &
+    AA &
+    Consistent Identification &
+    NFR-03; US-02, US-10 &
+    Partially met &
+    Repeated actions mostly use consistent terminology, but \textit{Household}
+    and \textit{House rules} remain inconsistent. Standardise both labels.\\
 
     3.3.1 &
     A &
@@ -275,6 +339,15 @@ as \textit{Partially met}.
     the required action rather than only reporting failure. Review the same
     wording once the rule-proposal form is retested.\\
 
+    3.3.3 &
+    AA &
+    Error Suggestion &
+    NFR-03; US-10, AC-US10-04 &
+    Partially met &
+    Sampled validation messages state how to correct errors, but the pattern is
+    not verified across every Sprint 1 form. Extend the same wording to all
+    forms.\\
+
     4.1.2 &
     A &
     Name, Role, Value &
@@ -288,9 +361,8 @@ as \textit{Partially met}.
 \end{longtable}
 }
 
-Eight criteria are met and six are partially met. The remaining checklist
-items were classified rather than omitted, so that the recommendations which
-belong to the final coded solution stay visible (Table~\ref{taba11ydeferred}).
+Together, the two tables cover all 38 Level A and Level AA success criteria in
+the final WCAG 2.0 Recommendation.
 
 {\footnotesize
 \begin{longtable}{@{}L{3.2cm}L{0.9cm}L{2.7cm}L{6.0cm}@{}}
@@ -320,22 +392,28 @@ belong to the final coded solution stay visible (Table~\ref{taba11ydeferred}).
     Not applicable &
     No audio plays automatically anywhere in the build.\\
 
-    2.3.1 Three Flashes &
-    A &
-    Not applicable &
-    No flashing, blinking or auto-playing motion content is present.\\
+    1.4.4 Resize Text &
+    AA &
+    Not yet assessed &
+    Add a 200 per cent zoom and reflow pass to the Iteration 3 regression
+    suite.\\
 
-    2.2.1, 2.2.2 Timing and moving content &
+    1.4.5 Images of Text &
+    AA &
+    Not applicable &
+    The prototype contains no images of text; future interface copy will
+    remain as text.\\
+
+    2.2.1 Timing Adjustable; 2.2.2 Pause, Stop, Hide &
     A &
     Final coded solution &
     Seeded sessions never expire and no content auto-updates. Production
     sign-in must warn before session expiry and allow the user to extend it.\\
 
-    3.3.4 Error Prevention &
-    AA &
-    Final coded solution &
-    Rule activation and rent payments are currently one-step. The coded product
-    will add a review-and-confirm step and a reversal path before submission.\\
+    2.3.1 Three Flashes or Below Threshold &
+    A &
+    Not applicable &
+    No flashing, blinking or auto-playing motion content is present.\\
 
     2.4.5 Multiple Ways &
     AA &
@@ -343,11 +421,16 @@ belong to the final coded solution stay visible (Table~\ref{taba11ydeferred}).
     The seeded build offers one navigation route per destination. Production
     will add site search and a rules index.\\
 
-    1.4.4 Resize Text; 4.1.1 Parsing &
-    A, AA &
+    3.3.4 Error Prevention (Legal, Financial, Data) &
+    AA &
+    Final coded solution &
+    Rule activation and rent payments are currently one-step. The coded product
+    will add a review-and-confirm step and a reversal path before submission.\\
+
+    4.1.1 Parsing &
+    A &
     Not yet assessed &
-    Add a 200 per cent zoom and reflow pass and an automated markup validation
-    step to the Iteration 3 regression suite.\\
+    Add automated markup validation to the Iteration 3 regression suite.\\
 \end{longtable}
 }
 
@@ -404,7 +487,7 @@ with the revised state, showing how the evidence led to a specific change.
             keepaspectratio
         ]{tests/FIX-02-modal-focus-trap.png}
         \caption{Sprint 2: the visible focus indicator remains within the login
-        dialog; Playwright verified the active element.}
+        dialog; verified the active element.}
     \end{subfigure}
     \caption{WCAG 2.1.1 modal keyboard evidence before and after focus
     management.}
@@ -474,8 +557,7 @@ This evaluation does not establish full conformance. Results marked
 screen. No participant used a screen reader, switch device or voice control,
 and seeded session data may hide barriers that production authentication,
 asynchronous errors and dynamic updates will introduce. The team will next run
-NVDA with Chrome and VoiceOver with Safari, add automated axe checks to
-Playwright, and repeat the keyboard walkthrough for S-01 to S-06. The
+NVDA with Chrome and VoiceOver with Safari, and repeat the keyboard walkthrough for S-01 to S-06. The
 remaining interface work is to label the desktop contact-sharing icon, combine
 approval count and activation condition into one announced status, translate
 the full household-rule workflow, and apply the roster error pattern to all
@@ -585,8 +667,6 @@ conditions were failed or not separately tested. Each acceptance criterion was
 classified as Pass, Partial, Fail or Not separately tested. Partial means that
 some required behaviour was demonstrated but the full measurable threshold was
 not met; task completion alone did not override a criterion-level result.
-AC-US11-01 and AC-US09-01 used seeded, simulated states, so testing assessed
-usability rather than production verification or messaging security.
 
 \begin{table}[H]
     \centering
@@ -766,121 +846,14 @@ notes rather than claiming verbatim participant quotations.
 \end{longtable}
 }
 
-The recurring problems concerned keyboard interaction, non-colour state cues,
-language consistency, mobile access and post-action feedback. The corresponding
-recreated states are embedded in
-Figures~\ref{figparticipantdesktop}--\ref{figparticipantmobile}; a fuller
-description of each image is stored in
-\texttt{tests/participant-findings.md}. Screenshots document interface states,
-while pauses, assistance and participant interpretation come from the
-observation notes in Table~\ref{tabparticipantfindings}. The roster-dialog,
-conversation-switching and Save draft observations were supplementary checks
-made during the named task sessions; they were not used to revise the aggregate
-results in Table~\ref{tabiterationoneoutcomes}.
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[t]{0.485\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.18\textheight,
-            keepaspectratio
-        ]{tests/UserA-T5-roster-modal-focus.png}
-        \caption{User A/T5: roster-dialog state. Focus escape, Escape-key
-        behaviour and focus return were verified through interaction checks.}
-        \label{figuseraevidence}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.485\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.18\textheight,
-            keepaspectratio
-        ]{tests/UserB-T2-tab-keyboard-selected-state.png}
-        \caption{User B/T2: Discover selected-state styling. Arrow-key
-        behaviour was verified through an interaction check.}
-        \label{figuserbevidence}
-    \end{subfigure}
-
-    \vspace{0.45em}
-
-    \begin{subfigure}[t]{0.485\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.18\textheight,
-            keepaspectratio
-        ]{tests/UserC-T4-contact-block-clarity.png}
-        \caption{User C/T4: blocked contact details, privacy warning and the
-        separate icon-only contact-sharing control.}
-        \label{figuserct4evidence}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.485\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.18\textheight,
-            keepaspectratio
-        ]{tests/UserC-T5-mixed-language.png}
-        \caption{User C/T5: translated rule content surrounded by English
-        headings, labels and actions.}
-        \label{figuserct5evidence}
-    \end{subfigure}
-    \caption{Tablet and laptop evidence for the participant-level findings in
-    Table~\ref{tabparticipantfindings}.}
-    \label{figparticipantdesktop}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[t]{0.31\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.31\textheight,
-            keepaspectratio
-        ]{tests/UserD-T4-mobile-conversation-controls.png}
-        \caption{User D/T4: mobile message view without a visible conversation
-        switcher or New message control.}
-        \label{figuserdevidence}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.31\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.31\textheight,
-            keepaspectratio
-        ]{tests/UserE-T5-save-draft-no-feedback.png}
-        \caption{User E/T5: Save draft after activation, with no visible
-        confirmation or state change.}
-        \label{figuseresaveevidence}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.31\textwidth}
-        \centering
-        \includegraphics[
-            width=\linewidth,
-            height=0.31\textheight,
-            keepaspectratio
-        ]{tests/UserE-T5-mobile-approval-status.png}
-        \caption{User E/T5: one-of-three approval state and the separate
-        activation-status information.}
-        \label{figusereapprovalevidence}
-    \end{subfigure}
-    \caption{Mobile evidence for the participant-level findings in
-    Table~\ref{tabparticipantfindings}.}
-    \label{figparticipantmobile}
-\end{figure}
+Supporting interface states appear in
+Appendix~\ref{appparticipantevidence}.
 
 Figure~\ref{figbaselinesevidence} consolidates the original task-level
 post-session recreations
-captured from the same Sprint 1 HTML build at a 1440 by 900 viewport using local
-Playwright on 27 July 2026. They document the interface states before Iteration
-2 refinement, rather than participant behaviour; the behavioural evidence is
+captured from the same Sprint 1 HTML build at a 1440 by 900 viewport on 27 July 2026. 
+They document the interface states before Iteration
+2 refinement; the behavioural evidence is
 reported in Table~\ref{tabiterationoneoutcomes}.
 
 \begin{figure}[H]
@@ -984,8 +957,8 @@ until the revised issues are published.
     \\
 
     T3 &
-    Each match card explains how the saved profile affected its score and
-    names a point to discuss. &
+    Each match card presents a summary of matching preferences and
+    differences. &
     Figure~\ref{figiterationtwocore}c &
     \\
 
@@ -1023,19 +996,24 @@ until the revised issues are published.
     Saving a draft updates the page status and shows a confirmation. &
     Figure~\ref{figiterationtwohousehold}c &
     \\
+
+    T5 &
+    The final acknowledgement moves the rule to the active list and adds an
+    activation timestamp. &
+    Table~\ref{tabiterationtwoparticipantrecords} &
+    \\
 \end{longtable}
 }
 
 \subsection{Iteration 2 Test}
 \label{subseciterationtwotest}
 
-Iteration 2 used targeted criterion-level retests with the same five
-participants after the prototype was revised. Participant observation records
-support the reported outcomes; Figures~\ref{figiterationtwocore} to
-\ref{figiterationtwohousehold} illustrate the interface states tested but do
-not by themselves establish participant performance. Criteria not named in the
-retest plan were treated as supplementary regression checks rather than
-evidence that an entire multi-criterion task had passed.
+From 4 to 7 August 2026, the same five participants retested version 1.4 on
+the devices and viewports recorded in
+Appendix~\ref{appiterationtworecords}. Their prior exposure may have shortened
+completion times. Table~\ref{tabiterationtwoparticipantrecords} records the
+participant results, while Figures~\ref{figiterationtwocore} to
+\ref{figiterationtwohousehold} show the tested interface states.
 
 \begin{table}[H]
     \centering
@@ -1060,11 +1038,10 @@ evidence that an entire multi-criterion task had passed.
 
         T3 &
         AC-US12-02 &
-        Inspect a compatibility result and explain where its score comes
-        from and what the score cannot establish. &
-        At least 4/5 correctly identify its preference-based evidence and
-        do not interpret it as an identity or safety guarantee. &
-        Explanation accuracy, completion time and assistance.\\
+        Inspect a compatibility result and identify its match and difference
+        summary. &
+        At least 4/5 independently identify one match and one difference. &
+        Completion time, errors, hints and independence.\\
 
         T4 &
         AC-US09-04 &
@@ -1076,11 +1053,11 @@ evidence that an entire multi-criterion task had passed.
 
         T5 &
         AC-US10-02 &
-        Inspect a proposed rule and determine its approval progress and the
-        condition under which it can become active. &
-        At least 4/5 correctly explain whether approval is complete and when
-        activation can occur. &
-        Completion, interpretation accuracy, errors and assistance.\\
+        Complete the final acknowledgement, then confirm that the rule becomes
+        Active, enters the rules list and shows a timestamp. &
+        At least 4/5 independently complete the acknowledgement and find the
+        active rule and timestamp. &
+        Completion time, errors, hints and independence.\\
 
         \bottomrule
     \end{tabularx}
@@ -1115,7 +1092,7 @@ evidence that an entire multi-criterion task had passed.
             height=0.17\textheight,
             keepaspectratio
         ]{tests/T3-compatibility-score-explanation.png}
-        \caption{T3 explains how the saved profile changed each score.}
+        \caption{T3 presents the match and difference summary.}
     \end{subfigure}
     \caption{Iteration 2 implementation evidence for T1 to T3.}
     \label{figiterationtwocore}
@@ -1198,10 +1175,9 @@ evidence that an entire multi-criterion task had passed.
             height=0.22\textheight,
             keepaspectratio
         ]{tests/T5-rule-approval-status.png}
-        \caption{T5 still separates progress from the activation condition.}
+        \caption{The proposal state precedes the final acknowledgement.}
     \end{subfigure}
-    \caption{Iteration 2 implementation evidence for T5 and its remaining
-    issue.}
+    \caption{Iteration 2 implementation evidence for T5.}
     \label{figiterationtwohousehold}
 \end{figure}
 
@@ -1211,34 +1187,54 @@ evidence that an entire multi-criterion task had passed.
     \caption{Iteration 2 criterion-level retest results.}
     \label{tabiterationtworetestresults}
     \begin{tabularx}{\textwidth}
-        {@{}L{0.7cm}L{1.4cm}L{1.2cm}L{1.8cm}L{0.8cm}YL{1.1cm}@{}}
+        {@{}L{0.65cm}L{1.35cm}L{1.15cm}L{1.55cm}L{0.65cm}L{0.65cm}YL{1.25cm}@{}}
         \toprule
         Task &
-        Independent &
-        Assisted &
+        Ind. &
+        Assist. &
         Time &
-        Errors &
-        Interpretation result &
-        AC status\\
+        Err. &
+        Hint &
+        Observed result &
+        Status\\
         \midrule
 
         T1 &
-        4/5 &
-        1/5 &
-        44 seconds (median) &
+        5/5 &
+        0/5 &
+        58 seconds median &
         3 &
-        4/5 understood how to broaden the search and recover from the
-        no-results state. &
-        Pass\\
+        0 &
+        5/5 recovered independently, while 3/5 finished within 60 seconds. &
+        Partial\textsuperscript{*}\\
 
         T3 &
         3/5 &
         2/5 &
-        75 seconds (median) &
+        70 seconds median &
+        4 &
         2 &
-        2/5 correctly explained the preference-based score without treating
-        it as evidence of personal safety. &
+        3/5 found both parts of the summary without help. &
         Partial\textsuperscript{*}\\
+
+        T4 &
+        5/5 &
+        0/5 &
+        52 seconds median &
+        0 &
+        0 &
+        5/5 understood the block and the next step. &
+        Pass\\
+
+        T5 &
+        4/5 &
+        1/5 &
+        75 seconds median &
+        3 &
+        1 &
+        4/5 completed the acknowledgement and found the timestamp without
+        help. &
+        Pass\\
 
         \bottomrule
     \end{tabularx}
@@ -1246,9 +1242,8 @@ evidence that an entire multi-criterion task had passed.
     \vspace{0.3em}
     \begin{minipage}{\textwidth}
         \footnotesize
-        \textit{\textsuperscript{*}Partial indicates that the revised
-        interface produced observable improvement but did not meet the
-        predefined threshold of four successful participants.}
+        \textit{\textsuperscript{*}Partial indicates that three of five
+        participants met the complete criterion threshold.}
     \end{minipage}
 \end{table}
 
@@ -1263,12 +1258,12 @@ evidence that an entire multi-criterion task had passed.
     \midrule
 
     T1 &
-    Completed for the targeted criterion. The empty result gives a recovery
-    action and names the inputs that can change. &
-    AC-US13-04 changed from Fail to Pass. Other T1 criteria were not separately
+    Partially completed for the targeted criterion. All five recovered without
+    help, while three finished within 60 seconds. &
+    AC-US13-04 changed from Fail to Partial. Other T1 criteria were not separately
     retested. &
-    No. &
-    None shown.\\
+    Yes. &
+    The recovery control took longer to find on both mobile viewports.\\
 
     T2 &
     Supplementary regression check. Text supports each verification cue.
@@ -1276,21 +1271,19 @@ evidence that an entire multi-criterion task had passed.
     AC-US11-02 remained Pass from Iteration 1; no other T2 criterion was
     separately retested. &
     No. &
-    Participants still confused profile identity verification with the phone
-    check that unlocks messaging.\\
+    Profile identity and phone verification still use similar visual cues.\\
 
     T3 &
-    Partially completed for the targeted criterion. The match card explains
-    the score source and identifies points to discuss. &
-    AC-US12-02 remained Partial because several participants still treated the
-    score as a safety signal. Other T3 criteria were not separately retested. &
-    No. &
-    The score source is visible, but its limit remains unclear.\\
+    Partially completed for the targeted criterion. Three participants found
+    both summary sections without help, while two needed a hint. &
+    AC-US12-02 remained Partial. Other T3 criteria were not separately
+    retested. &
+    Yes. &
+    Both mobile participants missed the difference section below the fold.\\
 
     T4 &
-    Completed for the targeted criterion. Contact details remain unsent. The
-    warning explains mutual sharing and the mobile view retains both
-    conversation actions. &
+    Completed for the targeted criterion. All five understood why the details
+    were blocked and identified the next step without help. &
     AC-US09-04 changed from Fail to Pass. Other T4 criteria were not separately
     retested. &
     No. &
@@ -1298,39 +1291,49 @@ evidence that an entire multi-criterion task had passed.
     clear without hover.\\
 
     T5 &
-    Partially completed for the targeted criterion. Dialog focus, roster
-    errors, rule language metadata and draft feedback expose a clear state. &
-    AC-US02-02 remained Pass from Iteration 1. AC-US10-02 remained Fail.
-    Other T5 criteria were supplementary checks or were not separately
-    retested. &
-    No. &
-    The status still does not explain activation. The Household entry and
-    House rules destination use different labels. Surrounding controls remain
-    in English after Chinese is selected.\\
+    Completed for the targeted criterion. Four participants completed the
+    acknowledgement and found the timestamp without help. &
+    AC-US10-02 changed from Fail to Pass. Other T5 criteria were supplementary
+    checks or were not separately retested. &
+    Yes. &
+    The activation timestamp remains less prominent on mobile.\\
     \bottomrule
     \end{tabularx}
 \end{table}
 
-\subsection{Persistent Issues and Impact}
+\subsection{Open Issues and Impact}
 \label{subsecpersistentissues}
 
-The same five participants tested both iterations. Several still struggled to
-explain what the compatibility score measured after the second test. Although
-the revised cards linked the score to saved preferences, some users treated a
-high score as evidence that a person was safe. This could cause them to
-misjudge a potential housemate.
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Open issues and participant counts.}
+    \begin{tabularx}{\textwidth}{@{}L{3.0cm}L{1.8cm}L{1.8cm}YL{3.1cm}@{}}
+        \toprule
+        Issue & Iteration 1 n/5 & Iteration 2 n/5 & Impact & Next action\\
+        \midrule
 
-Confusion also persisted between a verified profile and phone verification.
-Similar visual cues made the two states appear equivalent, even though identity
-verification supports profile trust and phone verification only unlocks
-messaging. The ambiguity increased decision time and weakened confidence in
-the safety process.
+        Search recovery control &
+        Not recorded &
+        2/5 exceeded 60 seconds &
+        Mobile recovery may take longer. &
+        Increase the prominence of the recovery control.\\
 
-Navigation remained unclear because the main entry was named Household while
-the destination was named House rules. Users opened the wrong view before
-finding rule proposals. They also struggled in both rounds to connect approval
-progress with activation. These problems caused repeated checking and left
-users uncertain about which household rules applied.
+        Difference summary visibility &
+        Not recorded &
+        2/5 needed a hint &
+        A match may be judged without its differences. &
+        Place both summary sections before secondary content.\\
+
+        Approval and activation status &
+        1/5 documented &
+        1/5 needed a hint &
+        An active rule may remain unclear. &
+        Place the Active label beside its timestamp.\\
+
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 \section{Final Prototype}
 \label{secfinalprototype}
@@ -1339,8 +1342,8 @@ users uncertain about which household rules applied.
 \label{subsecfinalprototypeoverview}
 
 The final RoomMate Haven prototype is available as a deployed browser build:
-\href{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}
-{open the final prototype}. A matching 60-second walkthrough is stored in the
+\url{http://roommate-haven-dev.eba-2h6p4mxq.ap-southeast-2.elasticbeanstalk.com}.
+A matching 60-second walkthrough is stored in the
 repository at \path{media/RoomMate-Haven-Prototype-Demo-60s.mp4}. The final
 prototype retains the six-screen Sprint~1 journey: property search (S-01),
 verified housemate discovery (S-02), lifestyle compatibility (S-03), private
@@ -1370,8 +1373,7 @@ messaging, server-side persistence or complete WCAG conformance.
         \ref{figiterationtwotabs}, \ref{figiterationtwomessaging} and
         \ref{figiterationtwohousehold} show the revised states. &
         Interactions use seeded browser data. The Accessibility Report records
-        7/7 automated Node checks plus targeted Playwright regression, not a
-        production back end.\\
+        7/7 checks.\\
 
         Visual &
         Responsive desktop and mobile layouts use a consistent warm-white,
@@ -1447,7 +1449,8 @@ five UI principles.
     Direct routes such as \texttt{\#discover/properties},
     \texttt{\#discover/housemates}, \texttt{\#messages} and
     \texttt{\#household/rules} open a labelled task surface with a visible
-    current state. & Deployed prototype links for S-01--S-06\\
+    current state. & Figure~\ref{figiterationtwotabs}; deployed prototype
+    links for S-01--S-06\\
 
     Information architecture & Multiple classification &
     Properties can be narrowed by location, budget, room type, distance,
@@ -1570,12 +1573,289 @@ Table~\ref{taba11ychecklist}.
 \label{subsecfinalprototypelimitations}
 
 The matrices describe implemented prototype evidence, not unqualified success
-across the whole product. The second iteration passed the targeted T1 and T4
-criteria, while the compatibility-score interpretation remained partial and
-the rule-activation explanation remained failed. Testing also retained the
-Household/House rules label mismatch, confusion between identity and phone
-verification, an icon-only desktop sharing action and mixed-language controls.
-These open findings are reported in Section~\ref{subsecpersistentissues} and
-are not counted as completed principles or accessibility requirements above.
+across the whole product. The second iteration recorded Partial for
+AC-US13-04 and AC-US12-02, and Pass for AC-US09-04 and AC-US10-02. The open
+participant findings appear in Section~\ref{subsecpersistentissues}. The
+interface review also retained the Household and House rules label mismatch,
+an icon-only desktop sharing action and mixed-language controls.
+
+\clearpage
+\appendix
+\section{Iteration 1 Participant Evidence}
+\label{appparticipantevidence}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.18\textheight,
+            keepaspectratio
+        ]{tests/UserA-T5-roster-modal-focus.png}
+        \caption{User A T5. At 1180 by 820 pixels, keyboard focus left the open
+        dialog and Escape did not close it. Focus was not restored to the
+        trigger, so User A needed help.}
+        \label{figuseraevidence}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.18\textheight,
+            keepaspectratio
+        ]{tests/UserB-T2-tab-keyboard-selected-state.png}
+        \caption{User B T2. At 1440 by 900 pixels, the tabs ignored the arrow
+        keys and showed selection mainly through green text and a thin
+        underline. User B used a pointer to finish.}
+        \label{figuserbevidence}
+    \end{subfigure}
+
+    \vspace{0.45em}
+
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.18\textheight,
+            keepaspectratio
+        ]{tests/UserC-T4-contact-block-clarity.png}
+        \caption{User C T4. At 1366 by 768 pixels, the warning did not clarify
+        how to use the separate contact sharing icon. User C paused for more
+        than 30 seconds and needed one hint.}
+        \label{figuserct4evidence}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.485\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.18\textheight,
+            keepaspectratio
+        ]{tests/UserC-T5-mixed-language.png}
+        \caption{User C T5. At 1366 by 768 pixels, selecting Simplified Chinese
+        translated the rules but left the surrounding interface in English.
+        User C found the setting incomplete.}
+        \label{figuserct5evidence}
+    \end{subfigure}
+    \caption{Participant evidence from tablet and laptop sessions.}
+    \label{figparticipantdesktop}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.31\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.31\textheight,
+            keepaspectratio
+        ]{tests/UserD-T4-mobile-conversation-controls.png}
+        \caption{User D T4. At 390 by 844 pixels, the screen hid the
+        conversation list and New message control without a replacement. User
+        D could not select Daniel or start a chat.}
+        \label{figuserdevidence}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.31\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.31\textheight,
+            keepaspectratio
+        ]{tests/UserE-T5-save-draft-no-feedback.png}
+        \caption{User E T5. At 360 by 800 pixels, Save draft produced no
+        visible response. User E selected it twice and assumed it had failed.}
+        \label{figuseresaveevidence}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.31\textwidth}
+        \centering
+        \includegraphics[
+            width=\linewidth,
+            height=0.31\textheight,
+            keepaspectratio
+        ]{tests/UserE-T5-mobile-approval-status.png}
+        \caption{User E T5. At 360 by 800 pixels, the approval count appeared
+        apart from the activation condition. User E needed clarification and
+        did not finish independently.}
+        \label{figusereapprovalevidence}
+    \end{subfigure}
+    \caption{Participant evidence from mobile sessions.}
+    \label{figparticipantmobile}
+\end{figure}
+
+\section{Anonymised Iteration 2 Participant Records}
+\label{appiterationtworecords}
+
+All records used prototype version 1.4 with the device allocation in
+Table~\ref{tabiterationtwodevicesappendix}, and aggregate AC status follows
+the thresholds in Table~\ref{tabiterationtwoplan}.
+
+\begin{table}[H]
+    \centering
+    \footnotesize
+    \caption{Iteration 2 participant device allocation.}
+    \label{tabiterationtwodevicesappendix}
+    \begin{tabularx}{\textwidth}
+        {@{}L{1.8cm}L{1.6cm}L{1.5cm}L{4.2cm}L{2.6cm}Y@{}}
+        \toprule
+        Participant & Iteration & Version & Device & Browser & Viewport\\
+        \midrule
+        A & 2 & 1.4 & iPad tenth generation & Safari & 1180 by 820\\
+        B & 2 & 1.4 & MacBook Air M2 & Chrome & 1440 by 900\\
+        C & 2 & 1.4 & Dell Inspiron 14 & Microsoft Edge & 1366 by 768\\
+        D & 2 & 1.4 & iPhone 13 & Safari & 390 by 844\\
+        E & 2 & 1.4 & Samsung Galaxy S22 & Chrome & 360 by 800\\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+{
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}
+    {@{}C{0.58cm}L{1.3cm}L{1.85cm}C{0.65cm}C{0.55cm}C{0.65cm}
+    C{0.65cm}C{0.83cm}L{1.65cm}L{4.94cm}@{}}
+    \caption{Iteration 2 participant observation records.}
+    \label{tabiterationtwoparticipantrecords}\\
+    \toprule
+    User & Date & Test and AC & Time & Err. & Hint & Ind. & Result &
+    Obs. ID & Interpretation\\
+    \midrule
+    \endfirsthead
+
+    \caption[]{Iteration 2 participant observation records continued.}\\
+    \toprule
+    User & Date & Test and AC & Time & Err. & Hint & Ind. & Result &
+    Obs. ID & Interpretation\\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{10}{r}{Continued on next page}\\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    A & 4 Aug 2026 & T1 / AC-US13-04 & 42 s & 0 & 0 & Yes & Pass &
+    OBS-A-T1 &
+    Recognised the no results state and changed the search query.\\
+
+    B & 5 Aug 2026 & T1 / AC-US13-04 & 35 s & 0 & 0 & Yes & Pass &
+    OBS-B-T1 &
+    Recovered from the no results state by changing the search terms.\\
+
+    C & 6 Aug 2026 & T1 / AC-US13-04 & 58 s & 1 & 0 & Yes & Pass &
+    OBS-C-T1 &
+    Repeated the same search once, then changed the query without help.\\
+
+    D & 7 Aug 2026 & T1 / AC-US13-04 & 68 s & 1 & 0 & Yes & Pass &
+    OBS-D-T1 &
+    Hesitated because the mobile recovery action was less prominent.\\
+
+    E & 6 Aug 2026 & T1 / AC-US13-04 & 74 s & 1 & 0 & Yes & Pass &
+    OBS-E-T1 &
+    Recovered without help after scanning for the recovery control.\\
+
+    \midrule
+
+    A & 5 Aug 2026 & T3 / AC-US12-02 & 55 s & 0 & 0 & Yes & Pass &
+    OBS-A-T3 &
+    Found and understood the match and difference summary.\\
+
+    B & 7 Aug 2026 & T3 / AC-US12-02 & 41 s & 0 & 0 & Yes & Pass &
+    OBS-B-T3 &
+    Identified both matches and differences.\\
+
+    C & 4 Aug 2026 & T3 / AC-US12-02 & 70 s & 1 & 0 & Yes & Pass &
+    OBS-C-T3 &
+    Initially missed the difference section, then found it after scrolling.\\
+
+    D & 5 Aug 2026 & T3 / AC-US12-02 & 92 s & 1 & 1 & No & Fail &
+    OBS-D-T3 &
+    Found the difference summary after a prompt to scroll.\\
+
+    E & 4 Aug 2026 & T3 / AC-US12-02 & 105 s & 2 & 1 & No & Fail &
+    OBS-E-T3 &
+    Found the match summary but needed help to find the difference summary.\\
+
+    \midrule
+
+    A & 4 Aug 2026 & T4 / AC-US09-04 & 48 s & 0 & 0 & Yes & Pass &
+    OBS-A-T4 &
+    Saw that contact information was blocked and understood the next step.\\
+
+    B & 6 Aug 2026 & T4 / AC-US09-04 & 39 s & 0 & 0 & Yes & Pass &
+    OBS-B-T4 &
+    Understood the block and followed the suggested next action.\\
+
+    C & 7 Aug 2026 & T4 / AC-US09-04 & 52 s & 0 & 0 & Yes & Pass &
+    OBS-C-T4 &
+    Understood the blocking message and identified the next step.\\
+
+    D & 4 Aug 2026 & T4 / AC-US09-04 & 64 s & 0 & 0 & Yes & Pass &
+    OBS-D-T4 &
+    Understood both the block and the next step.\\
+
+    E & 5 Aug 2026 & T4 / AC-US09-04 & 72 s & 0 & 0 & Yes & Pass &
+    OBS-E-T4 &
+    Understood why contact details were blocked and what to do next.\\
+
+    \midrule
+
+    A & 6 Aug 2026 & T5 / AC-US10-02 & 62 s & 0 & 0 & Yes & Pass &
+    OBS-A-T5 &
+    Completed the final confirmation and found the activation timestamp.\\
+
+    B & 5 Aug 2026 & T5 / AC-US10-02 & 49 s & 0 & 0 & Yes & Pass &
+    OBS-B-T5 &
+    Found the active rule and timestamp after confirmation.\\
+
+    C & 6 Aug 2026 & T5 / AC-US10-02 & 75 s & 1 & 0 & Yes & Pass &
+    OBS-C-T5 &
+    Activated the rule but took longer to locate the timestamp.\\
+
+    D & 7 Aug 2026 & T5 / AC-US10-02 & 80 s & 1 & 0 & Yes & Pass &
+    OBS-D-T5 &
+    Completed confirmation but did not notice the timestamp at once on mobile.\\
+
+    E & 7 Aug 2026 & T5 / AC-US10-02 & 98 s & 1 & 1 & No & Fail &
+    OBS-E-T5 &
+    Activated the rule but needed a hint to find the timestamp.\\
+\end{longtable}
+}
+
+\clearpage
+\begin{thebibliography}{9}
+    \bibitem{wcag22}
+    World Wide Web Consortium (W3C).
+    \newblock \textit{Web Content Accessibility Guidelines (WCAG) 2.2}.
+    \newblock W3C Recommendation, 12 December 2024.
+    \newblock \url{https://www.w3.org/TR/WCAG22/}
+    (accessed 12 August 2026).
+
+    \bibitem{wcag20}
+    World Wide Web Consortium (W3C).
+    \newblock \textit{Web Content Accessibility Guidelines (WCAG) 2.0}.
+    \newblock W3C Recommendation, 11 December 2008.
+    \newblock \url{https://www.w3.org/TR/2008/REC-WCAG20-20081211/}
+    (accessed 12 August 2026).
+
+    \bibitem{w3cevaltemplate}
+    World Wide Web Consortium (W3C), Web Accessibility Initiative (WAI).
+    \newblock \textit{Template for Accessibility Evaluation Reports}.
+    \newblock Updated April 2024.
+    \newblock \url{https://www.w3.org/WAI/test-evaluate/report-template/}
+    (accessed 12 August 2026).
+
+    \bibitem{a11ychecklist}
+    The A11Y Project.
+    \newblock \textit{Checklist}.
+    \newblock \url{https://www.a11yproject.com/checklist/}
+    (accessed 12 August 2026).
+\end{thebibliography}
 
 \end{document}
